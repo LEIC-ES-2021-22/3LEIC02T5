@@ -5,7 +5,7 @@
 
 ## Product Vision
 
-- For FEUP students who don't want to wait in lines, LineScape is an app that uses crowd sourcing to tell you how big lines at FEUP are ,as well as the capacity of certain spots like the library, department bars and parking lot etc. Unlike Sigarra/uni, our product thinks beyond our academic needs.
+- For FEUP students who don't want to wait in lines, LineScape is an app that uses crowd sourcing to tell you how big lines at FEUP are ,as well as the capacity of certain spots like the library, department bars, parking lot etc. Unlike {competitors}, our product thinks beyond our academic needs.
 
 ## Features
 - Canteen lines and Department Bars: Creating statistics using a like/dislike button according to the capacity and occupation of the spot.
