@@ -5,7 +5,7 @@
 
 ## Product Vision
 
-For {target costumer} who {customer need to be solved} the {product name} is a {product category} that {benefits, unique selling points}. Unlike {competitor project}, our product {main difference}.
+- For FEUP students who don't want to wait in lines, LineScape is an app that uses crowd sourcing to tell you how lines at FEUP are ,as well as the capacity of certain spots like the library, department bars and parking lot etc. Unlike Sigarra/uni, our product thinks beyond our academic needs.
 
 ## Features
 - Canteen lines: Creating statistics using a like/dislike button according to the capacity and occupation of the spot.
