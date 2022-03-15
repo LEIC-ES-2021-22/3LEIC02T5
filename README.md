@@ -12,6 +12,7 @@
 - Parking Lot Capacity: Through crowd-sourcing, the app should be able to give the user feedback about the chance of finding an empty spot at a specific parking lot in FEUP. the app should also allow users to give their own feedback about the parking lot reacting with a Like for signaling when the parking lot has significant space and a Dislike for signaling when it has little space left for parking.
 - Library Seats: The app allows users to check each floor of the library and understand which floors have more free seats and which have less, presenting each floor with a greener color the emptier it is.
 - Ordering Places: The app automatically orders the places from emptier to fuller and separates them in the following categories: Library Floors, Places to Eat, Parking Lots, Theorical Classrooms and Study Rooms.
+- Manage Schedule: The app gives alternatives for theorical classes, only if the statistics show the classroom is full.
 
 ## User Stories
 - As a student in FEUP, I want to see where I'll find smaller lines to eat so that I can have lunch/dinner quicker if I am short in time or want to use my break time to do something else between classes.
