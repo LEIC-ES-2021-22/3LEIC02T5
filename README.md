@@ -10,3 +10,15 @@
 - Library Seats: The app allows users to check each floor of the library and understand which floors have more free seats and which have less, presenting each floor with a greener color the emptier it is.
 - Ordering Places: The app automatically orders the places from emptier to fuller and separates them in the following categories: Library Floors, Places to Eat, Parking Lots, Theorical Classrooms and Study Rooms.
 - Manage Schedule: The app gives alternatives for theorical classes, only if the statistics show the classroom is full.
+
+## Use case model
+
+|||
+| --- | --- |
+| Name | Crowd Sourcing System |
+| Actor |  FEUP Community Member | 
+| Description | The user can see and contribute to line and capacity data and manage schedules.|
+| Preconditions | - The user must be logged in with FEUP credentials. <br> - FEUP needs to have previously defined schedules for every service. |
+| Postconditions | - The user is informed about any opening schedule even if the services are closed. <br> -  Each available service is constantly updated.  |
+| Normal flow | 1. The user accesses the application through the mobile phone .<br> 2. The system shows the list of services available by category.<br> 3. The user selects the service.<br> 4. The user can contribute for lotation and/or line statistics .<br> 5. If one line or service is full , suggest other options in the same category to the user. <br> 6. The user can log out the application. |
+| Alternative Flows and Exceptions | [Closed Service] If the service is off schedule, the app releases a warning giving information about the opening hours. |
