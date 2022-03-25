@@ -11,7 +11,12 @@
 - Ordering Places: The app automatically orders the places from emptier to fuller and separates them in the following categories: Library Floors, Places to Eat, Parking Lots, Theorical Classrooms and Study Rooms.
 - Manage Schedule: The app gives alternatives for theorical classes, only if the statistics show the classroom is full.
 
-## Use case model
+## Requirements
+
+### Use case diagram
+
+
+### Use case model
 
 |||
 | --- | --- |
