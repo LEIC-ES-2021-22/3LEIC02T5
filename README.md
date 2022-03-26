@@ -20,19 +20,22 @@
 
 * **Actor**. User 
 * **Description**. The user uses the apps feature to see the parking lots capacity to better know how full/empty it is.
-* **Preconditions and Postconditions**. The user must be logged in FEUP credencials.
+* **Preconditions and Postconditions**. The user must be logged in with FEUP credencials.
 * **Normal Flow**. 
   * System: Shows various FEUP spots options. 
   * User: clicks on the parking lot option. 
   * System: Either shows it has available spots and the number or it shows it has no available spots.
-* **Alternative Flows and Exceptions**. If the paking lot is empty, it will show a message saying it's closed and also show the next available time.
+* **Alternative Flows and Exceptions**. If the parking lot is closed, it will show a message saying it's closed and also show the next available time.
 
-### 
-* **Actor**. Student 
-* **Description**. 
-* **Preconditions and Postconditions**. 
+### See line lenghts of canteen/department bars
+* **Actor**. User
+* **Description**. The user sees the line lenght os different spots around FEUP so the can better manage their time and see the better scheduling options.
+* **Preconditions and Postconditions**. The use must be logged in with FEUP credencials.
 * **Normal Flow**.  
-* **Alternative Flows and Exceptions**. 
+   * System: Shows various FEUP spots option.
+   * User: clicks on the canteen/department bars options.
+   * System: Shows by a percentage how much the space is occupied. Also shows the best times to go to certain spots.
+* **Alternative Flows and Exceptions**.  If the canteen/department bars are closed, it will show a message saying it's closed and also show the next available time.
 
 
 |||
