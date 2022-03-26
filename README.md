@@ -22,9 +22,9 @@
 * **Description**. The user uses the apps feature to see the parking lots capacity to better know how full/empty it is.
 * **Preconditions and Postconditions**. The user must be logged in FEUP credencials.
 * **Normal Flow**. 
-* * System: Shows various FEUP spots options. 
-* * User: clicks on the parking lot option. 
-* * System: Either shows it has available spots and the number or it shows it has no available spots.
+  * System: Shows various FEUP spots options. 
+  * User: clicks on the parking lot option. 
+  * System: Either shows it has available spots and the number or it shows it has no available spots.
 * **Alternative Flows and Exceptions**. If the paking lot is empty, it will show a message saying it's closed and also show the next available time.
 
 ### 
