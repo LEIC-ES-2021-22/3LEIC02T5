@@ -43,8 +43,8 @@
 * **Normal Flow**.  
    * System: Shows schedule option.
    * User: clicks on the canteen/department bars options.
-   * System: Shows by a percentage how much the space is occupied. Also shows the best times to go to certain spots.
-* **Alternative Flows and Exceptions**.  If the canteen/department bars are closed, it will show a message saying it's closed and also show the next available time.
+   * System: Shows your personalized schedule.
+* **Alternative Flows and Exceptions**.  Shows you options for theoretical classes and if classes are overlapping,
 
 |||
 | --- | --- |
