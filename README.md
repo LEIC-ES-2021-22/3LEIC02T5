@@ -16,12 +16,28 @@
 ### Use case diagram
 
 
-### Use case model
+### See parking lot capacity
+
+* **Actor**. User 
+* **Description**. The user uses the apps feature to see the parking lots capacity to better know how full/empty it is.
+* **Preconditions and Postconditions**. The user must be logged in FEUP credencials.
+* **Normal Flow**. - System: Shows various FEUP spots options.
+* - User: clicks on the parking lot option.
+* - System: Either shows it has available spots and the number or it shows it has no available spots.
+* **Alternative Flows and Exceptions**. If the paking lot is empty, it will show a message saying it's closed and also show the next available time.
+
+### 
+* **Actor**. Student 
+* **Description**. 
+* **Preconditions and Postconditions**. 
+* **Normal Flow**.  
+* **Alternative Flows and Exceptions**. 
+
 
 |||
 | --- | --- |
-| Name | Crowd Sourcing System |
-| Actor |  FEUP Community Member | 
+| Name | User |
+| Actor |   | 
 | Description | The user can see and contribute to line and capacity data and manage schedules.|
 | Preconditions | - The user must be logged in with FEUP credentials. <br> - FEUP needs to have previously defined schedules for every service. |
 | Postconditions | - The user is informed about any opening schedule even if the services are closed. <br> -  Each available service is constantly updated.  |
