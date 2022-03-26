@@ -44,7 +44,26 @@
    * System: Shows schedule option.
    * User: clicks on the canteen/department bars options.
    * System: Shows your personalized schedule.
-* **Alternative Flows and Exceptions**.  Shows you options for theoretical classes and if classes are overlapping,
+* **Alternative Flows and Exceptions**.  Shows you options for theoretical classes and if classes are overlapping.
+
+### See available library seats
+|||
+| --- | --- |
+| Actor |  User | 
+| Description | The user uses the apps feature to see the libraries capacity to better know how full/empty it is, breaking that data into each library floor.|
+| Preconditions | - The user must be logged in with FEUP credentials. <br> - FEUP needs to have previously defined schedules for every service. |
+| Postconditions | - The user is informed about any opening schedule even if the services are closed. <br> -  Each available service is constantly updated.  |
+| Normal flow | 1. The user accesses the application through the mobile phone .<br> 2. The system shows the list of services available by category.<br> 3. The user selects the service.<br> 4. The user can contribute for lotation and/or line statistics .<br> 5. If one line or service is full , suggest other options in the same category to the user. <br> 6. The user can log out the application. |
+| Alternative Flows and Exceptions | [Closed Service] If the service is off schedule, the app releases a warning giving information about the opening hours. |
+
+* **Actor**. User 
+* **Description**. The user uses the apps feature to see the libraries capacity to better know how full/empty it is, breaking that do
+* **Preconditions and Postconditions**. The user must be logged in with FEUP credencials.
+* **Normal Flow**. 
+  * System: Shows various FEUP spots options. 
+  * User: clicks on the parking lot option. 
+  * System: Either shows it has available spots and the number or it shows it has no available spots.
+* **Alternative Flows and Exceptions**. If the parking lot is closed, it will show a message saying it's closed and also show the next available time.
 
 |||
 | --- | --- |
