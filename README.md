@@ -14,9 +14,7 @@
 ## Requirements
 
 ### Use case diagram
-
 ![UseCaseDiagram](CrowdSourcingSystem.png)
-
 ### See parking lot capacity
 
 * **Actor**. User 
