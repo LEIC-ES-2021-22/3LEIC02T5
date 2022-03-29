@@ -28,9 +28,9 @@
 |||
 | --- | --- |
 |**Actor**|User|
-|**Description**|The user sees the capacity of different spots around FEUP so they can avoid waisting time. |
+|**Description**|The user sees the capacity of different spots around FEUP so they can avoid wasting time. |
 |**Preconditions and Postconditions**| The user must be logged in with FEUP credentials.|
-|**Normal Flow**| **1. System:** Shows various FEUP spots options. </br> **2. User:** clicks on the wanted spot option. </br> **3. System:** Shows in a percentage bar how much the space is occupied. Also shows the best hours to go to certain spots.|
+|**Normal Flow**| **1. System:** Shows various FEUP spots options. </br> **2. User:** clicks on the wanted spot option. </br> **3. System:** Shows in a percentage bar how much of the space is occupied. Also shows the best hours to go to certain spots.|
 |**Alternative Flows and Exceptions**| **[Closed Service]** If the service is off schedule, the app releases a warning giving information about the opening hours.
 ### See parking lot capacity
 |||
