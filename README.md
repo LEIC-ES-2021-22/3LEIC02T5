@@ -14,7 +14,8 @@
 ## Requirements
 
 ### Use case diagram
-![UseCaseDiagram](CrowdSourcingSystem.png)
+![es_USECASES drawio](https://user-images.githubusercontent.com/89557480/160858443-44014cf6-9d70-4577-be93-370ab2524b5b.png)
+
 
 ### See line length of canteen/department bars
 |||
