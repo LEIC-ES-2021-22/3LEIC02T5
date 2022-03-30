@@ -14,7 +14,8 @@
 ## Requirements
 
 ### Use case diagram
-![es_USECASES drawio](https://user-images.githubusercontent.com/89557480/160858443-44014cf6-9d70-4577-be93-370ab2524b5b.png)
+![2 drawio](https://user-images.githubusercontent.com/89557480/160859115-fdb04029-7f9b-4d3c-98b8-e939f272b55a.png)
+
 
 
 ### See line length of canteen/department bars
