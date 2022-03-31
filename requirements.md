@@ -1,7 +1,7 @@
 # Requirements
 
 ## Use case diagram
-![2 drawio](https://user-images.githubusercontent.com/89557480/160859115-fdb04029-7f9b-4d3c-98b8-e939f272b55a.png)
+![CrowdSourcingSystem](CrowdSourcingSystem.png)
 
 
 
