@@ -1,7 +1,7 @@
 # Requirements
 
 ## Use case diagram
-![CrowdSourcingSystem](CrowdSourcingSystem.png)
+![CrowdSourcingSystem](docs/CrowdSourcingSystem.png)
 
 ### See line length of canteen/department bars
 |||
@@ -30,8 +30,8 @@
 |**Description**| The user uses the apps feature to see the parking lots capacity to know how full/empty it is.
 |**Preconditions**| The user must be logged in with FEUP credentials. |
 |**Postconditions**| If the user contributes for service occupation through the like or dislike button, the statistics about line lenght will be updated.|
-|**Normal Flow**| **1. System:** Shows various FEUP spots options. </br> **2. User:** clicks on the parking lot option.</br> **3. System:** Either shows it has available spots and the number or it shows it has no available spots.
-|**Alternative Flows and Exceptions**| **[Closed Service]** If the parking lot is closed, the app releases a warning giving information about the opening hours.
+|**Normal Flow**| **1. System:** Shows various FEUP spots options. </br> **2. User:** clicks on the parking lot option.</br> **3. System:** Either shows it has available spots and the number or it shows it has no available spots.|
+|**Alternative Flows and Exceptions**| **[Closed Service]** If the parking lot is closed, the app releases a warning giving information about the opening hours.|
 
 ### Visualize other possible theoretical classes
 |||

@@ -14,7 +14,7 @@ Maria Luísa Fontanete Loureiro Salvador - up202006471<br>
 
 ## Vision Statement
 For FEUP students who don't want to wait in lines, LineScape is an app that uses crowd sourcing to tell you how big lines at FEUP are, as well as the available capacity of certain spots like the library, department bars, parking lot, etc. Right now, there is no alternative to the service provided by our project besides the students just trying their luck and risking having to wait more time in lines or not have seats in classes or in the library.
-- [Requirements](requirements.md)
+- [Requirements](Requirements.md)
 - [Product Vision](ProductVision.md)
 
 ## Main Features
