@@ -40,7 +40,7 @@
 |**Description**|The user can see their schedule on the app, and visualize/try other theoretical classes, so they can manage their time better.|
 |**Preconditions**| The user must be logged in with FEUP credentials. |
 |**Postconditions**| If the user contributes for service occupation through the like or dislike button, the statistics about the number of students will be updated.|
-|**Normal Flow**| **1. System:** Shows schedule option. </br> **2. User:** clicks on the canteen/department bars options. </br> **3. System:** Shows in a percentage bar how much the space is occupied. Also shows the best times to go to certain spots.|
+|**Normal Flow**| **1. System:** Shows schedule option. </br> **2. User:** clicks on a specific class. </br> **3. System:** Shows in a percentage bar how much the space is occupied and gives the opportunity to choose other theoretical class at another hour.|
 |**Alternative Flows and Exceptions**|**[Overlapped Classes]** Shows you options for theoretical classes and warns you if classes are overlapped.|
 
 ### See available library seats
