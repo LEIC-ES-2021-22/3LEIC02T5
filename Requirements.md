@@ -9,7 +9,7 @@
 |**Actor**|User|
 |**Description**|The user sees the line length of canteen/department bars around FEUP so they can manage their time better and see the best scheduling options.|
 |**Preconditions**| The user must be logged in with FEUP credentials. |
-|**Postconditions**| If the user contributes for service occupation through the like or dislike button, the statistics about line lenght will be updated.|
+|**Postconditions**| If the user contributes for service occupation through the like or dislike button, the statistics about line length will be updated.|
 |**Normal Flow**| **1. System:** Shows various FEUP spots options. </br> **2. User:** clicks on the canteen/department bars option. </br> **3. System:** Shows in percentage bar how much the space is occupied. Also shows the best hours to go to certain spots.|
 |**Alternative Flows and Exceptions**| **[Closed Service]** If the canteen/department bars is off schedule, the app releases a warning giving information about the opening hours.
 
@@ -19,7 +19,7 @@
 |**Actor**|User|
 |**Description**|The user sees the capacity of different spots around FEUP so they can avoid wasting time. |
 |**Preconditions**| The user must be logged in with FEUP credentials.|
-|**Postconditions**| If the user contributes for service occupation through the like or dislike button, the statistics about line lenght will be updated.| 
+|**Postconditions**| If the user contributes for service occupation through the like or dislike button, the statistics about line length will be updated.| 
 |**Normal Flow**| **1. System:** Shows various FEUP spots options. </br> **2. User:** clicks on the wanted spot option. </br> **3. System:** Shows in a percentage bar how much of the space is occupied. Also shows the best hours to go to certain spots.|
 |**Alternative Flows and Exceptions**| **[Closed Service]** If the service is off schedule, the app releases a warning giving information about the opening hours.
 
@@ -29,7 +29,7 @@
 |**Actor**| User|
 |**Description**| The user uses the apps feature to see the parking lots capacity to know how full/empty it is.
 |**Preconditions**| The user must be logged in with FEUP credentials. |
-|**Postconditions**| If the user contributes for service occupation through the like or dislike button, the statistics about line lenght will be updated.|
+|**Postconditions**| If the user contributes for service occupation through the like or dislike button, the statistics about line length will be updated.|
 |**Normal Flow**| **1. System:** Shows various FEUP spots options. </br> **2. User:** clicks on the parking lot option.</br> **3. System:** Either shows it has available spots and the number or it shows it has no available spots.|
 |**Alternative Flows and Exceptions**| **[Closed Service]** If the parking lot is closed, the app releases a warning giving information about the opening hours.|
 
