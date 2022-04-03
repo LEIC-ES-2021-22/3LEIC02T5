@@ -3,12 +3,10 @@
 ## Members
 
 Ana Catarina Novais da Silva - up202004380 <br>
-
-Pedro Manuel Costa Aguiar Botelho Gomes - up202006086<br>
-
-Sandra Patrícia Linhares Miranda - up202007675<br>
-
+Gonçalo José Vicente e Domingues - up202007914<br>
 Maria Luísa Fontanete Loureiro Salvador - up202006471<br>
+Pedro Manuel Costa Aguiar Botelho Gomes - up202006086<br>
+Sandra Patrícia Linhares Miranda - up202007675<br>
 
 # LineScape
 
