@@ -1,7 +1,7 @@
-# Architecture and Design
+## Architecture and Design
 
-## Logical Architecture
+### Logical Architecture
 
-## Physical Architecture
+### Physical Architecture
 
-## Vertical Prototype
+### Vertical Prototype
