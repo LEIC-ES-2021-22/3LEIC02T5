@@ -12,8 +12,17 @@ Sandra Patrícia Linhares Miranda - up202007675<br>
 
 ## Vision Statement
 For FEUP students who don't want to wait in lines, LineScape is an app that uses crowd sourcing to tell you how big lines at FEUP are, as well as the available capacity of certain spots like the library, department bars, parking lot, etc. Right now, there is no alternative to the service provided by our project besides the students just trying their luck and risking having to wait more time in lines or not have seats in classes or in the library.
-- [Requirements](Requirements.md)
-- [Product Vision](ProductVision.md)
+
+* Business Modeling
+  * [Product Vision](ProductVision.md)
+* [Requirements](Requirements.md)
+  * [Use Case Model](https://github.com/LEIC-ES-2021-22/templates/blob/main/docs/requirements.md#Use case diagram)
+  * [User stories]
+  * [Domain model](https://github.com/LEIC-ES-2021-22/templates/blob/main/docs/requirements.md#Domain Model)
+* [Arquitecture and Design] 
+  * [Logical Architecture]
+  * [Phisical Architecture]
+  * [Vertical Prototype]
 
 ## Main Features
 - **Canteen lines, Student Association and Department Bars:** Creating statistics using a like/dislike button according to the available capacity and occupation of the spot.
