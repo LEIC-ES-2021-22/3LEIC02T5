@@ -11,7 +11,7 @@ For FEUP students who don't want to wait in lines, LineScape is an app that uses
 * [Requirements](Requirements.md)
   * [Use Case Model](https://github.com/LEIC-ES-2021-22/templates/blob/main/docs/requirements.md#use-case-model)
   * [Domain model](https://github.com/LEIC-ES-2021-22/templates/blob/main/docs/requirements.md#Domain-Model)
-* [Arquitecture and Design] 
+* [Arquitecture and Design](ArchitectureAndDesign.md) 
   * [Logical Architecture](https://github.com/LEIC-ES-2021-22/3LEIC02T5/blob/main/docs/ArchitectureAndDesign.md#logical-architecture)
   * [Phisical Architecture]
   * [Vertical Prototype]
