@@ -1,5 +1,5 @@
 # 3LEIC02T5
-LineSacpe Development Report
+LineScape Development Report
 
 Welcome to the documentation pages of the LineScape!
 
@@ -15,6 +15,9 @@ For FEUP students who don't want to wait in lines, LineScape is an app that uses
   * [Logical Architecture]
   * [Phisical Architecture]
   * [Vertical Prototype]
+
+## Required API's
+
 
 ## Members
 Ana Catarina Novais da Silva - up202004380 <br>
