@@ -1,7 +1,7 @@
 # Requirements
 
 ## Use case diagram
-![CrowdSourcingSystem](docs/CrowdSourcingSystem.png)
+![CrowdSourcingSystem](CrowdSourcingSystem.png)
 
 ### See line length of canteen/department bars
 |||
@@ -54,4 +54,13 @@
 | **Alternative Flows and Exceptions** | **[Closed Service]** If the library is off schedule, the app releases a warning giving information about the opening hours. |
 
 ## Domain Model
+
+- **User:** Represents a user like the app sees him/her. A user is defined by name (the one in his/her FEUP credentials), type (Student,Teacher...), number (again, the user's number from the FEUP credentials) and the user's preferences on subjects and preferred classes.
+- **Curricular Unit:** Represents a Curricular Unit in FEUP, registering its Name, Number, Director and the set of Theoretical Class schedule options available for students attending to it. A user can attend to 0 or more classes (teachers don't attend to classes and there are times in the year where the students may access the app without necessarily attending to any Curricular Unit).
+- **Event:** An Event object can represent either a food service, a library floor, a theoretical class, a study room or a parking lot. It is defined by an ID number, a name, a capacity (maximum amount of people that can be eating at a service/sitting in a library floor/attending to a theoretical class/have their car parked on a parking lot), a certain number of positive and negative reactions in terms of occupancy and a occupancy state, defined by those reactions. They also have an opening time and a closing time. An event has additional variables depending on its type.
+- **Reaction:** A user can react to an event and the app will register the type of reaction (positive or negative) and the time at which the reaction was submitted. A user can react from 0 to as many events as he/she wants and an event can have reactions from 0 or more users.
+- **isFavorite:** isFavorite is simply an association class with a single variable that would track if the user has selected a specific event as his/her favorite. A user can have 0 or more favorite events and an event can be favorited by 0 or more users.
+-  **Line:** Represents a line to acess a specific event. An event can have a line or have none. Inside a Line object, the app should store the positive and negative reactions to a certain line and use them to define the line state to be displayed by the app.
+
+
 ![Domain Modelling drawio](https://user-images.githubusercontent.com/80784137/160863948-9918caf7-3404-4587-8787-0f2dc4a5044d.png)
