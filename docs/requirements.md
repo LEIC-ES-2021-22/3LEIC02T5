@@ -63,4 +63,5 @@
 -  **Line:** Represents a line to acess a specific event. An event can have a line or have none. Inside a Line object, the app should store the positive and negative reactions to a certain line and use them to define the line state to be displayed by the app.
 
 
-![Domain Modelling drawio](https://user-images.githubusercontent.com/80784137/160863948-9918caf7-3404-4587-8787-0f2dc4a5044d.png)
+![Domain Modelling drawio (1)](https://user-images.githubusercontent.com/80784137/162174213-05eb2c24-da4c-40e9-9e21-c76c42507c59.png)
+
