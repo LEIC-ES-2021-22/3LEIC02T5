@@ -19,5 +19,6 @@ In this section of the project we will describe the logical and physical archite
 - **Event Data Processing:** Code that defines what an event is, what types of events there are (Library Floors, Places to Eat, Theoretical Classes and Parking Lots) and how they should work and be treated by the app.
 
 ### Physical Architecture
+In our app's physical architecture only 2 entities are featured: the Sigarra/uni server where the database with all the information required by the user is and the app itself, which the user interacts with.
 
 ### Vertical Prototype
