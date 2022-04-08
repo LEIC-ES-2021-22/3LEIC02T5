@@ -20,8 +20,9 @@ In this section of the project we will describe the logical and physical archite
 
 ### Physical Architecture
 
-![PhysicalArchitecture](https://user-images.githubusercontent.com/93594909/162527189-d0392689-6b8d-4511-aecf-3fcc93b0a215.png)
 In our app's physical architecture only 2 entities are featured: the Sigarra/uni server where the database with all the information required by the user is and the app itself, which the user interacts with.
+
+![image](https://user-images.githubusercontent.com/93594909/162527458-3386a72b-dad7-470f-88a0-0e6102f4d1be.png)
 
 
 
