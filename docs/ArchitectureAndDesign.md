@@ -27,3 +27,7 @@ In our app's physical architecture only 2 entities are featured: the Sigarra/uni
 
 
 ### Vertical Prototype
+
+The following features were vertically implemented:
+
+- **Login Page**: Users must autenticate themselves to use the app.
