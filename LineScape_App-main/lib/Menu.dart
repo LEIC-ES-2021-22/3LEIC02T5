@@ -34,8 +34,8 @@ class NewScreen extends StatelessWidget {
       GridView(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
-            crossAxisSpacing: 5,
-            mainAxisSpacing: 5,
+            crossAxisSpacing: 7,
+            mainAxisSpacing: 7,
             mainAxisExtent: 300,
 
           ),
@@ -50,7 +50,9 @@ class NewScreen extends StatelessWidget {
                   backgroundColor: MaterialStateProperty.all<Color>(
                       const Color.fromARGB(255, 175, 108, 94)),
                 ),
-                onPressed: () {}
+                onPressed: () {Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => Food()),
+                );}
             ),
             ),
             SizedBox(
@@ -94,7 +96,7 @@ class NewScreen extends StatelessWidget {
             ),
           ],
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButtonLocation: FloatingActionButtonLocation.miniCenterDocked,
     );
   }
 
