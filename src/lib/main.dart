@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'Menu.dart';
+
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
@@ -78,7 +80,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   onPressed: () {
                     print(nameController.text);
                     print(passwordController.text);
-                    //_navigateToNextScreen(context);
+                    _navigateToNextScreen(context);
                   }
               ),
             ),
@@ -101,7 +103,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           ],
         ));
   }
-  /*void _navigateToNextScreen(BuildContext context) {
+  void _navigateToNextScreen(BuildContext context) {
     Navigator.of(context).push(MaterialPageRoute(builder: (context) => NewScreen()));
-  }*/
+  }
 }

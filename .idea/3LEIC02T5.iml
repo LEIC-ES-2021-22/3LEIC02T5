@@ -8,9 +8,13 @@
       <excludeFolder url="file://$MODULE_DIR$/src/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/src/build" />
       <excludeFolder url="file://$MODULE_DIR$/src/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/LineScape_App-main/build" />
+      <excludeFolder url="file://$MODULE_DIR$/LineScape_App-main/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/LineScape_App-main/.dart_tool" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Dart SDK" level="project" />
+    <orderEntry type="library" name="Dart Packages" level="project" />
   </component>
 </module>
