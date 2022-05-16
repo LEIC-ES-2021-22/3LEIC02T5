@@ -15,7 +15,7 @@ class Menu extends StatelessWidget {
           IconButton(
             alignment: Alignment.topLeft,
             color: Colors.grey,
-            icon: const Icon(Icons.account_circle, size:50),
+            icon: const Icon(Icons.account_circle, size:40),
             onPressed: () {},
       ),
       ],

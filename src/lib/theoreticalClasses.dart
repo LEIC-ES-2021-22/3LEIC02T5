@@ -7,20 +7,12 @@ class TheoreticalClasses extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        toolbarHeight: 150,
         actions: <Widget>[
-          Center(
-            child: MaterialButton(
-                height: 25,
-                onPressed: () {},
-                color: const Color.fromARGB(255, 210, 187, 128),
-                textColor: Colors.white,
-                child: const Icon(
-                  Icons.account_circle,
-                  size: 65,
-                ),
-                padding: const EdgeInsets.all(9),
-                shape: const CircleBorder()),
+          IconButton(
+            alignment: Alignment.topLeft,
+            color: Colors.grey,
+            icon: const Icon(Icons.account_circle, size:40),
+            onPressed: () {},
           ),
         ],
       ),
@@ -42,7 +34,7 @@ class TheoreticalClasses extends StatelessWidget {
                     textAlign: TextAlign.center),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all<Color>(
-                      const Color.fromARGB(255,107, 0, 0)),
+                      const Color.fromARGB(255, 44, 44, 44)),
                 ),
                 onPressed: () {}
             ),
@@ -54,7 +46,7 @@ class TheoreticalClasses extends StatelessWidget {
                     textAlign: TextAlign.center),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all<Color>(
-                      const Color.fromARGB( 255, 141, 40,19)),
+                      const Color.fromARGB( 255, 76, 76, 76)),
                 ),
                 onPressed: () {}
             ),
@@ -67,7 +59,7 @@ class TheoreticalClasses extends StatelessWidget {
                     textAlign: TextAlign.center),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all<Color>(
-                      const Color.fromARGB(255, 139, 38, 16)),
+                      const Color.fromARGB(255, 148, 148, 149)),
                 ),
                 onPressed: () {}
             ),
@@ -80,7 +72,7 @@ class TheoreticalClasses extends StatelessWidget {
                     textAlign: TextAlign.center),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all<Color>(
-                      const Color.fromARGB(255, 191, 142, 127)),
+                      const Color.fromARGB(255, 182, 183, 183)),
                 ),
                 onPressed: () {}
             ),
@@ -93,7 +85,7 @@ class TheoreticalClasses extends StatelessWidget {
                     textAlign: TextAlign.center),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all<Color>(
-                      const Color.fromARGB(255, 191, 142, 127)),
+                      const Color.fromARGB(255, 201, 202, 202)),
                 ),
                 onPressed: () {}
             ),
