@@ -41,7 +41,7 @@
     <property name="cidr.known.project.marker" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../2Ano/2_Semestre/ES/3LEIC02T5-main" />
+    <property name="last_opened_file_path" value="$USER_HOME$/2Ano/2_Semestre/ES/3LEIC02T5-main" />
     <property name="settings.editor.selected.configurable" value="flutter.settings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
