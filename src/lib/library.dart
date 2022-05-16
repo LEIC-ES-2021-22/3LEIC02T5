@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hello_world/menu.dart';
 
-class Food extends StatelessWidget {
+class Library extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +22,7 @@ class Food extends StatelessWidget {
                 padding: const EdgeInsets.all(9),
                 shape: const CircleBorder()),
           ),
-          ],
+        ],
       ),
       body:
       GridView(
@@ -38,7 +38,7 @@ class Food extends StatelessWidget {
             height: 60,
             width: 250,
             child:ElevatedButton(
-                child: const Text('AEFEUP', style: TextStyle(fontSize: 20),
+                child: const Text('Piso 1', style: TextStyle(fontSize: 20),
                     textAlign: TextAlign.center),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all<Color>(
@@ -50,7 +50,7 @@ class Food extends StatelessWidget {
           SizedBox.fromSize(
             size: Size(60,200),
             child:ElevatedButton(
-                child: const Text('Bar da Biblioteca', style: TextStyle(fontSize: 20),
+                child: const Text('Piso 2', style: TextStyle(fontSize: 20),
                     textAlign: TextAlign.center),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all<Color>(
@@ -63,7 +63,7 @@ class Food extends StatelessWidget {
             height: 60,
             width: 100,
             child:ElevatedButton(
-                child: const Text('Cantina', style: TextStyle(fontSize: 20),
+                child: const Text('Piso 3', style: TextStyle(fontSize: 20),
                     textAlign: TextAlign.center),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all<Color>(
@@ -76,7 +76,7 @@ class Food extends StatelessWidget {
             height: 60,
             width: 100,
             child:ElevatedButton(
-                child: const Text('Restaurante do INEGI', style: TextStyle(fontSize: 20),
+                child: const Text('Piso 4', style: TextStyle(fontSize: 20),
                     textAlign: TextAlign.center),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all<Color>(
@@ -89,7 +89,33 @@ class Food extends StatelessWidget {
             height: 60,
             width: 100,
             child:ElevatedButton(
-                child: const Text('Bar de Minas', style: TextStyle(fontSize: 20),
+                child: const Text('Piso 5', style: TextStyle(fontSize: 20),
+                    textAlign: TextAlign.center),
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all<Color>(
+                      const Color.fromARGB(255, 191, 142, 127)),
+                ),
+                onPressed: () {}
+            ),
+          ),
+          SizedBox(
+            height: 60,
+            width: 100,
+            child:ElevatedButton(
+                child: const Text('Piso 6', style: TextStyle(fontSize: 20),
+                    textAlign: TextAlign.center),
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all<Color>(
+                      const Color.fromARGB(255, 191, 142, 127)),
+                ),
+                onPressed: () {}
+            ),
+          ),
+          SizedBox(
+            height: 60,
+            width: 100,
+            child:ElevatedButton(
+                child: const Text('Piso 7', style: TextStyle(fontSize: 20),
                     textAlign: TextAlign.center),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all<Color>(

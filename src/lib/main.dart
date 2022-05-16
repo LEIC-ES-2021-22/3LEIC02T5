@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'Menu.dart';
+import 'menu.dart';
 
 void main() => runApp(const MyApp());
 
@@ -104,6 +104,6 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         ));
   }
   void _navigateToNextScreen(BuildContext context) {
-    Navigator.of(context).push(MaterialPageRoute(builder: (context) => NewScreen()));
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => Menu()));
   }
 }

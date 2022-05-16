@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:hello_world/food.dart';
+import 'package:hello_world/parking.dart';
+import 'package:hello_world/theoreticalClasses.dart';
+import 'package:hello_world/library.dart';
 
 
-class NewScreen extends StatelessWidget {
+class Menu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,7 +47,7 @@ class NewScreen extends StatelessWidget {
               height: double.maxFinite/2,
               width: double.maxFinite/2,
                 child:ElevatedButton(
-                child: const Text('Food', style: TextStyle(fontSize: 20),
+                child: const Text('Alimentação', style: TextStyle(fontSize: 20),
                     textAlign: TextAlign.center),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all<Color>(
@@ -59,26 +62,30 @@ class NewScreen extends StatelessWidget {
               height: double.maxFinite/2,
               width: double.maxFinite/2,
                 child:ElevatedButton(
-                child: const Text('Parking Lot', style: TextStyle(fontSize: 20),
+                child: const Text('Estacionamento', style: TextStyle(fontSize: 20),
                     textAlign: TextAlign.center),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all<Color>(
                       const Color.fromARGB(255, 218, 203, 190)),
                 ),
-                onPressed: () {}
+                onPressed: () {Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => Parking()),
+                );}
             ),
             ),
             SizedBox(
               height: double.maxFinite/2,
               width: double.maxFinite/2,
                 child:ElevatedButton(
-                child: const Text('Classes', style: TextStyle(fontSize: 20),
+                child: const Text('Aulas Teóricas', style: TextStyle(fontSize: 20),
                     textAlign: TextAlign.center),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all<Color>(
                       const Color.fromARGB(255, 176, 176, 176)),
                 ),
-                onPressed: () {}
+                onPressed: () {Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => TheoreticalClasses()),
+                );}
             ),
             ),
             SizedBox(
@@ -91,7 +98,9 @@ class NewScreen extends StatelessWidget {
                   backgroundColor: MaterialStateProperty.all<Color>(
                       const Color.fromARGB(255, 209, 209, 209)),
                 ),
-                onPressed: () {}
+                onPressed: () {Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => Library()),
+                );}
             ),
             ),
           ],

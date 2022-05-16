@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hello_world/menu.dart';
 
-class Food extends StatelessWidget {
+class Parking extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +22,7 @@ class Food extends StatelessWidget {
                 padding: const EdgeInsets.all(9),
                 shape: const CircleBorder()),
           ),
-          ],
+        ],
       ),
       body:
       GridView(
@@ -38,7 +38,7 @@ class Food extends StatelessWidget {
             height: 60,
             width: 250,
             child:ElevatedButton(
-                child: const Text('AEFEUP', style: TextStyle(fontSize: 20),
+                child: const Text('Parque dos Alunos', style: TextStyle(fontSize: 20),
                     textAlign: TextAlign.center),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all<Color>(
@@ -50,50 +50,11 @@ class Food extends StatelessWidget {
           SizedBox.fromSize(
             size: Size(60,200),
             child:ElevatedButton(
-                child: const Text('Bar da Biblioteca', style: TextStyle(fontSize: 20),
+                child: const Text('Parque dos Professores', style: TextStyle(fontSize: 20),
                     textAlign: TextAlign.center),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all<Color>(
                       const Color.fromARGB( 255, 141, 40,19)),
-                ),
-                onPressed: () {}
-            ),
-          ),
-          SizedBox(
-            height: 60,
-            width: 100,
-            child:ElevatedButton(
-                child: const Text('Cantina', style: TextStyle(fontSize: 20),
-                    textAlign: TextAlign.center),
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all<Color>(
-                      const Color.fromARGB(255, 139, 38, 16)),
-                ),
-                onPressed: () {}
-            ),
-          ),
-          SizedBox(
-            height: 60,
-            width: 100,
-            child:ElevatedButton(
-                child: const Text('Restaurante do INEGI', style: TextStyle(fontSize: 20),
-                    textAlign: TextAlign.center),
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all<Color>(
-                      const Color.fromARGB(255, 191, 142, 127)),
-                ),
-                onPressed: () {}
-            ),
-          ),
-          SizedBox(
-            height: 60,
-            width: 100,
-            child:ElevatedButton(
-                child: const Text('Bar de Minas', style: TextStyle(fontSize: 20),
-                    textAlign: TextAlign.center),
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all<Color>(
-                      const Color.fromARGB(255, 191, 142, 127)),
                 ),
                 onPressed: () {}
             ),
