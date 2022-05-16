@@ -26,7 +26,9 @@ class Food extends StatelessWidget {
 
         ),
         children: <Widget>[
-          SizedBox(
+          Container(
+            margin: EdgeInsets.fromLTRB(10,0,10,0),
+            child : SizedBox(
             height: 60,
             width: 250,
             child:ElevatedButton(
@@ -39,8 +41,10 @@ class Food extends StatelessWidget {
                 onPressed: () {}
             ),
           ),
-          SizedBox.fromSize(
-            size: Size(60,200),
+    ),
+    Container(
+    margin: EdgeInsets.fromLTRB(10,0,10,0),
+    child : SizedBox(
             child:ElevatedButton(
                 child: const Text('Bar da Biblioteca', style: TextStyle(fontSize: 20),
                     textAlign: TextAlign.center),
@@ -51,7 +55,10 @@ class Food extends StatelessWidget {
                 onPressed: () {}
             ),
           ),
-          SizedBox(
+    ),
+            Container(
+            margin: EdgeInsets.fromLTRB(10,0,10,0),
+            child : SizedBox(
             height: 60,
             width: 100,
             child:ElevatedButton(
@@ -64,7 +71,10 @@ class Food extends StatelessWidget {
                 onPressed: () {}
             ),
           ),
-          SizedBox(
+            ),
+            Container(
+            margin: EdgeInsets.fromLTRB(10,0,10,0),
+            child : SizedBox(
             height: 60,
             width: 100,
             child:ElevatedButton(
@@ -77,7 +87,10 @@ class Food extends StatelessWidget {
                 onPressed: () {}
             ),
           ),
-          SizedBox(
+            ),
+            Container(
+            margin: EdgeInsets.fromLTRB(10,0,10,0),
+            child : SizedBox(
             height: 60,
             width: 100,
             child:ElevatedButton(
@@ -90,6 +103,7 @@ class Food extends StatelessWidget {
                 onPressed: () {}
             ),
           ),
+            ),
         ],
       ),
     );
