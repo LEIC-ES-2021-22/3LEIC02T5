@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="442ebc79-b596-43bf-9e32-ff5015d268a2" name="Default Changelist" comment="Cleanup 🧹" />
+    <list default="true" id="442ebc79-b596-43bf-9e32-ff5015d268a2" name="Default Changelist" comment="Cleanup 🧹">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/src/.dart_tool/package_config_subset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/src/.packages" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/android/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/android/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/build/4f2a58af27abc49ecf55570043bbf938.cache.dill.track.dill" beforeDir="false" afterPath="$PROJECT_DIR$/src/build/4f2a58af27abc49ecf55570043bbf938.cache.dill.track.dill" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +27,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feedback-bar" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="27aZsNnS3V8z6UZJGwI8n2RIle9" />
@@ -32,7 +46,7 @@
     <property name="cidr.known.project.marker" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/2Ano/2_Semestre/ES/3LEIC02T5-main" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../2Ano/2_Semestre/ES/3LEIC02T5-main" />
     <property name="settings.editor.selected.configurable" value="flutter.settings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
