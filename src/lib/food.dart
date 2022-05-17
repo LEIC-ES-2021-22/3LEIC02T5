@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hello_world/menu.dart';
 
+import 'lines.dart';
+
 class Food extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -38,7 +40,11 @@ class Food extends StatelessWidget {
                   backgroundColor: MaterialStateProperty.all<Color>(
                       const Color.fromARGB(255, 147, 77, 76)),
                 ),
-                onPressed: () {}
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => Lines()),
+                  );
+                }
             ),
           ),
     ),
