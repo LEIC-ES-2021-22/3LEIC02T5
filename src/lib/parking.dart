@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hello_world/menu.dart';
+import 'package:hello_world/ParkInfo.dart';
 
 class Parking extends StatelessWidget {
   @override
@@ -44,7 +45,8 @@ class Parking extends StatelessWidget {
                   backgroundColor: MaterialStateProperty.all<Color>(
                       const Color.fromARGB(255,107, 0, 0)),
                 ),
-                onPressed: () {}
+                onPressed: () {Navigator.of(context).push(
+               MaterialPageRoute(builder : (context) => ParkInfo()),);}
             ),
           ),
           SizedBox.fromSize(
