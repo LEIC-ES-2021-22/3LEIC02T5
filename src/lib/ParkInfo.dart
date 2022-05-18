@@ -36,12 +36,11 @@ class ParkInfo extends StatelessWidget{
               return Center( child: new CircularProgressIndicator());
             case ConnectionState.done:
               if (snapshot.data != null){
-                Map<String,String> myMap = snapshot.data as Map<String,String>; // transform your snapshot data in map
-                var keysList = myMap.keys.toList(); // getting all keys of your map into a list
-
+                Map<String,String> myMap = snapshot.data as Map<String,String>; // transform the snapshot data in a map
+                var keysList = myMap.keys.toList(); // getting all keys of the map into a list
                 return ListView.builder(
                     itemExtent: 90,
-                    itemCount: myMap.length, // getting map length you can use keyList.length too
+                    itemCount: myMap.length, // getting map length
                     itemBuilder: (BuildContext context, int index) {
                       return ListTile(
                           title: Text(myMap[index] as String),
