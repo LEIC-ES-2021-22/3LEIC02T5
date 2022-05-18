@@ -1,4 +1,5 @@
   import 'package:flutter/material.dart';
+import 'package:hello_world/StudentPark.dart';
   import 'package:hello_world/menu.dart';
 
   class Parking extends StatelessWidget {
@@ -38,7 +39,8 @@
                     backgroundColor: MaterialStateProperty.all<Color>(
                         const Color.fromARGB(255, 182, 163, 148)),
                   ),
-                  onPressed: () {}
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => StudentPark()),);}
               ),
             ),
             ),

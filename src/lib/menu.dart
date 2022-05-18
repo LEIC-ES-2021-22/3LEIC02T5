@@ -56,9 +56,8 @@ class Menu extends StatelessWidget {
                   backgroundColor: MaterialStateProperty.all<Color>(
                       const Color.fromARGB(255, 175, 108, 94)),
                 ),
-                onPressed: () {Navigator.of(context).push(
-                MaterialPageRoute(builder: (context) => Food()),
-                );}
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => Food()),);}
             ),
             ),
             ),
@@ -104,7 +103,7 @@ class Menu extends StatelessWidget {
               height: 900,
               width: 250,
                 child:ElevatedButton(
-                child: const Text('Library', style: TextStyle(fontSize: 19),
+                child: const Text('Biblioteca', style: TextStyle(fontSize: 19),
                     textAlign: TextAlign.center),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all<Color>(
