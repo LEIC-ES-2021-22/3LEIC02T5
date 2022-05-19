@@ -5,8 +5,9 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 const parkingUrl = 'https://sigarra.up.pt/feup/pt/instalacs_geral.ocupacao_parques';
+enum ReadMode {key,value,done}
 class ParkInfo extends StatelessWidget{
-  Future<Map<String,String>> getParkData() async {
+  Future<Map<String,dynamic>> getParkData() async {
     var response = await http.get(Uri.parse(parkingUrl));
     if (response.statusCode == 200) {
       var data = json.decode(response.body);
@@ -16,44 +17,50 @@ class ParkInfo extends StatelessWidget{
       throw Exception('Failed to read $parkingUrl');
     }
   }
-  String mapToStr(Map<String,String> map){
-    String ans = "";
-    map.forEach((key, value) {ans += "$key : $value /n";});
-    return ans;
+  Map<String,String> snapshotToMap(AsyncSnapshot snapshot){
+    String snapshotStr = snapshot.data.toString(), keyStr = "", valueStr ="", char;
+    ReadMode mode = ReadMode.key;
+    Map<String,String> myMap = {};
+    for (int i = 0; i < snapshotStr.length; i++){ //ignora os 8 primeiros carateres porque não interessam
+      char = snapshotStr[i];
+      if (char == "(" || char == ")" || char == "\"" || char == "{" || char == "}" || char == "[" || char == "]" || char == " "){continue;} //ignora estes simbolos
+      else if (char == ":"){mode = ReadMode.value;} //começa a registar values após o : e keys após ,
+      else if (char == ","){
+        mode = ReadMode.key;
+        print("Read key $keyStr with value $valueStr");
+        myMap[keyStr] = valueStr;
+        valueStr = "";
+        keyStr = "";
+      }
+      else{
+        if(mode == ReadMode.key){keyStr += char;}  //ignora espaços
+        else if (mode == ReadMode.value){valueStr += char;}
+      }
+      }
+    return myMap;
   }
-
   @override
   Widget build(BuildContext context){
-    return Container(
-      child: FutureBuilder(
+    return Scaffold(
+        appBar: AppBar(
+          title: Text('Park Info'),
+        ),
+        body: FutureBuilder(
         future: getParkData(),
-        builder: (context, AsyncSnapshot<Map<String,String>> snapshot) {
-          switch( snapshot.connectionState){
-            case ConnectionState.none:
-              return Text("There is no connection");
-            case ConnectionState.active:
-            case ConnectionState.waiting:
-              return Center( child: new CircularProgressIndicator());
-            case ConnectionState.done:
-              if (snapshot.data != null){
-                Map<String,String> myMap = snapshot.data as Map<String,String>; // transform the snapshot data in a map
-                var keysList = myMap.keys.toList(); // getting all keys of the map into a list
-                return ListView.builder(
-                    itemExtent: 90,
-                    itemCount: myMap.length, // getting map length
-                    itemBuilder: (BuildContext context, int index) {
-                      return ListTile(
-                          title: Text(myMap[index] as String),
-                      );
-                    }
-                );
-              }
-              // here your snapshot data is null so SharedPreferences has no data...
-              return Text("No data was loaded from SharedPreferences");
-          }//end switch
-        },
-      ),
+    builder: (_, snapshot){
+    if (snapshot.connectionState == ConnectionState.waiting) {
+    return CircularProgressIndicator();
+    }
+    if (snapshot.hasData) {
+    //return Text(snapshot.data.toString());
+    return Text(snapshotToMap(snapshot)["p1lotacao"].toString());
+    }
+    if (snapshot.hasError) {
+    return Text('There is something wrong: ${snapshot.error}');
+    }
+    return Container();
+    },
+        ),
     );
-
   }
 }
