@@ -1,5 +1,24 @@
 import 'package:flutter/material.dart';
+<<<<<<< Updated upstream
 
+=======
+import 'package:hello_world/main.dart';
+class extends StatelessWidget {
+  // This widget is the root
+  // of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Table',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      debugShowCheckedModeBanner: false,
+    );
+  }
+}
+ 
+>>>>>>> Stashed changes
 class Cantina extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
