@@ -1,5 +1,20 @@
 import 'package:flutter/material.dart';
-
+import 'package:hello_world/main.dart';
+class MyApp extends StatelessWidget {
+  // This widget is the root
+  // of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Table',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      debugShowCheckedModeBanner: false,
+    );
+  }
+}
+ 
 class Cantina extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -23,84 +38,57 @@ class Cantina extends StatelessWidget {
           ),
         ],
       ),
-      body:
-      GridView(
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 1,
-          crossAxisSpacing: 4,
-          mainAxisSpacing: 4,
-          mainAxisExtent:60,
-
+  body: Column(
+        children:<Widget>[
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text("Current Occupancy",textScaleFactor: 2,style: TextStyle(fontWeight:FontWeight.bold),),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Table(
+               
+            textDirection: TextDirection.rtl,
+            defaultVerticalAlignment: TableCellVerticalAlignment.bottom,
+            border:TableBorder.all(width: 2.0,color: Colors.red),
+            children: [
+              TableRow(
+                children: [
+                  Text("",textScaleFactor: 1.5,textAlign: TextAlign.center,),
+                  Text("Sopa",textScaleFactor: 1.5,textAlign: TextAlign.center),
+                ]
+              ),
+               TableRow(
+                children: [
+                  Text("",textScaleFactor: 1.5,textAlign: TextAlign.center),
+                  Text("Carne",textScaleFactor: 1.5,textAlign: TextAlign.center),
+                ]
+              ),
+              TableRow(
+                children: [
+                  Text("",textScaleFactor: 1.5,textAlign: TextAlign.center),
+                  Text("Peixe",textScaleFactor: 1.5,textAlign: TextAlign.center),
+                ]
+              ),
+              TableRow(
+                children: [
+                  Text("",textScaleFactor: 1.5,textAlign: TextAlign.center),
+                  Text("Vegetariano",textScaleFactor: 1.5,textAlign: TextAlign.center),
+                ]
+              ),
+              TableRow(
+                  children: [
+                    Text("",textScaleFactor: 1.5,textAlign: TextAlign.center),
+                    Text("Dieta",textScaleFactor: 1.5,textAlign: TextAlign.center),
+                  ]
+              ),
+            ],
         ),
-        children: <Widget>[
-          SizedBox(
-            height: 60,
-            width: 250,
-            child: ElevatedButton(
-                child: const Text('Piso 1', style: TextStyle(fontSize: 20),
-                    textAlign: TextAlign.center),
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all<Color>(
-                      const Color.fromARGB(255, 107, 0, 0)),
-                ),
-                onPressed: () {}
-            ),
           ),
-          SizedBox(
-            size: Size(60, 200),
-            child: ElevatedButton(
-                child: const Text('Piso 2', style: TextStyle(fontSize: 20),
-                    textAlign: TextAlign.center),
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all<Color>(
-                      const Color.fromARGB(255, 141, 40, 19)),
-                ),
-                onPressed: () {}
-            ),
-          ),
-          SizedBox(
-            height: 60,
-            width: 100,
-            child: ElevatedButton(
-                child: const Text('Piso 3', style: TextStyle(fontSize: 20),
-                    textAlign: TextAlign.center),
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all<Color>(
-                      const Color.fromARGB(255, 139, 38, 16)),
-                ),
-                onPressed: () {}
-            ),
-          ),
-          SizedBox(
-            height: 60,
-            width: 100,
-            child: ElevatedButton(
-                child: const Text('Piso 4', style: TextStyle(fontSize: 20),
-                    textAlign: TextAlign.center),
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all<Color>(
-                      const Color.fromARGB(255, 191, 142, 127)),
-                ),
-                onPressed: () {}
-            ),
-          ),
-          SizedBox(
-            height: 60,
-            width: 100,
-            child: ElevatedButton(
-                child: const Text('Piso 5', style: TextStyle(fontSize: 20),
-                    textAlign: TextAlign.center),
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all<Color>(
-                      const Color.fromARGB(255, 191, 142, 127)),
-                ),
-                onPressed: () {}
-            ),
-          ),
-
-        ],
+        ]
       ),
     );
+  
   }
 
   

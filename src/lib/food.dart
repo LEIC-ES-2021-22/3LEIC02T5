@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_world/cantina.dart';
 import 'package:hello_world/menu.dart';
 
 class Food extends StatelessWidget {
@@ -68,7 +69,9 @@ class Food extends StatelessWidget {
                   backgroundColor: MaterialStateProperty.all<Color>(
                       const Color.fromARGB(255, 176, 118, 105)),
                 ),
-                onPressed: () {}
+                onPressed: () {Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => Cantina()),
+                );}
             ),
           ),
             ),
