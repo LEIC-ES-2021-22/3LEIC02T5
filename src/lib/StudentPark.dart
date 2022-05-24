@@ -28,15 +28,13 @@ class StudentPark extends StatelessWidget {
           height: 2,
           onPressed: () {},
           textColor: const Color.fromARGB(255, 139, 186, 118),
-          child: Row(
+          child: Stack(
+            alignment: Alignment.center,
             children: <Widget>[
-              Text("34",style: TextStyle(fontSize: 37, fontWeight: FontWeight.bold,color: Color.fromARGB(255, 0, 0, 0))),
-              Icon(
-            Icons.circle,
-            size: 250,
-          ),
-        ],
-    ),
+              Icon(Icons.circle, size: 250),
+              Text("34",style: TextStyle(fontSize: 37, fontWeight: FontWeight.bold,color: Color.fromARGB(255, 0, 0, 0)),),
+            ],
+            ),
       ),
       ),
       Container(
