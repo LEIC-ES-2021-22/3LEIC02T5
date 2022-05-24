@@ -7,20 +7,12 @@ class Food extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        toolbarHeight: 150,
         actions: <Widget>[
-          Center(
-            child: MaterialButton(
-                height: 25,
-                onPressed: () {},
-                color: const Color.fromARGB(255, 210, 187, 128),
-                textColor: Colors.white,
-                child: const Icon(
-                  Icons.account_circle,
-                  size: 65,
-                ),
-                padding: const EdgeInsets.all(9),
-                shape: const CircleBorder()),
+          IconButton(
+            alignment: Alignment.topLeft,
+            color: Colors.grey,
+            icon: const Icon(Icons.account_circle, size:40),
+            onPressed: () {},
           ),
           ],
       ),
@@ -34,7 +26,9 @@ class Food extends StatelessWidget {
 
         ),
         children: <Widget>[
-          SizedBox(
+          Container(
+            margin: EdgeInsets.fromLTRB(10,0,10,0),
+            child : SizedBox(
             height: 60,
             width: 250,
             child:ElevatedButton(
@@ -42,24 +36,29 @@ class Food extends StatelessWidget {
                     textAlign: TextAlign.center),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all<Color>(
-                      const Color.fromARGB(255,107, 0, 0)),
+                      const Color.fromARGB(255, 147, 77, 76)),
                 ),
                 onPressed: () {}
             ),
           ),
-          SizedBox.fromSize(
-            size: Size(60,200),
+    ),
+    Container(
+    margin: EdgeInsets.fromLTRB(10,0,10,0),
+    child : SizedBox(
             child:ElevatedButton(
                 child: const Text('Bar da Biblioteca', style: TextStyle(fontSize: 20),
                     textAlign: TextAlign.center),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all<Color>(
-                      const Color.fromARGB( 255, 141, 40,19)),
+                      const Color.fromARGB( 255, 171, 105, 90)),
                 ),
                 onPressed: () {}
             ),
           ),
-          SizedBox(
+    ),
+            Container(
+            margin: EdgeInsets.fromLTRB(10,0,10,0),
+            child : SizedBox(
             height: 60,
             width: 100,
             child:ElevatedButton(
@@ -67,14 +66,17 @@ class Food extends StatelessWidget {
                     textAlign: TextAlign.center),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all<Color>(
-                      const Color.fromARGB(255, 139, 38, 16)),
+                      const Color.fromARGB(255, 176, 118, 105)),
                 ),
                 onPressed: () {Navigator.of(context).push(
                   MaterialPageRoute(builder: (context) => Cantina()),
                 );}
             ),
           ),
-          SizedBox(
+            ),
+            Container(
+            margin: EdgeInsets.fromLTRB(10,0,10,0),
+            child : SizedBox(
             height: 60,
             width: 100,
             child:ElevatedButton(
@@ -82,12 +84,15 @@ class Food extends StatelessWidget {
                     textAlign: TextAlign.center),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all<Color>(
-                      const Color.fromARGB(255, 191, 142, 127)),
+                      const Color.fromARGB(255, 197, 162, 150)),
                 ),
                 onPressed: () {}
             ),
           ),
-          SizedBox(
+            ),
+            Container(
+            margin: EdgeInsets.fromLTRB(10,0,10,0),
+            child : SizedBox(
             height: 60,
             width: 100,
             child:ElevatedButton(
@@ -95,11 +100,12 @@ class Food extends StatelessWidget {
                     textAlign: TextAlign.center),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all<Color>(
-                      const Color.fromARGB(255, 191, 142, 127)),
+                      const Color.fromARGB(255, 212, 186, 178)),
                 ),
                 onPressed: () {}
             ),
           ),
+            ),
         ],
       ),
     );

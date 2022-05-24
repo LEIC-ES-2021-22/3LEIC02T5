@@ -1,66 +1,67 @@
-import 'package:flutter/material.dart';
-import 'package:hello_world/menu.dart';
+  import 'package:flutter/material.dart';
+import 'package:hello_world/StudentPark.dart';
+  import 'package:hello_world/menu.dart';
 
-class Parking extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        toolbarHeight: 150,
-        actions: <Widget>[
-          Center(
-            child: MaterialButton(
-                height: 25,
-                onPressed: () {},
-                color: const Color.fromARGB(255, 210, 187, 128),
-                textColor: Colors.white,
-                child: const Icon(
-                  Icons.account_circle,
-                  size: 65,
-                ),
-                padding: const EdgeInsets.all(9),
-                shape: const CircleBorder()),
-          ),
-        ],
-      ),
-      body:
-      GridView(
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 1,
-          crossAxisSpacing: 7,
-          mainAxisSpacing: 7,
-          mainAxisExtent: 100,
-
+  class Parking extends StatelessWidget {
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          actions: <Widget>[
+            IconButton(
+              alignment: Alignment.topLeft,
+              color: Colors.grey,
+              icon: const Icon(Icons.account_circle, size:40),
+              onPressed: () {},
+            ),
+          ],
         ),
-        children: <Widget>[
-          SizedBox(
-            height: 60,
-            width: 250,
-            child:ElevatedButton(
-                child: const Text('Parque dos Alunos', style: TextStyle(fontSize: 20),
-                    textAlign: TextAlign.center),
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all<Color>(
-                      const Color.fromARGB(255,107, 0, 0)),
-                ),
-                onPressed: () {}
-            ),
+        body:
+        GridView(
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 1,
+            crossAxisSpacing: 7,
+            mainAxisSpacing: 7,
+            mainAxisExtent: 300,
+
           ),
-          SizedBox.fromSize(
-            size: Size(60,200),
-            child:ElevatedButton(
-                child: const Text('Parque dos Professores', style: TextStyle(fontSize: 20),
-                    textAlign: TextAlign.center),
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all<Color>(
-                      const Color.fromARGB( 255, 141, 40,19)),
-                ),
-                onPressed: () {}
+          children: <Widget>[
+            Container(
+              margin: EdgeInsets.fromLTRB(10,0,10,0),
+              child : SizedBox(
+                height: 60,
+                width: 250,
+              child:ElevatedButton(
+                  child: const Text('Parque dos Alunos', style: TextStyle(fontSize: 20),
+                      textAlign: TextAlign.center),
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(
+                        const Color.fromARGB(255, 182, 163, 148)),
+                  ),
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => StudentPark()),);}
+              ),
             ),
-          ),
-        ],
-      ),
-    );
+            ),
+            Container(
+              margin: EdgeInsets.fromLTRB(10,0,10,0),
+              child : SizedBox(
+                height: 60,
+                width: 250,
+              child:ElevatedButton(
+                  child: const Text('Parque dos Professores', style: TextStyle(fontSize: 20),
+                      textAlign: TextAlign.center),
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(
+                        const Color.fromARGB( 255, 160, 133, 107)),
+                  ),
+                  onPressed: () {}
+              ),
+            ),
+           ),
+          ],
+        ),
+      );
+    }
   }
-}

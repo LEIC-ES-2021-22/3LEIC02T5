@@ -7,20 +7,12 @@ class Library extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        toolbarHeight: 150,
         actions: <Widget>[
-          Center(
-            child: MaterialButton(
-                height: 25,
-                onPressed: () {},
-                color: const Color.fromARGB(255, 210, 187, 128),
-                textColor: Colors.white,
-                child: const Icon(
-                  Icons.account_circle,
-                  size: 65,
-                ),
-                padding: const EdgeInsets.all(9),
-                shape: const CircleBorder()),
+          IconButton(
+            alignment: Alignment.topLeft,
+            color: Colors.grey,
+            icon: const Icon(Icons.account_circle, size:40),
+            onPressed: () {},
           ),
         ],
       ),

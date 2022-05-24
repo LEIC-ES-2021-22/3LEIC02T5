@@ -15,12 +15,13 @@ class Menu extends StatelessWidget {
           IconButton(
             alignment: Alignment.topLeft,
             color: Colors.grey,
-            icon: const Icon(Icons.account_circle, size:50),
+            icon: const Icon(Icons.account_circle, size:40),
             onPressed: () {},
       ),
       ],
       ),
-      floatingActionButton: Center(
+      floatingActionButton: Container(
+        margin:EdgeInsets.fromLTRB(0,0,0,MediaQuery.of(context).size.height/2.8),
         child: MaterialButton(
             height: 2,
             onPressed: () {},
@@ -28,7 +29,7 @@ class Menu extends StatelessWidget {
             textColor: Colors.white,
             child: const Icon(
               Icons.star,
-              size: 65,
+              size: 40,
             ),
             padding: const EdgeInsets.all(30),
             shape: const CircleBorder()),
@@ -37,32 +38,36 @@ class Menu extends StatelessWidget {
       GridView(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
-            crossAxisSpacing: 7,
-            mainAxisSpacing: 7,
-            mainAxisExtent: 300,
+            crossAxisSpacing: 10,
+            mainAxisSpacing: 10,
+            mainAxisExtent: 350,
 
           ),
           children: <Widget>[
-            SizedBox(
+            Container(
+              margin: EdgeInsets.fromLTRB(10,20,0,0),
+            child : SizedBox(
               height: double.maxFinite/2,
               width: double.maxFinite/2,
                 child:ElevatedButton(
-                child: const Text('Alimentação', style: TextStyle(fontSize: 20),
+                child: const Text('Alimentação', style: TextStyle(fontSize: 19),
                     textAlign: TextAlign.center),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all<Color>(
                       const Color.fromARGB(255, 175, 108, 94)),
                 ),
-                onPressed: () {Navigator.of(context).push(
-                MaterialPageRoute(builder: (context) => Food()),
-                );}
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => Food()),);}
             ),
             ),
-            SizedBox(
+            ),
+            Container(
+            margin: EdgeInsets.fromLTRB(0,20,10,0),
+            child: SizedBox(
               height: double.maxFinite/2,
               width: double.maxFinite/2,
                 child:ElevatedButton(
-                child: const Text('Estacionamento', style: TextStyle(fontSize: 20),
+                child: const Text('Estacionamento', style: TextStyle(fontSize: 19),
                     textAlign: TextAlign.center),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all<Color>(
@@ -73,11 +78,14 @@ class Menu extends StatelessWidget {
                 );}
             ),
             ),
-            SizedBox(
+            ),
+            Container(
+            margin: EdgeInsets.fromLTRB(10,0,0,0),
+            child : SizedBox(
               height: double.maxFinite/2,
               width: double.maxFinite/2,
                 child:ElevatedButton(
-                child: const Text('Aulas Teóricas', style: TextStyle(fontSize: 20),
+                child: const Text('Aulas Teóricas', style: TextStyle(fontSize: 19),
                     textAlign: TextAlign.center),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all<Color>(
@@ -88,11 +96,14 @@ class Menu extends StatelessWidget {
                 );}
             ),
             ),
-            SizedBox(
+            ),
+            Container(
+            margin: EdgeInsets.fromLTRB(0,0,10,0),
+            child : SizedBox(
               height: 900,
               width: 250,
                 child:ElevatedButton(
-                child: const Text('Library', style: TextStyle(fontSize: 20),
+                child: const Text('Biblioteca', style: TextStyle(fontSize: 19),
                     textAlign: TextAlign.center),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all<Color>(
@@ -100,7 +111,9 @@ class Menu extends StatelessWidget {
                 ),
                 onPressed: () {Navigator.of(context).push(
                   MaterialPageRoute(builder: (context) => Library()),
-                );}
+                );
+                }
+                ),
             ),
             ),
           ],
