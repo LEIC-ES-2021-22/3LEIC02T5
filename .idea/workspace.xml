@@ -13,6 +13,7 @@
       <change beforePath="$PROJECT_DIR$/src/lib/cantina.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/cantina.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/feedback_provider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/feedback_provider.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/food.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/food.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/ParkInfo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/ParkInfo.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
