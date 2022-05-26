@@ -5,15 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="442ebc79-b596-43bf-9e32-ff5015d268a2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/teacherPark.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/.dart_tool/package_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/src/.packages" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/build/4f2a58af27abc49ecf55570043bbf938.cache.dill.track.dill" beforeDir="false" afterPath="$PROJECT_DIR$/src/build/4f2a58af27abc49ecf55570043bbf938.cache.dill.track.dill" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/cantina.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/cantina.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/feedback_provider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/feedback_provider.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/food.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/food.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/ParkInfo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/ParkInfo.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ios/Runner/GeneratedPluginRegistrant.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/ios/Runner/GeneratedPluginRegistrant.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ios/Runner/GeneratedPluginRegistrant.m" beforeDir="false" afterPath="$PROJECT_DIR$/src/ios/Runner/GeneratedPluginRegistrant.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/ParkInfo.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/StudentPark.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/studentPark.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/parking.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/parking.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,9 +37,6 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedIndex" value="1" />
-  </component>
   <component name="ProjectId" id="27aZsNnS3V8z6UZJGwI8n2RIle9" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -50,12 +49,13 @@
     <property name="cidr.known.project.marker" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../2Ano/2_Semestre/ES/3LEIC02T5-main" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="flutter.settings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Aulas FEUP\Documents\GitHub\3LEIC02T5\src\lib" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
