@@ -20,6 +20,17 @@
 
 ## Did Well
 
+- We managed to develop more functionality in this iteration than in the previous one, focusing more on the app functioning than in its design.
+- The code used to read from the Parking Lot API ended up being relatively simple and can be adapted to other API's we may need to read from in development.
+- Despite not focusing so much in it, the app's interface is also relatively well designed.
+- We managed to quickly make decisions about some details that weren't decided until now about the way the app works.
+
 ## Do Differently
 
+- We should develop more tests from now on, since we are implementing the main features of the app.
+- We need to be a bit quicker developing code and implementing features.
+
 ## Puzzles
+
+- We are still a bit confused when it comes to testing, especially about the automated acceptance tests, because our app doesn't have a lot of functionality so far.
+- We still need to figure out how to integrate our app inside Uni.
