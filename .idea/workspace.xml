@@ -5,18 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="442ebc79-b596-43bf-9e32-ff5015d268a2" name="Default Changelist" comment="Cleanup">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/.dart_tool/package_config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/src/.dart_tool/package_config_subset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.dart_tool/version" beforeDir="false" afterPath="$PROJECT_DIR$/src/.dart_tool/version" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/src/.packages" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/android/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/android/local.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ios/Runner/GeneratedPluginRegistrant.m" beforeDir="false" afterPath="$PROJECT_DIR$/src/ios/Runner/GeneratedPluginRegistrant.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/build/4f2a58af27abc49ecf55570043bbf938.cache.dill.track.dill" beforeDir="false" afterPath="$PROJECT_DIR$/src/build/4f2a58af27abc49ecf55570043bbf938.cache.dill.track.dill" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/cantina.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/cantina.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/parking.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/parking.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/studentPark.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/studentPark.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/teacherPark.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/teacherPark.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
