@@ -65,13 +65,8 @@ class TeacherPark extends StatelessWidget {
           }
           if (snapshot.hasData) {
             //return Text(snapshot.data.toString());
-            return GridView(
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 1,
-                crossAxisSpacing: 0,
-                mainAxisSpacing: 200,
-                mainAxisExtent: 100,
-              ),
+            return Column(
+              mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 Container( margin:EdgeInsets.fromLTRB(0,0,0,0),
                   child: MaterialButton(
@@ -81,23 +76,25 @@ class TeacherPark extends StatelessWidget {
                     child: Stack(
                       alignment: Alignment.center,
                       children: <Widget>[
-                        Icon(Icons.circle, size: 250),
-                        Text(snapshotToMap(snapshot)["p3livres"].toString() + " / " + snapshotToMap(snapshot)["p3lotacao"].toString(),
-                          style: TextStyle(fontSize: 37,
+                        Icon(Icons.circle, size: 300),
+                        Padding( padding: EdgeInsets.fromLTRB(0,0,0,0),
+                        child : Text(snapshotToMap(snapshot)["p1livres"].toString(),/* + " / " + snapshotToMap(snapshot)["p1lotacao"].toString(),*/
+                          style: TextStyle(fontSize: 90,
                               fontWeight: FontWeight.bold,
                               color: Color.fromARGB(255, 0, 0, 0)
                           ),
                         ),
-                      ],
+                        )],
                     ),
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.fromLTRB(50,0,0,50),
+                  margin: EdgeInsets.fromLTRB(50,0,50,20),
                   child: Text("Available Spots",
                     style: TextStyle(fontSize: 37, fontWeight: FontWeight.bold),
                   ),
-                )],
+                ),
+                Image.asset('assets/images/park.png', height: 300,width: 300),],
             );
           }
           if (snapshot.hasError) {
