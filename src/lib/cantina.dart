@@ -1,7 +1,10 @@
 import 'dart:ui';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hello_world/main.dart';
+import 'dart:async';
+import 'package:flutter/material.dart';
 
 void main() => runApp(const Cantina());
 
@@ -31,6 +34,8 @@ class MyStatefulWidget extends StatefulWidget {
 
 class _MyStatefulWidgetState extends State<MyStatefulWidget>
     with TickerProviderStateMixin {
+  double _downloadPercentage = 0,value= 0;
+  int count1 = 0, count2 = 0; //false
   late AnimationController controller;
 
   @override
@@ -39,9 +44,38 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget>
       vsync: this,
       duration: const Duration(seconds: 5),
     )..addListener(() {
-        setState(() {});
+        setState(() {
+          _handleReactions();
+        });
       });
     controller.repeat();
+  }
+
+/*
+  void determinateIndicator() {
+    new Timer.periodic(const Duration(seconds: 2), (Timer timer) {
+      setState(() {
+        if (_downloadPercentage == 1) {
+          timer.cancel();
+        } else {
+          _downloadPercentage = _downloadPercentage + 0.1;
+        }
+      });
+    });
+  }
+*/
+  void _handleReactions() {
+    Timer.periodic(const Duration(seconds: 2), (Timer timer) {
+      setState(() {
+        while(_downloadPercentage < 1.0 && _downloadPercentage > 0.0){
+          if (count1 - count2 > 25) {
+            _downloadPercentage = ((count1 - count2) * 0.1) / 0.25;
+          } else if (count1 - count2 <= 0) {
+            _downloadPercentage = _downloadPercentage - 0.1;
+        }
+          _downloadPercentage = value;
+      });
+    });
   }
 
   @override
@@ -60,26 +94,47 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget>
         ],
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
+          Container(
+            alignment: Alignment.topCenter,
+            child: const Text(
+              'Current Occupancy',
+              style: TextStyle(fontSize: 20),
+            ),
+          ),
+          Container(
+            alignment: Alignment.topCenter,
+            child: SizedBox(
+              width: 300,
+              child: LinearProgressIndicator(
+                minHeight: 40,
+                backgroundColor: Colors.grey,
+                value: _downloadPercentage,
+              ),
+            ),
+          ),
           SizedBox(
             height: queryData.size.height * 0.1,
           ),
-          const Text(
-            'Current Occupancy',
-            style: TextStyle(fontSize: 20),
-          ),
-          LinearProgressIndicator(
-            backgroundColor: Colors.grey,
-            value: controller.value,
-            semanticsLabel: 'Linear progress indicator',
-          ),
+          Container(
+              alignment: Alignment.topCenter,
+              child: const Text(
+                'Do you agree?',
+                style: TextStyle(fontSize: 20),
+              )),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               MaterialButton(
-                onPressed: () {},
+                onPressed: () {
+                  while (count1 - count2 < 25 && count1 - count2 > 0) {
+                    count1++;
+                  }
+                  _handleReactions();
+                  setState(() {});
+                },
                 textColor: const Color.fromARGB(255, 139, 186, 118),
                 child: Stack(
                   alignment: Alignment.topCenter,
@@ -89,7 +144,13 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget>
                 ),
               ),
               MaterialButton(
-                onPressed: () {},
+                onPressed: () {
+                  while (count1 - count2 < 25 && count1 - count2 > 0) {
+                    count2++;
+                  }
+                  _handleReactions();
+                  setState(() {});
+                },
                 textColor: const Color.fromARGB(255, 139, 186, 118),
                 child: Stack(
                   alignment: Alignment.topCenter,
@@ -97,6 +158,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget>
                     Icon(Icons.sentiment_dissatisfied_outlined, size: 50),
                   ],
                 ),
+              ),
+              SizedBox(
+                height: queryData.size.height * 0.1,
               ),
             ],
           ),
