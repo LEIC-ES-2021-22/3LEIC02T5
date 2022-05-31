@@ -18,6 +18,9 @@ For FEUP students who don't want to wait in lines, LineScape is an app that uses
 
 ## Required API's
 
+- Parking Lot API (already in use)
+- Library Floors API (not available)
+- Canteen Menu API (implementing...)
 
 ## Members
 Ana Catarina Novais da Silva - up202004380 <br>
