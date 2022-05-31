@@ -32,8 +32,8 @@ file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/collection-1.15.0/
 file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/collection-1.15.0/lib/
 convert
 2.12
-file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/convert-3.0.1/
-file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/convert-3.0.1/lib/
+file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/convert-3.0.2/
+file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/convert-3.0.2/lib/
 crypto
 2.12
 file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/crypto-3.0.1/
@@ -66,6 +66,10 @@ http_parser
 2.12
 file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/http_parser-4.0.1/
 file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/http_parser-4.0.1/lib/
+intl
+2.12
+file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/intl-0.17.0/
+file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/intl-0.17.0/lib/
 lints
 2.12
 file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/lints-1.0.1/
