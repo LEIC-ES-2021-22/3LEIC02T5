@@ -3,6 +3,7 @@ import 'package:hello_world/teacherPark.dart';
 import 'package:flutter/material.dart';
 import 'package:hello_world/menu.dart';
 enum ChosenPark {student,teacher}
+enum ReadMode {key,value,done}
 class Parking extends StatelessWidget {
     @override
     Widget build(BuildContext context) {

@@ -4,8 +4,41 @@ import 'package:flutter/material.dart';
 import 'package:hello_world/main.dart';
 
 void main() => runApp(const Cantina());
-
+const canteenURL = "https://sigarra.up.pt/feup/pt/mob_eme_geral.cantinas";
+enum ReadMode {key,value,done}
 class Cantina extends StatelessWidget {
+  Future<Map<String,dynamic>> getCanteenData() async {
+    var response = await http.get(Uri.parse(canteenURL));
+    if (response.statusCode == 200) {
+      var data = json.decode(response.body);
+      var parkInfo = data["itdc"][0]["resposta"];
+      return parkInfo;
+    } else {
+      throw Exception('Failed to read $canteenURL');
+    }
+  }
+  Map<String,String> snapshotToMap(AsyncSnapshot snapshot){
+    String snapshotStr = snapshot.data.toString(), keyStr = "", valueStr ="", char;
+    ReadMode mode = ReadMode.key;
+    Map<String,String> myMap = {};
+    for (int i = 0; i < snapshotStr.length; i++){ //ignora os 8 primeiros carateres porque não interessam
+      char = snapshotStr[i];
+      if (char == "(" || char == ")" || char == "\"" || char == "{" || char == "}" || char == "[" || char == "]" || char == " "){continue;} //ignora estes simbolos
+      else if (char == ":"){mode = ReadMode.value;} //começa a registar values após o : e keys após ,
+      else if (char == ","){
+        mode = ReadMode.key;
+        print("Read key $keyStr with value $valueStr");
+        myMap[keyStr] = valueStr;
+        valueStr = "";
+        keyStr = "";
+      }
+      else{
+        if(mode == ReadMode.key){keyStr += char;}  //ignora espaços
+        else if (mode == ReadMode.value){valueStr += char;}
+      }
+    }
+    return myMap;
+  }
   // This widget is the root
   // of your application.
   const Cantina({Key? key}) : super(key: key);
