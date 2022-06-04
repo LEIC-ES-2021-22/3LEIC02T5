@@ -74,8 +74,11 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget>
             _downloadPercentage = _downloadPercentage - 0.1;
         }
           _downloadPercentage = value;
-      });
-    });
+      }
+    }
+      );
+  },
+    );
   }
 
   @override

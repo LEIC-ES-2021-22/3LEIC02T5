@@ -1,9 +1,9 @@
 #!/bin/sh
 # This is a generated file; do not edit or check into version control.
-export "FLUTTER_ROOT=/Users/user/Desktop/2ºano/semestre2/ES/flutter"
-export "FLUTTER_APPLICATION_PATH=/Users/user/Desktop/3LEIC02T5/src"
+export "FLUTTER_ROOT=/Users/ana/Desktop/es/flutter"
+export "FLUTTER_APPLICATION_PATH=/Users/ana/Desktop/es/3LEIC02T5/src"
 export "COCOAPODS_PARALLEL_CODE_SIGN=true"
-export "FLUTTER_TARGET=/Users/user/Desktop/3LEIC02T5/src/lib/main.dart"
+export "FLUTTER_TARGET=/Users/ana/Desktop/es/3LEIC02T5/src/lib/main.dart"
 export "FLUTTER_BUILD_DIR=build"
 export "FLUTTER_BUILD_NAME=1.0.0"
 export "FLUTTER_BUILD_NUMBER=1"
@@ -11,4 +11,4 @@ export "DART_DEFINES=Zmx1dHRlci5pbnNwZWN0b3Iuc3RydWN0dXJlZEVycm9ycz10cnVl,RkxVVF
 export "DART_OBFUSCATION=false"
 export "TRACK_WIDGET_CREATION=true"
 export "TREE_SHAKE_ICONS=false"
-export "PACKAGE_CONFIG=/Users/user/Desktop/3LEIC02T5/src/.dart_tool/package_config.json"
+export "PACKAGE_CONFIG=/Users/ana/Desktop/es/3LEIC02T5/src/.dart_tool/package_config.json"
