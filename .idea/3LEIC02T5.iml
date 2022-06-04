@@ -11,6 +11,15 @@
       <excludeFolder url="file://$MODULE_DIR$/LineScape_App-main/build" />
       <excludeFolder url="file://$MODULE_DIR$/LineScape_App-main/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/LineScape_App-main/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/src/ios/.symlinks/plugins/integration_test/integration_test_macos/build" />
+      <excludeFolder url="file://$MODULE_DIR$/src/ios/.symlinks/plugins/integration_test/integration_test_macos/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/src/ios/.symlinks/plugins/integration_test/integration_test_macos/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/src/ios/.symlinks/plugins/integration_test/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/src/ios/.symlinks/plugins/integration_test/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/src/ios/.symlinks/plugins/integration_test/build" />
+      <excludeFolder url="file://$MODULE_DIR$/src/ios/.symlinks/plugins/integration_test/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/src/ios/.symlinks/plugins/integration_test/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/src/ios/.symlinks/plugins/integration_test/example/.pub" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -89,14 +89,14 @@
         <entry key="flutter">
           <value>
             <list>
-              <option value="$USER_HOME$/fluttter_recente/flutter/packages/flutter/lib" />
+              <option value="$PROJECT_DIR$/../flutter/packages/flutter/lib" />
             </list>
           </value>
         </entry>
         <entry key="flutter_driver">
           <value>
             <list>
-              <option value="$USER_HOME$/fluttter_recente/flutter/packages/flutter_driver/lib" />
+              <option value="$PROJECT_DIR$/../flutter/packages/flutter_driver/lib" />
             </list>
           </value>
         </entry>
@@ -117,14 +117,14 @@
         <entry key="flutter_test">
           <value>
             <list>
-              <option value="$USER_HOME$/fluttter_recente/flutter/packages/flutter_test/lib" />
+              <option value="$PROJECT_DIR$/../flutter/packages/flutter_test/lib" />
             </list>
           </value>
         </entry>
         <entry key="fuchsia_remote_debug_protocol">
           <value>
             <list>
-              <option value="$USER_HOME$/fluttter_recente/flutter/packages/fuchsia_remote_debug_protocol/lib" />
+              <option value="$PROJECT_DIR$/../flutter/packages/fuchsia_remote_debug_protocol/lib" />
             </list>
           </value>
         </entry>
@@ -145,7 +145,7 @@
         <entry key="integration_test">
           <value>
             <list>
-              <option value="$USER_HOME$/fluttter_recente/flutter/packages/integration_test/lib" />
+              <option value="$PROJECT_DIR$/../flutter/packages/integration_test/lib" />
             </list>
           </value>
         </entry>
@@ -208,7 +208,7 @@
         <entry key="sky_engine">
           <value>
             <list>
-              <option value="$USER_HOME$/fluttter_recente/flutter/bin/cache/pkg/sky_engine/lib" />
+              <option value="$PROJECT_DIR$/../flutter/bin/cache/pkg/sky_engine/lib" />
             </list>
           </value>
         </entry>
