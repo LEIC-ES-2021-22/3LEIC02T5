@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hello_world/food.dart';
+import 'package:hello_world/foodList.dart';
 import 'package:hello_world/parkList.dart';
 import 'package:hello_world/theoreticalClasses.dart';
 import 'package:hello_world/library.dart';
@@ -57,7 +57,7 @@ class Menu extends StatelessWidget {
                       const Color.fromARGB(255, 175, 108, 94)),
                 ),
                 onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => Food()),);}
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => FoodList()),);}
             ),
             ),
             ),
@@ -74,7 +74,7 @@ class Menu extends StatelessWidget {
                       const Color.fromARGB(255, 218, 203, 190)),
                 ),
                 onPressed: () {Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => Parking()),
+                  MaterialPageRoute(builder: (context) => ParkList()),
                 );}
             ),
             ),

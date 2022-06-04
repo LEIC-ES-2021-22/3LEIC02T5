@@ -1,59 +1,62 @@
 import 'dart:ui';
 import 'dart:convert';
 
+import 'package:hello_world/foodList.dart';
 import 'package:hello_world/menu.dart';
 import 'package:flutter/material.dart';
 import 'package:hello_world/main.dart';
 import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
 
-void main() => runApp(const Cantina());
 const canteenURL = "https://sigarra.up.pt/feup/pt/mob_eme_geral.cantinas";
-const canteenIndex = 3;
-enum ReadMode {key,value,done}
-class Cantina extends StatelessWidget {
-  // This widget is the root
-  // of your application.
-  const Cantina({Key? key}) : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Table',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: MyStatefulWidget(),
-      debugShowCheckedModeBanner: false,
-    );
-  }
-}
-
-class MyStatefulWidget extends StatefulWidget {
-  const MyStatefulWidget({Key? key}) : super(key: key);
-
-  @override
-  State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
-}
-
-class _MyStatefulWidgetState extends State<MyStatefulWidget>
-    with TickerProviderStateMixin {
-  late AnimationController controller;
-
-  @override
-  void initState() {
-    controller = AnimationController(
-      vsync: this,
-      duration: const Duration(seconds: 5),
-    )..addListener(() {
-        setState(() {});
-      });
-    controller.repeat();
+class FoodSpotWithMenu extends StatelessWidget{
+  int getIndex(){
+    if(type == FoodType.AEFEUP) return -1;
+    else if (type == FoodType.cantina) return 3;
+    else if (type == FoodType.restFEUP) return 1;
+    else if (type == FoodType.restINEGI) return 2;
+    else if (type == FoodType.grill) return 0;
+    else return -2;
   }
 
-  List<Map<String,dynamic>> snapshotToList(AsyncSnapshot snapshot){
-    List<Map<String,dynamic>> myMap = snapshot.data as List<Map<String,dynamic>>;
+  List<String> snapshotToList(AsyncSnapshot snapshot){
+    List<String> myMap = snapshot.data as List<String>;
     return myMap;
   }
+
+  Map<String,dynamic> getMap(AsyncSnapshot snapshot){
+    return snapshotToList(snapshot)[getIndex()] as Map<String,dynamic>;
+  }
+
+  String locateDish(Map<String,dynamic> data, String foodtypeValue){
+    Map<String,dynamic> today_menu = {};
+    bool menu_found = false;
+    for(var menu in data["ementas"]){
+      if (menu["data"] == getCurrentDate()){
+        today_menu = menu["data"];
+        menu_found = true;
+      }
+    }
+    if (!menu_found) return "Informação Indisponível";
+    for(var dish in today_menu["pratos"]){
+      if (dish["tipo_descr"] == foodtypeValue){
+        return dish["descricao"];
+      }
+    }
+    return "Informação Indisponível";
+  }
+
+  Future<List<Map<String,dynamic>>> getCanteenData() async {
+    var response = await http.get(Uri.parse(canteenURL));
+    if (response.statusCode == 200) {
+      var data = json.decode(response.body);
+      var canteenInfo = data;
+      return canteenInfo;
+    } else {
+      throw Exception('Failed to read $canteenURL');
+    }
+  }
+
 
   String getCurrentDate(){
     print("Getting Current Date...\n");
@@ -63,38 +66,6 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget>
     date = formatter.format(dateDT);
     print("Date Obtained.\n");
     return date;
-  }
-
-  String locateDish(List<Map<String,dynamic>> data, String foodtypeValue){
-    print("Getting Dish of Type '" + foodtypeValue + "' for date " + getCurrentDate() + "\n");
-    String date = getCurrentDate();
-    Map<String,dynamic> todayMenu = {};
-    for(var menu in data[canteenIndex]["ementas"]){
-      if(menu["data"] == date) {
-        todayMenu = menu;
-        break;
-      }
-      else continue;
-    }
-    if(todayMenu.keys.length == 0 || todayMenu["pratos"].keys.length == 0) return "Informação Indisponível";
-    for(var dish in todayMenu["pratos"]){
-      if(dish["tipo_descr"] == foodtypeValue){
-        return dish["descricao"];
-      }
-      else continue;
-    }
-    return "Informação Indisponível";
-  }
-
-  Future<List<Map<String,dynamic>>> getCanteenData() async {
-    var response = await http.get(Uri.parse(canteenURL));
-    if (response.statusCode == 200) {
-      var data = json.decode(response.body);
-      var canteenInfo = data as Future<List<Map<String,dynamic>>>;
-      return canteenInfo;
-    } else {
-      throw Exception('Failed to read $canteenURL');
-    }
   }
 
   @override
@@ -172,23 +143,23 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget>
                   children: [
                     TableRow(children: [
                       Text("Sopa", textScaleFactor: 1.5, textAlign: TextAlign.center),
-                      Text(locateDish(snapshotToList(snapshot), "Sopa"), textScaleFactor: 1.5, textAlign: TextAlign.center),
+                      Text(locateDish(getMap(snapshot), "Sopa"), textScaleFactor: 1.5, textAlign: TextAlign.center),
                     ]),
                     TableRow(children: [
                       Text("Carne", textScaleFactor: 1.5, textAlign: TextAlign.center),
-                      Text(locateDish(snapshotToList(snapshot), "Carne"), textScaleFactor: 1.5, textAlign: TextAlign.center),
+                      Text(locateDish(getMap(snapshot), "Carne"), textScaleFactor: 1.5, textAlign: TextAlign.center),
                     ]),
                     TableRow(children: [
                       Text("Peixe", textScaleFactor: 1.5, textAlign: TextAlign.center),
-                      Text(locateDish(snapshotToList(snapshot), "Peixe"), textScaleFactor: 1.5, textAlign: TextAlign.center),
+                      Text(locateDish(getMap(snapshot), "Peixe"), textScaleFactor: 1.5, textAlign: TextAlign.center),
                     ]),
                     TableRow(children: [
                       Text("Vegetariano", textScaleFactor: 1.5, textAlign: TextAlign.center),
-                      Text(locateDish(snapshotToList(snapshot), "Sopa"), textScaleFactor: 1.5, textAlign: TextAlign.center),
+                      Text(locateDish(getMap(snapshot), "Sopa"), textScaleFactor: 1.5, textAlign: TextAlign.center),
                     ]),
                     TableRow(children: [
                       Text("Dieta", textScaleFactor: 1.5, textAlign: TextAlign.center),
-                      Text(locateDish(snapshotToList(snapshot), "Dieta"), textScaleFactor: 1.5, textAlign: TextAlign.center),
+                      Text(locateDish(getMap(snapshot), "Dieta"), textScaleFactor: 1.5, textAlign: TextAlign.center),
                     ]),
                   ],
                 ),

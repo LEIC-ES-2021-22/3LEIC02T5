@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:hello_world/menu.dart';
 enum ChosenPark {student,teacher}
 ChosenPark park = ChosenPark.student;
-class Parking extends StatelessWidget {
+class ParkList extends StatelessWidget {
     @override
     Widget build(BuildContext context) {
       return Scaffold(
