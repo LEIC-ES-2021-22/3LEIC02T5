@@ -1,5 +1,5 @@
 hello_world
-2.16
+2.12
 file:///C:/Users/Utilizador/Documents/2Ano/2_Semestre/ES/3LEIC02T5/src/
 file:///C:/Users/Utilizador/Documents/2Ano/2_Semestre/ES/3LEIC02T5/src/lib/
 archive
@@ -32,8 +32,8 @@ file:///C:/Users/Utilizador/fluttter_recente/flutter/.pub-cache/hosted/pub.dartl
 file:///C:/Users/Utilizador/fluttter_recente/flutter/.pub-cache/hosted/pub.dartlang.org/collection-1.15.0/lib/
 convert
 2.12
-file:///C:/Users/Utilizador/fluttter_recente/flutter/.pub-cache/hosted/pub.dartlang.org/convert-3.0.1/
-file:///C:/Users/Utilizador/fluttter_recente/flutter/.pub-cache/hosted/pub.dartlang.org/convert-3.0.1/lib/
+file:///C:/Users/Utilizador/fluttter_recente/flutter/.pub-cache/hosted/pub.dartlang.org/convert-3.0.2/
+file:///C:/Users/Utilizador/fluttter_recente/flutter/.pub-cache/hosted/pub.dartlang.org/convert-3.0.2/lib/
 crypto
 2.12
 file:///C:/Users/Utilizador/fluttter_recente/flutter/.pub-cache/hosted/pub.dartlang.org/crypto-3.0.1/
@@ -86,6 +86,10 @@ path
 2.12
 file:///C:/Users/Utilizador/fluttter_recente/flutter/.pub-cache/hosted/pub.dartlang.org/path-1.8.0/
 file:///C:/Users/Utilizador/fluttter_recente/flutter/.pub-cache/hosted/pub.dartlang.org/path-1.8.0/lib/
+percent_indicator
+2.7
+file:///C:/Users/Utilizador/fluttter_recente/flutter/.pub-cache/hosted/pub.dartlang.org/percent_indicator-2.1.9+1/
+file:///C:/Users/Utilizador/fluttter_recente/flutter/.pub-cache/hosted/pub.dartlang.org/percent_indicator-2.1.9+1/lib/
 platform
 2.12
 file:///C:/Users/Utilizador/fluttter_recente/flutter/.pub-cache/hosted/pub.dartlang.org/platform-3.1.0/
