@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:hello_world/favourites.dart';
 import 'package:hello_world/food.dart';
 import 'package:hello_world/parking.dart';
 import 'package:hello_world/theoreticalClasses.dart';
 import 'package:hello_world/library.dart';
 
-
-class Menu extends StatelessWidget {
+class Menu extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,7 +24,7 @@ class Menu extends StatelessWidget {
         margin:EdgeInsets.fromLTRB(0,0,0,MediaQuery.of(context).size.height/2.8),
         child: MaterialButton(
             height: 2,
-            onPressed: () {},
+            onPressed: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => Favourites()),);},
             color: const Color.fromARGB(255, 210, 187, 128),
             textColor: Colors.white,
             child: const Icon(

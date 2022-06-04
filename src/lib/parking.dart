@@ -29,7 +29,7 @@ class Parking extends StatelessWidget {
           ),
           children: <Widget>[
             Container(
-              margin: EdgeInsets.fromLTRB(10,0,10,0),
+              margin: EdgeInsets.fromLTRB(10,10,10,0),
               child : SizedBox(
                 height: 60,
                 width: 250,

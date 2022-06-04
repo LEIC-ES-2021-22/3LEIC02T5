@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_world/cantina.dart';
 import 'package:hello_world/menu.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
@@ -67,7 +68,20 @@ class StudentPark extends StatelessWidget {
             //return Text(snapshot.data.toString());
             return Column(
               mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>[
+              children: <Widget>[Container(
+                margin: EdgeInsets.fromLTRB(310,6,0,0),
+                child: MaterialButton(
+                  height: 2,
+                  onPressed: () {
+                    isfavourite = true;
+                  },
+                  child: const Icon(
+                    Icons.star,
+                    size: 50,
+                    color : Color.fromARGB(255, 210, 187, 128),
+                  ),
+                ),
+              ),
                 Container( margin:EdgeInsets.fromLTRB(0,0,0,0),
                   child: MaterialButton(
                     onPressed: () {},
@@ -75,9 +89,9 @@ class StudentPark extends StatelessWidget {
                     child: Stack(
                       alignment: Alignment.center,
                       children: <Widget>[
-                        Icon(Icons.circle, size: 300),
+                        Icon(Icons.circle, size: 270),
                         Padding( padding: EdgeInsets.fromLTRB(0,0,0,0),child : Text(snapshotToMap(snapshot)["p3livres"].toString() /* + " / " + snapshotToMap(snapshot)["p3lotacao"].toString()*/,
-                          style: TextStyle(fontSize: 90,
+                          style: TextStyle(fontSize: 80,
                               fontWeight: FontWeight.bold,
                               color: Color.fromARGB(255, 0, 0, 0)
                           ),
@@ -104,4 +118,26 @@ class StudentPark extends StatelessWidget {
       ),
     );
   }
+}
+Widget getStudentPark(BuildContext context){
+  return Container(
+    margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
+    child: SizedBox(
+      height: 60,
+      width: 100,
+      child: ElevatedButton(
+          child: const Text('Parque dos alunos',
+              style: TextStyle(fontSize: 20),
+              textAlign: TextAlign.center),
+          style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.all<Color>(
+                const Color.fromARGB(255, 182, 163, 148)),
+          ),
+          onPressed: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) => StudentPark()),
+            );
+          }),
+    ),
+  );
 }
