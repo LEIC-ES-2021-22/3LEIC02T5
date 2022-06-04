@@ -32,53 +32,43 @@ class MyStatefulWidget extends StatefulWidget {
   State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
 }
 
-class _MyStatefulWidgetState extends State<MyStatefulWidget>
-    with TickerProviderStateMixin {
-  double _downloadPercentage = 0,value= 0;
-  int count1 = 0, count2 = 0; //false
-  late AnimationController controller;
+class _MyStatefulWidgetState extends State<MyStatefulWidget> {
+  double progress = 0;
+  int count_up = 0;
+  int count_down = 0;
 
-  @override
-  void initState() {
-    controller = AnimationController(
-      vsync: this,
-      duration: const Duration(seconds: 5),
-    )..addListener(() {
-        setState(() {
-          _handleReactions();
-        });
-      });
-    controller.repeat();
-  }
+  Future _handleReactions() async {
+    final balance = count_up - count_down;
+    setState(() {
+      Text("oi");
 
-/*
-  void determinateIndicator() {
-    new Timer.periodic(const Duration(seconds: 2), (Timer timer) {
-      setState(() {
-        if (_downloadPercentage == 1) {
-          timer.cancel();
-        } else {
-          _downloadPercentage = _downloadPercentage + 0.1;
+      progress = ((balance * 0.1) / 25);
+      if (balance == -25) {
+        progress -= 0.1;
+        if (progress < 0) {
+          progress = 0;
         }
-      });
+      } else if (balance < -25) {
+        progress = ((balance) * 0.1) / 25;
+        if (progress < 0) {
+          progress = 0;
+        }
+      } else if (balance == 100) {
+        Text("Full!");
+      }
     });
   }
-*/
-  void _handleReactions() {
-    Timer.periodic(const Duration(seconds: 2), (Timer timer) {
-      setState(() {
-        while(_downloadPercentage < 1.0 && _downloadPercentage > 0.0){
-          if (count1 - count2 > 25) {
-            _downloadPercentage = ((count1 - count2) * 0.1) / 0.25;
-          } else if (count1 - count2 <= 0) {
-            _downloadPercentage = _downloadPercentage - 0.1;
-        }
-          _downloadPercentage = value;
-      }
-    }
+
+  Widget buildProgress() {
+    if (progress == 1.0) {
+      return Text("Full!");
+    } else {
+      return Text(
+        '${(progress * 100).toStringAsFixed(1)}%',
+        style: TextStyle(
+            fontWeight: FontWeight.bold, fontSize: 24, color: Colors.black),
       );
-  },
-    );
+    }
   }
 
   @override
@@ -100,6 +90,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget>
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
+          SizedBox(
+            height: queryData.size.height * 0.0000,
+          ),
           Container(
             alignment: Alignment.topCenter,
             child: const Text(
@@ -107,15 +100,30 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget>
               style: TextStyle(fontSize: 20),
             ),
           ),
+          SizedBox(
+            height: queryData.size.height * 0.04,
+          ),
           Container(
             alignment: Alignment.topCenter,
-            child: SizedBox(
-              width: 300,
-              child: LinearProgressIndicator(
-                minHeight: 40,
-                backgroundColor: Colors.grey,
-                value: _downloadPercentage,
-              ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                    height: 50,
+                    width: 300,
+                    child: Stack(
+                      fit: StackFit.expand,
+                      children: [
+                        LinearProgressIndicator(
+                          minHeight: 40,
+                          valueColor: AlwaysStoppedAnimation(Colors.green),
+                          backgroundColor: Colors.grey,
+                          value: progress,
+                        ),
+                        Center(child: buildProgress()),
+                      ],
+                    )),
+              ],
             ),
           ),
           SizedBox(
@@ -127,43 +135,46 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget>
                 'Do you agree?',
                 style: TextStyle(fontSize: 20),
               )),
+          SizedBox(
+            height: queryData.size.height * 0.001,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               MaterialButton(
                 onPressed: () {
-                  while (count1 - count2 < 25 && count1 - count2 > 0) {
-                    count1++;
-                  }
+                  setState(() {
+                    count_up++;
+                  });
                   _handleReactions();
-                  setState(() {});
                 },
                 textColor: const Color.fromARGB(255, 139, 186, 118),
                 child: Stack(
                   alignment: Alignment.topCenter,
                   children: <Widget>[
-                    Icon(Icons.sentiment_satisfied_alt_outlined, size: 50),
+                    //Text('$count_up'),
+                    Icon(Icons.thumb_up_alt_outlined, size: 50),
                   ],
                 ),
               ),
               MaterialButton(
                 onPressed: () {
-                  while (count1 - count2 < 25 && count1 - count2 > 0) {
-                    count2++;
-                  }
+                  setState(() {
+                    count_down++;
+                  });
                   _handleReactions();
-                  setState(() {});
                 },
                 textColor: const Color.fromARGB(255, 139, 186, 118),
                 child: Stack(
                   alignment: Alignment.topCenter,
                   children: <Widget>[
-                    Icon(Icons.sentiment_dissatisfied_outlined, size: 50),
+                    //Text('$count_down'),
+                    Icon(Icons.thumb_down_alt_outlined, size: 50),
                   ],
                 ),
               ),
               SizedBox(
-                height: queryData.size.height * 0.1,
+                height: queryData.size.height * 0.2,
               ),
             ],
           ),
