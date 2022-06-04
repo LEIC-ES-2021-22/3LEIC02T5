@@ -15,6 +15,22 @@ class Food extends StatelessWidget {
             icon: const Icon(Icons.account_circle, size: 40),
             onPressed: () {},
           ),
+      Container (
+        child: SizedBox(
+        width: 96,
+        height: 67,
+        child: Card(child: Text('Hello World!')),
+      ),)
+      /*const SizedBox(
+        width: 95.0,
+        height: 67.0,
+        child: const DecoratedBox(
+          decoration: const BoxDecoration(
+              color: Colors.grey
+          ),
+        ),
+      ),*/
+
         ],
       ),
       body: GridView(
