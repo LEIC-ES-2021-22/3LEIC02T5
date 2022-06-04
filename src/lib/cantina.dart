@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hello_world/main.dart';
 import 'dart:async';
+import 'package:hello_world/food.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(const Cantina());
@@ -24,7 +25,7 @@ class Cantina extends StatelessWidget {
     );
   }
 }
-
+bool isfavourite = false;
 class MyStatefulWidget extends StatefulWidget {
   const MyStatefulWidget({Key? key}) : super(key: key);
 
@@ -54,23 +55,27 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           progress = 0;
         }
       } else if (balance == 100) {
-        Text("Full!");
+        Text("Full!",style:TextStyle(fontWeight: FontWeight.bold, fontSize: 24, color: Colors.black));
       }
     });
   }
 
   Widget buildProgress() {
-    if (progress == 1.0) {
-      return Text("Full!");
-    } else {
-      return Text(
+    if (progress >= 0.9) {
+      //Text("Full!",style:TextStyle(fontWeight: FontWeight.bold, fontSize: 24, color: Colors.black));
+      return LinearProgressIndicator(valueColor: AlwaysStoppedAnimation(Color.fromARGB(255, 190, 83, 49)),value: progress,minHeight: 50,backgroundColor: Colors.grey);
+    }
+    else if(progress >=  0.6 && progress < 0.9){
+      return LinearProgressIndicator(valueColor: AlwaysStoppedAnimation(Color.fromARGB(255, 232, 191, 43)),value: progress,minHeight: 50,backgroundColor: Colors.grey);
+    }else{
+      /*return Text(
         '${(progress * 100).toStringAsFixed(1)}%',
         style: TextStyle(
             fontWeight: FontWeight.bold, fontSize: 24, color: Colors.black),
-      );
+      );*/
+      return LinearProgressIndicator(valueColor: AlwaysStoppedAnimation(Colors.green),value: progress,minHeight: 50,backgroundColor: Colors.grey);
     }
   }
-
   @override
   Widget build(BuildContext context) {
     final MediaQueryData queryData = MediaQuery.of(context);
@@ -87,21 +92,36 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         ],
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           SizedBox(
             height: queryData.size.height * 0.0000,
           ),
           Container(
+            margin: EdgeInsets.fromLTRB(320,10,0,0),
+            child: MaterialButton(
+              height: 2,
+              onPressed: () {
+                isfavourite = true;
+              },
+            child: const Icon(
+              Icons.star,
+              size: 40,
+              color : Color.fromARGB(255, 210, 187, 128),
+            ),
+            ),
+          ),
+          Container(
             alignment: Alignment.topCenter,
+            margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
             child: const Text(
               'Current Occupancy',
-              style: TextStyle(fontSize: 20),
+              style: TextStyle(fontSize: 27, fontWeight: FontWeight.bold),
             ),
           ),
           SizedBox(
-            height: queryData.size.height * 0.04,
+            height: 12,
           ),
           Container(
             alignment: Alignment.topCenter,
@@ -127,13 +147,13 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             ),
           ),
           SizedBox(
-            height: queryData.size.height * 0.1,
+            height: 15,
           ),
           Container(
               alignment: Alignment.topCenter,
               child: const Text(
                 'Do you agree?',
-                style: TextStyle(fontSize: 20),
+                style: TextStyle(fontSize: 27, fontWeight: FontWeight.bold),
               )),
           SizedBox(
             height: queryData.size.height * 0.001,
@@ -153,7 +173,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   alignment: Alignment.topCenter,
                   children: <Widget>[
                     //Text('$count_up'),
-                    Icon(Icons.thumb_up_alt_outlined, size: 50),
+                    Icon(Icons.thumb_up_alt_outlined, size: 90),
                   ],
                 ),
               ),
@@ -164,57 +184,220 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   });
                   _handleReactions();
                 },
-                textColor: const Color.fromARGB(255, 139, 186, 118),
+                textColor: const Color.fromARGB(255, 190, 83, 49),
                 child: Stack(
                   alignment: Alignment.topCenter,
                   children: <Widget>[
                     //Text('$count_down'),
-                    Icon(Icons.thumb_down_alt_outlined, size: 50),
+                    Icon(Icons.thumb_down_alt_outlined, size: 90),
                   ],
                 ),
               ),
               SizedBox(
-                height: queryData.size.height * 0.2,
+                height:100,
               ),
             ],
           ),
-          Table(
-            textDirection: TextDirection.rtl,
-            defaultVerticalAlignment: TableCellVerticalAlignment.bottom,
-            border: TableBorder.all(width: 2.0, color: Colors.red),
-            children: const [
-              TableRow(children: [
-                Text(
-                  "",
-                  textScaleFactor: 1.5,
-                  textAlign: TextAlign.center,
+      Row(
+        children: <Widget>[
+          Container(
+            margin: EdgeInsets.fromLTRB(10,4,0,0),
+            child : SizedBox(
+              height: 45,
+              width: 85,
+              child:ElevatedButton(
+                  child: const Text('Soup', style: TextStyle(fontSize: 10),
+                      textAlign: TextAlign.center),
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(
+                        const Color.fromARGB(255, 171, 121, 105)),
+                  ),
+                  onPressed: () {}
+              ),
+            ),),
+          Container(
+            margin: EdgeInsets.fromLTRB(4,4,0,0),
+            child : SizedBox(
+              height: 45,
+              width: 270,
+              child:ElevatedButton(
+                  child: const Text('creme de legumes', style: TextStyle(fontSize: 12,color: Colors.black),
+                      textAlign: TextAlign.center),
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(
+                        const Color.fromARGB(255, 227, 227, 227)),
+                  ),
+                  onPressed: () {}
+              ),
+            ),
+          ),
+        ],
+      ),
+          Row(
+            children: <Widget>[
+              Container(
+                margin: EdgeInsets.fromLTRB(10,4.5,0,0),
+                child : SizedBox(
+                  height: 45,
+                  width: 85,
+                  child:ElevatedButton(
+                      child: const Text('Meat', style: TextStyle(fontSize: 10),
+                          textAlign: TextAlign.center),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all<Color>(
+                            const Color.fromARGB(255, 171, 121, 105)),
+                      ),
+                      onPressed: () {}
+                  ),
+                ),),
+              Container(
+                margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                child : SizedBox(
+                  height: 45,
+                  width: 270,
+                  child:ElevatedButton(
+                      child: const Text('Hambúrguer de aves com arroz, ovo e hortaliça', style: TextStyle(fontSize: 12,color: Colors.black),
+                          textAlign: TextAlign.center),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all<Color>(
+                            const Color.fromARGB(255, 227, 227, 227)),
+                      ),
+                      onPressed: () {}
+                  ),
                 ),
-                Text("Sopa", textScaleFactor: 1.5, textAlign: TextAlign.center),
-              ]),
-              TableRow(children: [
-                Text("", textScaleFactor: 1.5, textAlign: TextAlign.center),
-                Text("Carne",
-                    textScaleFactor: 1.5, textAlign: TextAlign.center),
-              ]),
-              TableRow(children: [
-                Text("", textScaleFactor: 1.5, textAlign: TextAlign.center),
-                Text("Peixe",
-                    textScaleFactor: 1.5, textAlign: TextAlign.center),
-              ]),
-              TableRow(children: [
-                Text("", textScaleFactor: 1.5, textAlign: TextAlign.center),
-                Text("Vegetariano",
-                    textScaleFactor: 1.5, textAlign: TextAlign.center),
-              ]),
-              TableRow(children: [
-                Text("", textScaleFactor: 1.5, textAlign: TextAlign.center),
-                Text("Dieta",
-                    textScaleFactor: 1.5, textAlign: TextAlign.center),
-              ]),
+              ),
             ],
           ),
+          Row(
+            children: <Widget>[
+              Container(
+                margin: EdgeInsets.fromLTRB(10,4.5,0,0),
+                child : SizedBox(
+                  height: 45,
+                  width: 85,
+                  child:ElevatedButton(
+                      child: const Text('Fish', style: TextStyle(fontSize: 10),
+                          textAlign: TextAlign.center),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all<Color>(
+                            const Color.fromARGB(255, 171, 121, 105)),
+                      ),
+                      onPressed: () {}
+                  ),
+                ),),
+              Container(
+                margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                child : SizedBox(
+                  height: 45,
+                  width: 270,
+                  child:ElevatedButton(
+                      child: const Text('creme de legumes', style: TextStyle(fontSize: 12,color: Colors.black),
+                          textAlign: TextAlign.center),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all<Color>(
+                            const Color.fromARGB(255, 227, 227, 227)),
+                      ),
+                      onPressed: () {}
+                  ),
+                ),
+              ),
+            ],
+          ),
+          Row(
+            children: <Widget>[
+              Container(
+                margin: EdgeInsets.fromLTRB(10,4.5,0,0),
+                child : SizedBox(
+                  height: 45,
+                  width: 85,
+                  child:ElevatedButton(
+                      child: const Text('Vegetarian', style: TextStyle(fontSize: 10),
+                          textAlign: TextAlign.left),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all<Color>(
+                            const Color.fromARGB(255, 171, 121, 105)),
+                      ),
+                      onPressed: () {}
+                  ),
+                ),),
+              Container(
+                margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                child : SizedBox(
+                  height: 45,
+                  width: 270,
+                  child:ElevatedButton(
+                      child: const Text('', style: TextStyle(fontSize: 12,color: Colors.black),
+                          textAlign: TextAlign.center),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all<Color>(
+                            const Color.fromARGB(255, 227, 227, 227)),
+                      ),
+                      onPressed: () {}
+                  ),
+                ),
+              ),
+            ],
+          ),
+          Row(
+            children: <Widget>[
+              Container(
+                margin: EdgeInsets.fromLTRB(10,4.5,0,4),
+                child : SizedBox(
+                  height: 45,
+                  width: 85,
+                  child:ElevatedButton(
+                      child: const Text('Diet', style: TextStyle(fontSize: 10),
+                          textAlign: TextAlign.center),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all<Color>(
+                            const Color.fromARGB(255, 171, 121, 105)),
+                      ),
+                      onPressed: () {}
+                  ),
+                ),),
+              Container(
+                margin: EdgeInsets.fromLTRB(4,4.5,0,4),
+                child : SizedBox(
+                  height: 45,
+                  width: 270,
+                  child:ElevatedButton(
+                      child: const Text('', style: TextStyle(fontSize: 14,color: Colors.black),
+                          textAlign: TextAlign.center),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all<Color>(
+                            const Color.fromARGB(255, 227, 227, 227)),
+                      ),
+                      onPressed: () {}
+                  ),
+                ),
+              ),
+            ],
+          ),
+          Image.asset('assets/images/canteen.png', height:110,width:385,alignment: Alignment.center),
         ],
       ),
     );
   }
+}
+Widget getWidget(BuildContext context){
+  return Container(
+    margin: EdgeInsets.fromLTRB(10, 10, 10, 0),
+    child: SizedBox(
+      height: 60,
+      width: 100,
+      child: ElevatedButton(
+          child: const Text('Cantina',
+              style: TextStyle(fontSize: 20),
+              textAlign: TextAlign.center),
+          style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.all<Color>(
+                const Color.fromARGB(255, 176, 118, 105)),
+          ),
+          onPressed: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) => Cantina()),
+            );
+          }),
+    ),
+  );
 }

@@ -12,7 +12,16 @@
       <change beforePath="$PROJECT_DIR$/src/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/src/.dart_tool/package_config_subset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/src/.packages" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/android/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/android/local.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/src/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/build/4f2a58af27abc49ecf55570043bbf938.cache.dill.track.dill" beforeDir="false" afterPath="$PROJECT_DIR$/src/build/4f2a58af27abc49ecf55570043bbf938.cache.dill.track.dill" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ios/Flutter/Generated.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/src/ios/Flutter/Generated.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ios/Flutter/flutter_export_environment.sh" beforeDir="false" afterPath="$PROJECT_DIR$/src/ios/Flutter/flutter_export_environment.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/cantina.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/cantina.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/food.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/food.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/menu.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/menu.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/parking.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/parking.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/studentPark.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/studentPark.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/teacherPark.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/teacherPark.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,11 +65,14 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets/images" />
+      <recent name="$PROJECT_DIR$/src/assets/fonts" />
+      <recent name="$PROJECT_DIR$/src/assets" />
+      <recent name="$PROJECT_DIR$/docs" />
       <recent name="C:\Users\Aulas FEUP\Documents\GitHub\3LEIC02T5\src\lib" />
-      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Flutter.cantina.dart">
+  <component name="RunManager" selected="Flutter.main.dart">
     <configuration name="cantina.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
       <option name="filePath" value="$PROJECT_DIR$/src/lib/cantina.dart" />
       <method v="2" />
@@ -75,8 +87,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Flutter.cantina.dart" />
         <item itemvalue="Flutter.main.dart" />
+        <item itemvalue="Flutter.cantina.dart" />
         <item itemvalue="Flutter.main.dart (1)" />
       </list>
     </recent_temporary>
