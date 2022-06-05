@@ -27,8 +27,12 @@ class Favourites extends StatelessWidget {
     mainAxisExtent: 100,
     ),
         children: <Widget>[
-          if( isfavourite = true)
-            getWidget(context),getStudentPark(context), getTeacherPark(context)],
+          if( cantinaFavorite == true)
+            getWidget(context)
+          else if (studentParkFavourite == true)
+            getStudentPark(context)
+          else if(teacherParkFavorite == true )
+            getTeacherPark(context)],
           ),
     );
   }

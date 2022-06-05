@@ -3,7 +3,7 @@ import 'package:hello_world/cantina.dart';
 import 'package:hello_world/menu.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-
+bool studentParkFavourite = false;
 const parkingUrl = 'https://sigarra.up.pt/feup/pt/instalacs_geral.ocupacao_parques';
 enum ReadMode {key,value,done}
 class StudentPark extends StatelessWidget {
@@ -73,7 +73,8 @@ class StudentPark extends StatelessWidget {
                 child: MaterialButton(
                   height: 2,
                   onPressed: () {
-                    isfavourite = true;
+                    if(studentParkFavourite) studentParkFavourite = false;
+                    else studentParkFavourite = true;
                   },
                   child: const Icon(
                     Icons.star,
@@ -121,7 +122,7 @@ class StudentPark extends StatelessWidget {
 }
 Widget getStudentPark(BuildContext context){
   return Container(
-    margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
+    margin: EdgeInsets.fromLTRB(10, 10, 10, 0),
     child: SizedBox(
       height: 60,
       width: 100,

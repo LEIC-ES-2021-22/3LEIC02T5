@@ -25,7 +25,7 @@ class Cantina extends StatelessWidget {
     );
   }
 }
-bool isfavourite = false;
+bool cantinaFavorite = false;
 class MyStatefulWidget extends StatefulWidget {
   const MyStatefulWidget({Key? key}) : super(key: key);
 
@@ -103,7 +103,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             child: MaterialButton(
               height: 2,
               onPressed: () {
-                isfavourite = true;
+                if(cantinaFavorite) cantinaFavorite = false;
+                else cantinaFavorite = true;
               },
             child: const Icon(
               Icons.star,
