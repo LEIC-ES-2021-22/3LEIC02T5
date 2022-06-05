@@ -9,19 +9,32 @@ class Food extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         actions: <Widget>[
+          Container (
+            color: Colors.grey,
+            //alignment: Alignment.topLeft,
+            margin: EdgeInsets.fromLTRB(0, 0, 189, 0),
+            child: SizedBox(
+              width: 152,
+              height: 56,
+              child: ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all<Color>(const Color.fromARGB(255, 147, 77, 76)),),
+                onPressed:() { Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => Menu()
+                ),);},
+                child: const Text('Alimentação',
+                    style: TextStyle(fontSize: 17),
+                    textAlign: TextAlign.center),
+              ),),),
           IconButton(
             alignment: Alignment.topLeft,
             color: Colors.grey,
             icon: const Icon(Icons.account_circle, size: 40),
             onPressed: () {},
-          ),
-      Container (
-        child: SizedBox(
-        width: 96,
-        height: 67,
-        child: Card(child: Text('Hello World!')),
-      ),)
-      /*const SizedBox(
+          ),],
+
+
+        /*const SizedBox(
         width: 95.0,
         height: 67.0,
         child: const DecoratedBox(
@@ -31,7 +44,6 @@ class Food extends StatelessWidget {
         ),
       ),*/
 
-        ],
       ),
       body: GridView(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
