@@ -3,6 +3,8 @@ import 'package:hello_world/cantina.dart';
 import 'package:hello_world/menu.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'package:icon_decoration/icon_decoration.dart';
+
 bool studentParkFavourite = false;
 const parkingUrl = 'https://sigarra.up.pt/feup/pt/instalacs_geral.ocupacao_parques';
 enum ReadMode {key,value,done}
@@ -42,7 +44,9 @@ class StudentPark extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar: AppBar(leading: BackButton(
+          color: Colors.black
+      ),
         backgroundColor: Colors.white,
         actions: <Widget>[
           IconButton(
@@ -90,7 +94,10 @@ class StudentPark extends StatelessWidget {
                     child: Stack(
                       alignment: Alignment.center,
                       children: <Widget>[
-                        Icon(Icons.circle, size: 270),
+                        DecoratedIcon(
+                          icon: Icon(Icons.circle,size: 270),
+                          decoration: IconDecoration(border: IconBorder()),
+                        ),
                         Padding( padding: EdgeInsets.fromLTRB(0,0,0,0),child : Text(snapshotToMap(snapshot)["p3livres"].toString() /* + " / " + snapshotToMap(snapshot)["p3lotacao"].toString()*/,
                           style: TextStyle(fontSize: 80,
                               fontWeight: FontWeight.bold,

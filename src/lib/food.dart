@@ -1,21 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:hello_world/cantina.dart';
 import 'package:hello_world/menu.dart';
-
+bool ispressed = false;
 class Food extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: BackButton(
+            color: Colors.black,
+            onPressed: () {
+              if(ispressed) Navigator.of(context).pop();
+              else Navigator.of(context).push(MaterialPageRoute(builder: (context) => Menu()));
+            }
+        ),
         backgroundColor: Colors.white,
         actions: <Widget>[
           Container (
-            color: Colors.grey,
             //alignment: Alignment.topLeft,
-            margin: EdgeInsets.fromLTRB(0, 0, 189, 0),
-            child: SizedBox(
-              width: 152,
-              height: 56,
+            margin: EdgeInsets.fromLTRB(0, 10, 208,10),
+            /*child: SizedBox(
+              width: 134,
               child: ElevatedButton(
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all<Color>(const Color.fromARGB(255, 147, 77, 76)),),
@@ -23,9 +28,10 @@ class Food extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => Menu()
                 ),);},
                 child: const Text('Alimentação',
-                    style: TextStyle(fontSize: 17),
-                    textAlign: TextAlign.center),
-              ),),),
+                    style: TextStyle(fontSize: 16),
+                    textAlign: TextAlign.left),
+              ),),*/),
+
           IconButton(
             alignment: Alignment.topLeft,
             color: Colors.grey,

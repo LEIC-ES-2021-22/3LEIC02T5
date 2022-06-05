@@ -81,6 +81,13 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     final MediaQueryData queryData = MediaQuery.of(context);
     return Scaffold(
       appBar: AppBar(
+        leading: BackButton(
+            color: Colors.black,
+          onPressed: () {
+            if(ispressed) Navigator.of(context).pop();
+            else Navigator.of(context).push(MaterialPageRoute(builder: (context) => Food()));
+          }
+        ),
         backgroundColor: Colors.white,
         actions: <Widget>[
           IconButton(

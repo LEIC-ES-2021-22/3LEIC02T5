@@ -6,6 +6,9 @@
     Widget build(BuildContext context) {
       return Scaffold(
         appBar: AppBar(
+          leading: BackButton(
+            color: Colors.black
+          ),
           backgroundColor: Colors.white,
           actions: <Widget>[
             IconButton(
