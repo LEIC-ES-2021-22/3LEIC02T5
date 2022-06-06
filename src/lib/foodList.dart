@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hello_world/foodSpotWithMenu.dart';
 import 'package:hello_world/menu.dart';
+
+import 'foodSpotWithoutMenu.dart';
 enum FoodType {AEFEUP, cantina, restINEGI, restFEUP, grill}
 FoodType type = FoodType.AEFEUP;
 class FoodList extends StatelessWidget {
@@ -41,6 +43,9 @@ class FoodList extends StatelessWidget {
                   ),
                   onPressed: () {
                     type = FoodType.AEFEUP;
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => FoodSpotWithoutMenu()),
+                    );
                   }),
             ),
           ),
@@ -79,7 +84,7 @@ class FoodList extends StatelessWidget {
                   onPressed: () {
                     type = FoodType.restFEUP;
                     Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => FoodSpotWithMenu()),
+                      MaterialPageRoute(builder: (context) => FoodSpotWithoutMenu()),
                     );
                   }),
             ),
@@ -100,7 +105,7 @@ class FoodList extends StatelessWidget {
                   onPressed: () {
                     type = FoodType.restINEGI;
                     Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => FoodSpotWithMenu()),
+                      MaterialPageRoute(builder: (context) => FoodSpotWithoutMenu()),
                     );
                   }),
             ),
@@ -121,7 +126,7 @@ class FoodList extends StatelessWidget {
                   onPressed: () {
                     type = FoodType.grill;
                     Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => FoodSpotWithMenu()),
+                      MaterialPageRoute(builder: (context) => FoodSpotWithoutMenu()),
                     );
                   }),
             ),

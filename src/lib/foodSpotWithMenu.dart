@@ -20,8 +20,8 @@ class FoodSpotWithMenu extends StatelessWidget{
   }
 
   List<String> snapshotToList(AsyncSnapshot snapshot){
-    List<String> myMap = snapshot.data as List<String>;
-    return myMap;
+    List<String> myList = snapshot.data as List<String>;
+    return myList;
   }
 
   Map<String,dynamic> getMap(AsyncSnapshot snapshot){
@@ -46,12 +46,11 @@ class FoodSpotWithMenu extends StatelessWidget{
     return "Informação Indisponível";
   }
 
-  Future<List<Map<String,dynamic>>> getCanteenData() async {
+  Future<List<String>> getCanteenData() async {
     var response = await http.get(Uri.parse(canteenURL));
     if (response.statusCode == 200) {
-      var data = json.decode(response.body);
-      var canteenInfo = data;
-      return canteenInfo;
+      List<String> data = json.decode(response.body);
+      return data;
     } else {
       throw Exception('Failed to read $canteenURL');
     }
