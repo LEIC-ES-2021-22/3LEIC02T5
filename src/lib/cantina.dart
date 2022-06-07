@@ -176,6 +176,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   _handleReactions();
                 },
                 textColor: const Color.fromARGB(255, 139, 186, 118),
+                key: Key("Thumbs_up"),
                 child: Stack(
                   alignment: Alignment.topCenter,
                   children: <Widget>[
