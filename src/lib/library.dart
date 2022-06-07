@@ -148,12 +148,14 @@ class FirstF extends StatelessWidget {
           ),
         ],
       ),
-      body: Row(
+      body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Image.asset("assets/images/piso1.png",
           scale: 1.1,
           fit: BoxFit.fitWidth),
+          Image.asset("assets/images/library.png",
+              scale: 1.1,height:140,width:385),
         ],
       ),
     );
@@ -178,12 +180,14 @@ class SecondF extends StatelessWidget {
           ),
         ],
       ),
-      body: Row(
+      body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Image.asset("assets/images/piso2.png",
               scale: 1.1,
               fit: BoxFit.fitWidth),
+          Image.asset("assets/images/library.png",
+              scale: 1.1,height:140,width:385),
         ],
       ),
     );
@@ -208,12 +212,14 @@ class ThirdF extends StatelessWidget {
           ),
         ],
       ),
-      body: Row(
+      body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Image.asset("assets/images/piso3.png",
               scale: 1.1,
               fit: BoxFit.fitWidth),
+          Image.asset("assets/images/library.png",
+              scale: 1.1,height:140,width:385),
         ],
       ),
     );
@@ -238,12 +244,14 @@ class FourthF extends StatelessWidget {
           ),
         ],
       ),
-      body: Row(
+      body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Image.asset("assets/images/piso4.png",
               scale: 1.1,
               fit: BoxFit.fitWidth),
+          Image.asset("assets/images/library.png",
+              scale: 1.1,height:140,width:385),
         ],
       ),
     );
@@ -268,12 +276,14 @@ class FifthF extends StatelessWidget {
           ),
         ],
       ),
-      body: Row(
+      body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Image.asset("assets/images/piso5.png",
               scale: 1.1,
               fit: BoxFit.fitWidth),
+          Image.asset("assets/images/library.png",
+              scale: 1.1,height:140,width:385),
         ],
       ),
     );
@@ -298,12 +308,14 @@ class SixthF extends StatelessWidget {
           ),
         ],
       ),
-      body: Row(
+      body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Image.asset("assets/images/piso6.png",
               scale: 1.1,
               fit: BoxFit.fitWidth),
+          Image.asset("assets/images/library.png",
+              scale: 1.1,height:140,width:385),
         ],
       ),
     );

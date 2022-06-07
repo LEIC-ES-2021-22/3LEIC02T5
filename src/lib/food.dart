@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hello_world/cantina.dart';
+import 'package:hello_world/foodSpots.dart';
 import 'package:hello_world/menu.dart';
 bool ispressed = false;
 class Food extends StatelessWidget {
@@ -72,7 +73,9 @@ class Food extends StatelessWidget {
                     backgroundColor: MaterialStateProperty.all<Color>(
                         const Color.fromARGB(255, 147, 77, 76)),
                   ),
-                  onPressed: () {}),
+                  onPressed: () {Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => FoodSpots()));
+                  }),
             ),
           ),
           Container(
@@ -104,8 +107,7 @@ class Food extends StatelessWidget {
                   ),
                   onPressed: () {
                     Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => Cantina()),
-                    );
+                      MaterialPageRoute(builder: (context) => Cantina()));
                   }),
             ),
           ),
