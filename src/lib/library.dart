@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hello_world/menu.dart';
 
 class Library extends StatelessWidget {
   @override
@@ -41,7 +40,7 @@ class Library extends StatelessWidget {
                     backgroundColor: MaterialStateProperty.all<Color>(
                         const Color.fromARGB(255, 190, 191, 191)),
                   ),
-                  onPressed: () {}
+                  onPressed: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => SixthF()),);}
               ),
             ),
           ),
@@ -57,7 +56,7 @@ class Library extends StatelessWidget {
                     backgroundColor: MaterialStateProperty.all<Color>(
                         const Color.fromARGB( 255, 158, 158, 159)),
                   ),
-                  onPressed: () {}
+                  onPressed: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => FifthF()),);}
               ),
             ),
           ),
@@ -73,7 +72,7 @@ class Library extends StatelessWidget {
                     backgroundColor: MaterialStateProperty.all<Color>(
                         const Color.fromARGB(255, 140, 140, 141)),
                   ),
-                  onPressed: () {}
+                  onPressed: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => FourthF()),);}
               ),
             ),
           ),
@@ -89,7 +88,7 @@ class Library extends StatelessWidget {
                     backgroundColor: MaterialStateProperty.all<Color>(
                         const Color.fromARGB(255, 99, 99, 99)),
                   ),
-                  onPressed: () {}
+                  onPressed: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => ThirdF()),);}
               ),
             ),
           ),
@@ -105,7 +104,7 @@ class Library extends StatelessWidget {
                     backgroundColor: MaterialStateProperty.all<Color>(
                         const Color.fromARGB(255, 50, 50, 50)),
                   ),
-                  onPressed: () {}
+                  onPressed: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => SecondF()),);}
               ),
             ),
           ),
@@ -121,10 +120,190 @@ class Library extends StatelessWidget {
                     backgroundColor: MaterialStateProperty.all<Color>(
                         const Color.fromARGB(255, 2, 2, 2)),
                   ),
-                  onPressed: () {}
+                  onPressed: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => FirstF()),);}
               ),
             ),
           ),
+        ],
+      ),
+    );
+  }
+}
+
+class FirstF extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        leading: BackButton(
+            color: Colors.black
+        ),
+        backgroundColor: Colors.white,
+        actions: <Widget>[
+          IconButton(
+            alignment: Alignment.topLeft,
+            color: Colors.grey,
+            icon: const Icon(Icons.account_circle, size: 40),
+            onPressed: () {},
+          ),
+        ],
+      ),
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Image.asset("assets/images/piso1.png",
+          scale: 0.7,
+          fit: BoxFit.fitWidth),
+        ],
+      ),
+    );
+  }
+}
+
+class SecondF extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        leading: BackButton(
+            color: Colors.black
+        ),
+        backgroundColor: Colors.white,
+        actions: <Widget>[
+          IconButton(
+            alignment: Alignment.topLeft,
+            color: Colors.grey,
+            icon: const Icon(Icons.account_circle, size: 40),
+            onPressed: () {},
+          ),
+        ],
+      ),
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Image.asset("assets/images/piso2.png",
+              scale: 0.7,
+              fit: BoxFit.fitWidth),
+        ],
+      ),
+    );
+  }
+}
+
+class ThirdF extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        leading: BackButton(
+            color: Colors.black
+        ),
+        backgroundColor: Colors.white,
+        actions: <Widget>[
+          IconButton(
+            alignment: Alignment.topLeft,
+            color: Colors.grey,
+            icon: const Icon(Icons.account_circle, size: 40),
+            onPressed: () {},
+          ),
+        ],
+      ),
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Image.asset("assets/images/piso3.png",
+              scale: 0.7,
+              fit: BoxFit.fitWidth),
+        ],
+      ),
+    );
+  }
+}
+
+class FourthF extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        leading: BackButton(
+            color: Colors.black
+        ),
+        backgroundColor: Colors.white,
+        actions: <Widget>[
+          IconButton(
+            alignment: Alignment.topLeft,
+            color: Colors.grey,
+            icon: const Icon(Icons.account_circle, size: 40),
+            onPressed: () {},
+          ),
+        ],
+      ),
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Image.asset("assets/images/piso4.png",
+              scale: 0.7,
+              fit: BoxFit.fitWidth),
+        ],
+      ),
+    );
+  }
+}
+
+class FifthF extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        leading: BackButton(
+            color: Colors.black
+        ),
+        backgroundColor: Colors.white,
+        actions: <Widget>[
+          IconButton(
+            alignment: Alignment.topLeft,
+            color: Colors.grey,
+            icon: const Icon(Icons.account_circle, size: 40),
+            onPressed: () {},
+          ),
+        ],
+      ),
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Image.asset("assets/images/piso5.png",
+              scale: 0.7,
+              fit: BoxFit.fitWidth),
+        ],
+      ),
+    );
+  }
+}
+
+class SixthF extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        leading: BackButton(
+            color: Colors.black
+        ),
+        backgroundColor: Colors.white,
+        actions: <Widget>[
+          IconButton(
+            alignment: Alignment.topLeft,
+            color: Colors.grey,
+            icon: const Icon(Icons.account_circle, size: 40),
+            onPressed: () {},
+          ),
+        ],
+      ),
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Image.asset("assets/images/piso6.png",
+              scale: 0.7,
+              fit: BoxFit.fitWidth),
         ],
       ),
     );
