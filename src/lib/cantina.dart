@@ -41,7 +41,6 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   Future _handleReactions() async {
     final balance = count_up - count_down;
     setState(() {
-      Text("oi");
 
       progress = ((balance * 0.1) / 25);
       if (balance == -25) {
@@ -181,7 +180,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   alignment: Alignment.topCenter,
                   children: <Widget>[
                     //Text('$count_up'),
-                    Icon(Icons.thumb_up_alt_outlined, size: 90),
+                    Icon(Icons.thumb_up_alt_outlined, size: 90, ),
                   ],
                 ),
               ),
