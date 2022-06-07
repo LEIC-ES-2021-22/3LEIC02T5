@@ -34,8 +34,8 @@ class Menu extends StatelessWidget{
             padding: const EdgeInsets.all(30),
             shape: const CircleBorder()),
       ),
-      body:
-      GridView(
+      body: GridView(
+        physics: new NeverScrollableScrollPhysics(),
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
             crossAxisSpacing: 10,
