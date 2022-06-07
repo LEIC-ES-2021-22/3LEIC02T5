@@ -8,7 +8,9 @@ class Favourites extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar: AppBar(leading: BackButton(
+          color: Colors.black
+        ),
         backgroundColor: Colors.white,
         actions: <Widget>[
           IconButton(

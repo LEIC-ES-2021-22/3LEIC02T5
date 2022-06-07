@@ -264,7 +264,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   height: 45,
                   width: 270,
                   child:ElevatedButton(
-                      child: const Text('Hambúrguer de aves com arroz, ovo e hortaliça', style: TextStyle(fontSize: 12,color: Colors.black),
+                      child: const Text('Croquetes de batata com carne picada e arroz alegre', style: TextStyle(fontSize: 12,color: Colors.black),
                           textAlign: TextAlign.center),
                       style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all<Color>(
@@ -299,7 +299,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   height: 45,
                   width: 270,
                   child:ElevatedButton(
-                      child: const Text('creme de legumes', style: TextStyle(fontSize: 12,color: Colors.black),
+                      child: const Text('Perca escalfada com salada de batata', style: TextStyle(fontSize: 12,color: Colors.black),
                           textAlign: TextAlign.center),
                       style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all<Color>(
@@ -334,7 +334,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   height: 45,
                   width: 270,
                   child:ElevatedButton(
-                      child: const Text('', style: TextStyle(fontSize: 12,color: Colors.black),
+                      child: const Text('Massa salteada vegetariana (soja, milho e brócolos)', style: TextStyle(fontSize: 12,color: Colors.black),
                           textAlign: TextAlign.center),
                       style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all<Color>(
@@ -369,7 +369,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   height: 45,
                   width: 270,
                   child:ElevatedButton(
-                      child: const Text('', style: TextStyle(fontSize: 14,color: Colors.black),
+                      child: const Text('Peru grelhado com macarrão', style: TextStyle(fontSize: 12,color: Colors.black),
                           textAlign: TextAlign.center),
                       style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all<Color>(
