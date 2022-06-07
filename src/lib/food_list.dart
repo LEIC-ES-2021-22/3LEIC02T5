@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:hello_world/cantina.dart';
-import 'package:hello_world/food_spots.dart';
+import 'package:hello_world/food_spot_with_menu.dart';
+import 'package:hello_world/food_spot_without_menu.dart';
 import 'package:hello_world/menu.dart';
 bool ispressed = false;
-class Food extends StatelessWidget {
-  const Food({Key? key}) : super(key: key);
+enum FoodSpotType {aefeup, barBiblio, cantina, restauranteINEGI, barMinas}
+FoodSpotType type = FoodSpotType.aefeup;
+class FoodList extends StatelessWidget {
+  const FoodList({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -78,8 +80,10 @@ class Food extends StatelessWidget {
                     backgroundColor: MaterialStateProperty.all<Color>(
                         const Color.fromARGB(255, 147, 77, 76)),
                   ),
-                  onPressed: () {Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => const FoodSpots()));
+                  onPressed: () {
+                    type = FoodSpotType.aefeup;
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => const FoodSpotWithoutMenu()));
                   }),
             ),
           ),
@@ -94,7 +98,11 @@ class Food extends StatelessWidget {
                     backgroundColor: MaterialStateProperty.all<Color>(
                         const Color.fromARGB(255, 171, 105, 90)),
                   ),
-                  onPressed: () {}),
+                  onPressed: () {
+                    type = FoodSpotType.barBiblio;
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => const FoodSpotWithoutMenu()));
+                  }),
             ),
           ),
           Container(
@@ -111,8 +119,9 @@ class Food extends StatelessWidget {
                         const Color.fromARGB(255, 176, 118, 105)),
                   ),
                   onPressed: () {
+                    type = FoodSpotType.cantina;
                     Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => const Cantina()));
+                      MaterialPageRoute(builder: (context) => const FoodSpotWithMenu()));
                   }),
             ),
           ),
@@ -129,7 +138,11 @@ class Food extends StatelessWidget {
                     backgroundColor: MaterialStateProperty.all<Color>(
                         const Color.fromARGB(255, 197, 162, 150)),
                   ),
-                  onPressed: () {}),
+                  onPressed: () {
+                    type = FoodSpotType.restauranteINEGI;
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => const FoodSpotWithoutMenu()));
+                  }),
             ),
           ),
           Container(
@@ -145,7 +158,11 @@ class Food extends StatelessWidget {
                     backgroundColor: MaterialStateProperty.all<Color>(
                         const Color.fromARGB(255, 212, 186, 178)),
                   ),
-                  onPressed: () {}),
+                  onPressed: () {
+                    type = FoodSpotType.barMinas;
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => const FoodSpotWithoutMenu()));
+                  }),
             ),
           ),
         ],

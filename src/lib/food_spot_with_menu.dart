@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
-import 'package:hello_world/food.dart';
+import 'package:hello_world/food_list.dart';
 
-void main() => runApp(const Cantina());
+void main() => runApp(const FoodSpotWithMenu());
 
-class Cantina extends StatelessWidget {
+class FoodSpotWithMenu extends StatelessWidget {
   // This widget is the root
   // of your application.
-  const Cantina({Key? key}) : super(key: key);
+  const FoodSpotWithMenu({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -79,7 +79,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             color: Colors.black,
           onPressed: () {
             if(ispressed) {Navigator.of(context).pop();}
-            else {Navigator.of(context).push(MaterialPageRoute(builder: (context) => const Food()));}
+            else {Navigator.of(context).push(MaterialPageRoute(builder: (context) => const FoodList()));}
           }
         ),
         backgroundColor: Colors.white,
@@ -376,7 +376,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               ),
             ],
           ),
-          Image.asset('assets/images/canteen.png', height:110,width:385,alignment: Alignment.center),
+          Image.asset('src/assets/images/canteen.png', height:110,width:385,alignment: Alignment.center),
         ],
       ),
     );
@@ -398,7 +398,7 @@ Widget getWidget(BuildContext context){
           ),
           onPressed: () {
             Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => const Cantina()),
+              MaterialPageRoute(builder: (context) => const FoodSpotWithMenu()),
             );
           }),
     ),

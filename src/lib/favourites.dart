@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:hello_world/cantina.dart';
+import 'package:hello_world/food_spot_with_menu.dart';
 import 'package:hello_world/park.dart';
 
 class Favourites extends StatelessWidget {

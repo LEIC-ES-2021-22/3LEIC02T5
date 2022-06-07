@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
-import 'package:hello_world/food.dart';
+import 'package:hello_world/food_list.dart';
 
-void main() => runApp(const FoodSpots());
+void main() => runApp(const FoodSpotWithoutMenu());
 
-class FoodSpots extends StatelessWidget {
+class FoodSpotWithoutMenu extends StatelessWidget {
   // This widget is the root
   // of your application.
-  const FoodSpots({Key? key}) : super(key: key);
+  const FoodSpotWithoutMenu({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -32,6 +32,21 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   double progress = 0;
   int countUp = 0;
   int countDown = 0;
+
+  String getImageAddress(){
+    switch(type){
+      case FoodSpotType.aefeup:
+        return "assets/images/schedules/aefeup.png";
+      case FoodSpotType.cantina:
+        return "assets/images/schedules/canteen.png";
+      case FoodSpotType.restauranteINEGI:
+        return "assets/images/schedules/restaurante_inegi.png";
+      case FoodSpotType.barMinas:
+        return "assets/images/schedules/bar_minas.png";
+      case FoodSpotType.barBiblio:
+        return "assets/images/schedules/bar_biblioteca.png";
+    }
+  }
 
   Future _handleReactions() async {
     final balance = countUp - countDown;
@@ -82,7 +97,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               if(ispressed) {
                 Navigator.of(context).pop();
               } else {
-                Navigator.of(context).push(MaterialPageRoute(builder: (context) => const Food()));
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => const FoodList()));
               }
             }
         ),
@@ -207,7 +222,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               ),
             ],
           ),
-          Image.asset('assets/images/AEFEUP.png', height:110,width:385,alignment: Alignment.center),
+          Image.asset('assets/images/aefeup.png', height:110,width:385,alignment: Alignment.center),
         ],
       ),
     );
@@ -229,7 +244,7 @@ Widget getWidget(BuildContext context){
           ),
           onPressed: () {
             Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => const FoodSpots()),
+              MaterialPageRoute(builder: (context) => const FoodSpotWithoutMenu()),
             );
           }),
     ),
