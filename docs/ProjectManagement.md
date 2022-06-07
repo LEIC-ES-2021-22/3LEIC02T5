@@ -34,3 +34,19 @@
 
 - We are still a bit confused when it comes to testing, especially about the automated acceptance tests, because our app doesn't have a lot of functionality so far.
 - We still need to figure out how to integrate our app inside Uni.
+
+# Iteration 3 - Retrospective
+
+## Did Well
+
+- We managed to close a bigger amount of issues in this iteration.
+- 
+
+## Do Differently
+
+- 
+
+## Puzzles
+
+- We were not able to implement the Canteen API after some tries, so we implemented the menus and schedules through mocks.
+- We couldn't apply web scraping to the Library Occupation Web Page (we couldn't get the JSON with the data) so we implemented the feature using sample images from the web page as mocks.
