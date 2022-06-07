@@ -41,7 +41,7 @@
                     backgroundColor: MaterialStateProperty.all<Color>(
                         const Color.fromARGB(255, 44, 44, 44)),
                   ),
-                  onPressed: () {}
+                  onPressed: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => DA()),);}
               ),
             ),
       ),
@@ -57,7 +57,7 @@
                     backgroundColor: MaterialStateProperty.all<Color>(
                         const Color.fromARGB( 255, 76, 76, 76)),
                   ),
-                  onPressed: () {}
+                  onPressed: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => ES()),);}
               ),
             ),
       ),
@@ -73,7 +73,7 @@
                     backgroundColor: MaterialStateProperty.all<Color>(
                         const Color.fromARGB(255, 148, 148, 149)),
                   ),
-                  onPressed: () {}
+                  onPressed: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => LC()),);}
               ),
             ),
             ),
@@ -89,7 +89,7 @@
                     backgroundColor: MaterialStateProperty.all<Color>(
                         const Color.fromARGB(255, 182, 183, 183)),
                   ),
-                  onPressed: () {}
+                  onPressed: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => LTW()),);}
               ),
       ),
               ),
@@ -105,10 +105,900 @@
                     backgroundColor: MaterialStateProperty.all<Color>(
                         const Color.fromARGB(255, 201, 202, 202)),
                   ),
-                  onPressed: () {}
+                  onPressed: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => SO()),);}
               ),
             ),
               ),
+          ],
+        ),
+      );
+    }
+  }
+
+  class SO extends StatelessWidget {
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        appBar: AppBar(
+          leading: BackButton(
+              color: Colors.black
+          ),
+          backgroundColor: Colors.white,
+          actions: <Widget>[
+            IconButton(
+              alignment: Alignment.topLeft,
+              color: Colors.grey,
+              icon: const Icon(Icons.account_circle, size: 40),
+              onPressed: () {},
+            ),
+          ],
+        ),
+        body:Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+                Row(
+                  children: <Widget>[
+                    Container(
+                      margin: EdgeInsets.fromLTRB(10,4.5,0,0),
+                      child : SizedBox(
+                        height: 45,
+                        width: 85,
+                        child:ElevatedButton(
+                            child: const Text('SO', style: TextStyle(fontSize: 17),
+                                textAlign: TextAlign.left),
+                            style: ButtonStyle(
+                              backgroundColor: MaterialStateProperty.all<Color>(
+                                  const Color.fromARGB(255, 171, 121, 105)),
+                            ),
+                            onPressed: () {}
+                        ),
+                      ),),
+                    Container(
+                      margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                      child : SizedBox(
+                        height: 45,
+                        width: 270,
+                        child:ElevatedButton(
+                            child: const Text('Monday | 10h30 - 12h30', style: TextStyle(fontSize: 17,color: Colors.black),
+                                textAlign: TextAlign.center),
+                            style: ButtonStyle(
+                              backgroundColor: MaterialStateProperty.all<Color>(
+                                  const Color.fromARGB(255, 227, 227, 227)),
+                            ),
+                            onPressed: () {}
+                        ),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                      child : SizedBox(
+                        height: 45,
+                        width: 85,
+                        child:ElevatedButton(
+                            child: const Text('B001', style: TextStyle(fontSize: 17),
+                                textAlign: TextAlign.left),
+                            style: ButtonStyle(
+                              backgroundColor: MaterialStateProperty.all<Color>(
+                                  const Color.fromARGB(255, 99, 99, 99)),
+                            ),
+                            onPressed: () {}
+                        ),
+                      ),),
+                  ],
+                ),
+              Row(
+                children: <Widget>[
+                  Container(
+                    margin: EdgeInsets.fromLTRB(10,4.5,0,0),
+                    child : SizedBox(
+                      height: 45,
+                      width: 85,
+                      child:ElevatedButton(
+                          child: const Text('SO', style: TextStyle(fontSize: 17),
+                              textAlign: TextAlign.left),
+                          style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all<Color>(
+                                const Color.fromARGB(255, 171, 121, 105)),
+                          ),
+                          onPressed: () {}
+                      ),
+                    ),),
+                  Container(
+                    margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                    child : SizedBox(
+                      height: 45,
+                      width: 270,
+                      child:ElevatedButton(
+                          child: const Text('Tuesday | 16h00 - 18h00', style: TextStyle(fontSize: 17,color: Colors.black),
+                              textAlign: TextAlign.center),
+                          style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all<Color>(
+                                const Color.fromARGB(255, 227, 227, 227)),
+                          ),
+                          onPressed: () {}
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                    child : SizedBox(
+                      height: 45,
+                      width: 85,
+                      child:ElevatedButton(
+                          child: const Text('B003', style: TextStyle(fontSize: 17),
+                              textAlign: TextAlign.left),
+                          style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all<Color>(
+                                const Color.fromARGB(255, 99, 99, 99)),
+                          ),
+                          onPressed: () {}
+                      ),
+                    ),),
+                ],
+              ),
+              Row(
+                children: <Widget>[
+                  Container(
+                    margin: EdgeInsets.fromLTRB(10,4.5,0,0),
+                    child : SizedBox(
+                      height: 45,
+                      width: 85,
+                      child:ElevatedButton(
+                          child: const Text('SO', style: TextStyle(fontSize: 17),
+                              textAlign: TextAlign.left),
+                          style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all<Color>(
+                                const Color.fromARGB(255, 171, 121, 105)),
+                          ),
+                          onPressed: () {}
+                      ),
+                    ),),
+                  Container(
+                    margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                    child : SizedBox(
+                      height: 45,
+                      width: 270,
+                      child:ElevatedButton(
+                          child: const Text('Friday | 08h00 - 10h00', style: TextStyle(fontSize: 17,color: Colors.black),
+                              textAlign: TextAlign.center),
+                          style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all<Color>(
+                                const Color.fromARGB(255, 227, 227, 227)),
+                          ),
+                          onPressed: () {}
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                    child : SizedBox(
+                      height: 45,
+                      width: 85,
+                      child:ElevatedButton(
+                          child: const Text('B112', style: TextStyle(fontSize: 17),
+                              textAlign: TextAlign.left),
+                          style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all<Color>(
+                                const Color.fromARGB(255, 99, 99, 99)),
+                          ),
+                          onPressed: () {}
+                      ),
+                    ),),
+                ],
+              ),
+           ],
+        ),
+      );
+    }
+  }
+
+  class LTW extends StatelessWidget {
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        appBar: AppBar(
+          leading: BackButton(
+              color: Colors.black
+          ),
+          backgroundColor: Colors.white,
+          actions: <Widget>[
+            IconButton(
+              alignment: Alignment.topLeft,
+              color: Colors.grey,
+              icon: const Icon(Icons.account_circle, size: 40),
+              onPressed: () {},
+            ),
+          ],
+        ),
+        body:Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Row(
+              children: <Widget>[
+                Container(
+                  margin: EdgeInsets.fromLTRB(10,4.5,0,0),
+                  child : SizedBox(
+                    height: 45,
+                    width: 85,
+                    child:ElevatedButton(
+                        child: const Text('LTW', style: TextStyle(fontSize: 17),
+                            textAlign: TextAlign.left),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              const Color.fromARGB(255, 171, 121, 105)),
+                        ),
+                        onPressed: () {}
+                    ),
+                  ),),
+                Container(
+                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  child : SizedBox(
+                    height: 45,
+                    width: 270,
+                    child:ElevatedButton(
+                        child: const Text('Wednesday | 11h30 - 13h30', style: TextStyle(fontSize: 17,color: Colors.black),
+                            textAlign: TextAlign.center),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              const Color.fromARGB(255, 227, 227, 227)),
+                        ),
+                        onPressed: () {}
+                    ),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  child : SizedBox(
+                    height: 45,
+                    width: 85,
+                    child:ElevatedButton(
+                        child: const Text('B002', style: TextStyle(fontSize: 17),
+                            textAlign: TextAlign.left),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              const Color.fromARGB(255, 99, 99, 99)),
+                        ),
+                        onPressed: () {}
+                    ),
+                  ),),
+              ],
+            ),
+            Row(
+              children: <Widget>[
+                Container(
+                  margin: EdgeInsets.fromLTRB(10,4.5,0,0),
+                  child : SizedBox(
+                    height: 45,
+                    width: 85,
+                    child:ElevatedButton(
+                        child: const Text('LTW', style: TextStyle(fontSize: 17),
+                            textAlign: TextAlign.left),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              const Color.fromARGB(255, 171, 121, 105)),
+                        ),
+                        onPressed: () {}
+                    ),
+                  ),),
+                Container(
+                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  child : SizedBox(
+                    height: 45,
+                    width: 270,
+                    child:ElevatedButton(
+                        child: const Text('Thursday | 15h00 - 17h00', style: TextStyle(fontSize: 17,color: Colors.black),
+                            textAlign: TextAlign.center),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              const Color.fromARGB(255, 227, 227, 227)),
+                        ),
+                        onPressed: () {}
+                    ),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  child : SizedBox(
+                    height: 45,
+                    width: 85,
+                    child:ElevatedButton(
+                        child: const Text('B025', style: TextStyle(fontSize: 17),
+                            textAlign: TextAlign.left),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              const Color.fromARGB(255, 99, 99, 99)),
+                        ),
+                        onPressed: () {}
+                    ),
+                  ),),
+              ],
+            ),
+            Row(
+              children: <Widget>[
+                Container(
+                  margin: EdgeInsets.fromLTRB(10,4.5,0,0),
+                  child : SizedBox(
+                    height: 45,
+                    width: 85,
+                    child:ElevatedButton(
+                        child: const Text('LTW', style: TextStyle(fontSize: 17),
+                            textAlign: TextAlign.left),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              const Color.fromARGB(255, 171, 121, 105)),
+                        ),
+                        onPressed: () {}
+                    ),
+                  ),),
+                Container(
+                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  child : SizedBox(
+                    height: 45,
+                    width: 270,
+                    child:ElevatedButton(
+                        child: const Text('Friday | 10h00 - 12h00', style: TextStyle(fontSize: 17,color: Colors.black),
+                            textAlign: TextAlign.center),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              const Color.fromARGB(255, 227, 227, 227)),
+                        ),
+                        onPressed: () {}
+                    ),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  child : SizedBox(
+                    height: 45,
+                    width: 85,
+                    child:ElevatedButton(
+                        child: const Text('B002', style: TextStyle(fontSize: 17),
+                            textAlign: TextAlign.left),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              const Color.fromARGB(255, 99, 99, 99)),
+                        ),
+                        onPressed: () {}
+                    ),
+                  ),),
+              ],
+            ),
+          ],
+        ),
+      );
+    }
+  }
+
+  class LC extends StatelessWidget {
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        appBar: AppBar(
+          leading: BackButton(
+              color: Colors.black
+          ),
+          backgroundColor: Colors.white,
+          actions: <Widget>[
+            IconButton(
+              alignment: Alignment.topLeft,
+              color: Colors.grey,
+              icon: const Icon(Icons.account_circle, size: 40),
+              onPressed: () {},
+            ),
+          ],
+        ),
+        body:Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Row(
+              children: <Widget>[
+                Container(
+                  margin: EdgeInsets.fromLTRB(10,4.5,0,0),
+                  child : SizedBox(
+                    height: 45,
+                    width: 85,
+                    child:ElevatedButton(
+                        child: const Text('LC', style: TextStyle(fontSize: 17),
+                            textAlign: TextAlign.left),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              const Color.fromARGB(255, 171, 121, 105)),
+                        ),
+                        onPressed: () {}
+                    ),
+                  ),),
+                Container(
+                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  child : SizedBox(
+                    height: 45,
+                    width: 270,
+                    child:ElevatedButton(
+                        child: const Text('Monday | 12h30 - 14h30', style: TextStyle(fontSize: 17,color: Colors.black),
+                            textAlign: TextAlign.center),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              const Color.fromARGB(255, 227, 227, 227)),
+                        ),
+                        onPressed: () {}
+                    ),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  child : SizedBox(
+                    height: 45,
+                    width: 85,
+                    child:ElevatedButton(
+                        child: const Text('B005', style: TextStyle(fontSize: 17),
+                            textAlign: TextAlign.left),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              const Color.fromARGB(255, 99, 99, 99)),
+                        ),
+                        onPressed: () {}
+                    ),
+                  ),),
+              ],
+            ),
+            Row(
+              children: <Widget>[
+                Container(
+                  margin: EdgeInsets.fromLTRB(10,4.5,0,0),
+                  child : SizedBox(
+                    height: 45,
+                    width: 85,
+                    child:ElevatedButton(
+                        child: const Text('LC', style: TextStyle(fontSize: 17),
+                            textAlign: TextAlign.left),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              const Color.fromARGB(255, 171, 121, 105)),
+                        ),
+                        onPressed: () {}
+                    ),
+                  ),),
+                Container(
+                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  child : SizedBox(
+                    height: 45,
+                    width: 270,
+                    child:ElevatedButton(
+                        child: const Text('Tuesday | 14h00 - 16h00', style: TextStyle(fontSize: 17,color: Colors.black),
+                            textAlign: TextAlign.center),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              const Color.fromARGB(255, 227, 227, 227)),
+                        ),
+                        onPressed: () {}
+                    ),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  child : SizedBox(
+                    height: 45,
+                    width: 85,
+                    child:ElevatedButton(
+                        child: const Text('B003', style: TextStyle(fontSize: 17),
+                            textAlign: TextAlign.left),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              const Color.fromARGB(255, 99, 99, 99)),
+                        ),
+                        onPressed: () {}
+                    ),
+                  ),),
+              ],
+            ),
+            Row(
+              children: <Widget>[
+                Container(
+                  margin: EdgeInsets.fromLTRB(10,4.5,0,0),
+                  child : SizedBox(
+                    height: 45,
+                    width: 85,
+                    child:ElevatedButton(
+                        child: const Text('LC', style: TextStyle(fontSize: 17),
+                            textAlign: TextAlign.left),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              const Color.fromARGB(255, 171, 121, 105)),
+                        ),
+                        onPressed: () {}
+                    ),
+                  ),),
+                Container(
+                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  child : SizedBox(
+                    height: 45,
+                    width: 270,
+                    child:ElevatedButton(
+                        child: const Text('Thursday | 08h00 - 10h00', style: TextStyle(fontSize: 17,color: Colors.black),
+                            textAlign: TextAlign.center),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              const Color.fromARGB(255, 227, 227, 227)),
+                        ),
+                        onPressed: () {}
+                    ),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  child : SizedBox(
+                    height: 45,
+                    width: 85,
+                    child:ElevatedButton(
+                        child: const Text('B112', style: TextStyle(fontSize: 17),
+                            textAlign: TextAlign.left),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              const Color.fromARGB(255, 99, 99, 99)),
+                        ),
+                        onPressed: () {}
+                    ),
+                  ),),
+              ],
+            ),
+          ],
+        ),
+      );
+    }
+  }
+
+  class DA extends StatelessWidget {
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        appBar: AppBar(
+          leading: BackButton(
+              color: Colors.black
+          ),
+          backgroundColor: Colors.white,
+          actions: <Widget>[
+            IconButton(
+              alignment: Alignment.topLeft,
+              color: Colors.grey,
+              icon: const Icon(Icons.account_circle, size: 40),
+              onPressed: () {},
+            ),
+          ],
+        ),
+        body:Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Row(
+              children: <Widget>[
+                Container(
+                  margin: EdgeInsets.fromLTRB(10,4.5,0,0),
+                  child : SizedBox(
+                    height: 45,
+                    width: 85,
+                    child:ElevatedButton(
+                        child: const Text('DA', style: TextStyle(fontSize: 17),
+                            textAlign: TextAlign.left),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              const Color.fromARGB(255, 171, 121, 105)),
+                        ),
+                        onPressed: () {}
+                    ),
+                  ),),
+                Container(
+                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  child : SizedBox(
+                    height: 45,
+                    width: 270,
+                    child:ElevatedButton(
+                        child: const Text('Monday | 8h30 - 10h30', style: TextStyle(fontSize: 17,color: Colors.black),
+                            textAlign: TextAlign.center),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              const Color.fromARGB(255, 227, 227, 227)),
+                        ),
+                        onPressed: () {}
+                    ),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  child : SizedBox(
+                    height: 45,
+                    width: 85,
+                    child:ElevatedButton(
+                        child: const Text('B001', style: TextStyle(fontSize: 17),
+                            textAlign: TextAlign.left),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              const Color.fromARGB(255, 99, 99, 99)),
+                        ),
+                        onPressed: () {}
+                    ),
+                  ),),
+              ],
+            ),
+            Row(
+              children: <Widget>[
+                Container(
+                  margin: EdgeInsets.fromLTRB(10,4.5,0,0),
+                  child : SizedBox(
+                    height: 45,
+                    width: 85,
+                    child:ElevatedButton(
+                        child: const Text('DA', style: TextStyle(fontSize: 17),
+                            textAlign: TextAlign.left),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              const Color.fromARGB(255, 171, 121, 105)),
+                        ),
+                        onPressed: () {}
+                    ),
+                  ),),
+                Container(
+                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  child : SizedBox(
+                    height: 45,
+                    width: 270,
+                    child:ElevatedButton(
+                        child: const Text('Wednesday | 10h00 - 12h00', style: TextStyle(fontSize: 17,color: Colors.black),
+                            textAlign: TextAlign.center),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              const Color.fromARGB(255, 227, 227, 227)),
+                        ),
+                        onPressed: () {}
+                    ),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  child : SizedBox(
+                    height: 45,
+                    width: 85,
+                    child:ElevatedButton(
+                        child: const Text('B007', style: TextStyle(fontSize: 17),
+                            textAlign: TextAlign.left),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              const Color.fromARGB(255, 99, 99, 99)),
+                        ),
+                        onPressed: () {}
+                    ),
+                  ),),
+              ],
+            ),
+            Row(
+              children: <Widget>[
+                Container(
+                  margin: EdgeInsets.fromLTRB(10,4.5,0,0),
+                  child : SizedBox(
+                    height: 45,
+                    width: 85,
+                    child:ElevatedButton(
+                        child: const Text('DA', style: TextStyle(fontSize: 17),
+                            textAlign: TextAlign.left),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              const Color.fromARGB(255, 171, 121, 105)),
+                        ),
+                        onPressed: () {}
+                    ),
+                  ),),
+                Container(
+                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  child : SizedBox(
+                    height: 45,
+                    width: 270,
+                    child:ElevatedButton(
+                        child: const Text('Friday | 17h00 - 19h00', style: TextStyle(fontSize: 17,color: Colors.black),
+                            textAlign: TextAlign.center),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              const Color.fromARGB(255, 227, 227, 227)),
+                        ),
+                        onPressed: () {}
+                    ),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  child : SizedBox(
+                    height: 45,
+                    width: 85,
+                    child:ElevatedButton(
+                        child: const Text('B002', style: TextStyle(fontSize: 17),
+                            textAlign: TextAlign.left),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              const Color.fromARGB(255, 99, 99, 99)),
+                        ),
+                        onPressed: () {}
+                    ),
+                  ),),
+              ],
+            ),
+          ],
+        ),
+      );
+    }
+  }
+
+  class ES extends StatelessWidget {
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        appBar: AppBar(
+          leading: BackButton(
+              color: Colors.black
+          ),
+          backgroundColor: Colors.white,
+          actions: <Widget>[
+            IconButton(
+              alignment: Alignment.topLeft,
+              color: Colors.grey,
+              icon: const Icon(Icons.account_circle, size: 40),
+              onPressed: () {},
+            ),
+          ],
+        ),
+        body:Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Row(
+              children: <Widget>[
+                Container(
+                  margin: EdgeInsets.fromLTRB(10,4.5,0,0),
+                  child : SizedBox(
+                    height: 45,
+                    width: 85,
+                    child:ElevatedButton(
+                        child: const Text('ES', style: TextStyle(fontSize: 17),
+                            textAlign: TextAlign.left),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              const Color.fromARGB(255, 171, 121, 105)),
+                        ),
+                        onPressed: () {}
+                    ),
+                  ),),
+                Container(
+                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  child : SizedBox(
+                    height: 45,
+                    width: 270,
+                    child:ElevatedButton(
+                        child: const Text('Tuesday | 17h30 - 19h30', style: TextStyle(fontSize: 17,color: Colors.black),
+                            textAlign: TextAlign.center),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              const Color.fromARGB(255, 227, 227, 227)),
+                        ),
+                        onPressed: () {}
+                    ),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  child : SizedBox(
+                    height: 45,
+                    width: 85,
+                    child:ElevatedButton(
+                        child: const Text('B002', style: TextStyle(fontSize: 17),
+                            textAlign: TextAlign.left),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              const Color.fromARGB(255, 99, 99, 99)),
+                        ),
+                        onPressed: () {}
+                    ),
+                  ),),
+              ],
+            ),
+            Row(
+              children: <Widget>[
+                Container(
+                  margin: EdgeInsets.fromLTRB(10,4.5,0,0),
+                  child : SizedBox(
+                    height: 45,
+                    width: 85,
+                    child:ElevatedButton(
+                        child: const Text('ES', style: TextStyle(fontSize: 17),
+                            textAlign: TextAlign.left),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              const Color.fromARGB(255, 171, 121, 105)),
+                        ),
+                        onPressed: () {}
+                    ),
+                  ),),
+                Container(
+                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  child : SizedBox(
+                    height: 45,
+                    width: 270,
+                    child:ElevatedButton(
+                        child: const Text('Thursday | 8h00 - 10h00', style: TextStyle(fontSize: 17,color: Colors.black),
+                            textAlign: TextAlign.center),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              const Color.fromARGB(255, 227, 227, 227)),
+                        ),
+                        onPressed: () {}
+                    ),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  child : SizedBox(
+                    height: 45,
+                    width: 85,
+                    child:ElevatedButton(
+                        child: const Text('B011', style: TextStyle(fontSize: 17),
+                            textAlign: TextAlign.left),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              const Color.fromARGB(255, 99, 99, 99)),
+                        ),
+                        onPressed: () {}
+                    ),
+                  ),),
+              ],
+            ),
+            Row(
+              children: <Widget>[
+                Container(
+                  margin: EdgeInsets.fromLTRB(10,4.5,0,0),
+                  child : SizedBox(
+                    height: 45,
+                    width: 85,
+                    child:ElevatedButton(
+                        child: const Text('ES', style: TextStyle(fontSize: 17),
+                            textAlign: TextAlign.left),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              const Color.fromARGB(255, 171, 121, 105)),
+                        ),
+                        onPressed: () {}
+                    ),
+                  ),),
+                Container(
+                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  child : SizedBox(
+                    height: 45,
+                    width: 270,
+                    child:ElevatedButton(
+                        child: const Text('Friday | 16h00 - 18h00', style: TextStyle(fontSize: 17,color: Colors.black),
+                            textAlign: TextAlign.center),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              const Color.fromARGB(255, 227, 227, 227)),
+                        ),
+                        onPressed: () {}
+                    ),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  child : SizedBox(
+                    height: 45,
+                    width: 85,
+                    child:ElevatedButton(
+                        child: const Text('B103', style: TextStyle(fontSize: 17),
+                            textAlign: TextAlign.left),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              const Color.fromARGB(255, 99, 99, 99)),
+                        ),
+                        onPressed: () {}
+                    ),
+                  ),),
+              ],
+            ),
           ],
         ),
       );
