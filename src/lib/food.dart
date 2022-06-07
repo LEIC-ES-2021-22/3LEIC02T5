@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:hello_world/cantina.dart';
-import 'package:hello_world/foodSpots.dart';
+import 'package:hello_world/food_spots.dart';
 import 'package:hello_world/menu.dart';
 bool ispressed = false;
 class Food extends StatelessWidget {
+  const Food({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -11,15 +13,18 @@ class Food extends StatelessWidget {
         leading: BackButton(
             color: Colors.black,
             onPressed: () {
-              if(ispressed) Navigator.of(context).pop();
-              else Navigator.of(context).push(MaterialPageRoute(builder: (context) => Menu()));
+              if(ispressed) {
+                Navigator.of(context).pop();
+              } else {
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => const Menu()));
+              }
             }
         ),
         backgroundColor: Colors.white,
         actions: <Widget>[
           Container (
             //alignment: Alignment.topLeft,
-            margin: EdgeInsets.fromLTRB(0, 10, 208,10),
+            margin: const EdgeInsets.fromLTRB(0, 10, 208,10),
             /*child: SizedBox(
               width: 134,
               child: ElevatedButton(
@@ -61,7 +66,7 @@ class Food extends StatelessWidget {
         ),
         children: <Widget>[
           Container(
-            margin: EdgeInsets.fromLTRB(10, 10, 10, 0),
+            margin: const EdgeInsets.fromLTRB(10, 10, 10, 0),
             child: SizedBox(
               height: 60,
               width: 250,
@@ -74,12 +79,12 @@ class Food extends StatelessWidget {
                         const Color.fromARGB(255, 147, 77, 76)),
                   ),
                   onPressed: () {Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => FoodSpots()));
+                      MaterialPageRoute(builder: (context) => const FoodSpots()));
                   }),
             ),
           ),
           Container(
-            margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
+            margin: const EdgeInsets.fromLTRB(10, 0, 10, 0),
             child: SizedBox(
               child: ElevatedButton(
                   child: const Text('Bar da Biblioteca',
@@ -93,7 +98,7 @@ class Food extends StatelessWidget {
             ),
           ),
           Container(
-            margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
+            margin: const EdgeInsets.fromLTRB(10, 0, 10, 0),
             child: SizedBox(
               height: 60,
               width: 100,
@@ -107,12 +112,12 @@ class Food extends StatelessWidget {
                   ),
                   onPressed: () {
                     Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => Cantina()));
+                      MaterialPageRoute(builder: (context) => const Cantina()));
                   }),
             ),
           ),
           Container(
-            margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
+            margin: const EdgeInsets.fromLTRB(10, 0, 10, 0),
             child: SizedBox(
               height: 60,
               width: 100,
@@ -128,7 +133,7 @@ class Food extends StatelessWidget {
             ),
           ),
           Container(
-            margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
+            margin: const EdgeInsets.fromLTRB(10, 0, 10, 0),
             child: SizedBox(
               height: 60,
               width: 100,

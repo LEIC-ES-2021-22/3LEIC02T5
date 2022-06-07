@@ -4,10 +4,12 @@ import 'package:hello_world/cantina.dart';
 import 'package:hello_world/park.dart';
 
 class Favourites extends StatelessWidget {
+  const Favourites({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(leading: BackButton(
+      appBar: AppBar(leading: const BackButton(
           color: Colors.black
         ),
         backgroundColor: Colors.white,

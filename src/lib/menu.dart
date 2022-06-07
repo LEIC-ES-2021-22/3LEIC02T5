@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:hello_world/favourites.dart';
 import 'package:hello_world/food.dart';
-import 'package:hello_world/parking.dart';
-import 'package:hello_world/theoreticalClasses.dart';
+import 'package:hello_world/park_list.dart';
+import 'package:hello_world/theoretical_classes.dart';
 import 'package:hello_world/library.dart';
 
 class Menu extends StatelessWidget{
+  const Menu({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,7 +26,7 @@ class Menu extends StatelessWidget{
         margin:EdgeInsets.fromLTRB(0,0,0,MediaQuery.of(context).size.height/2.8),
         child: MaterialButton(
             height: 2,
-            onPressed: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => Favourites()),);},
+            onPressed: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => const Favourites()),);},
             color: const Color.fromARGB(255, 210, 187, 128),
             textColor: Colors.white,
             child: const Icon(
@@ -35,7 +37,7 @@ class Menu extends StatelessWidget{
             shape: const CircleBorder()),
       ),
       body: GridView(
-        physics: new NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
             crossAxisSpacing: 10,
@@ -45,7 +47,7 @@ class Menu extends StatelessWidget{
           ),
           children: <Widget>[
             Container(
-              margin: EdgeInsets.fromLTRB(10,20,0,0),
+              margin: const EdgeInsets.fromLTRB(10,20,0,0),
             child : SizedBox(
               height: double.maxFinite/2,
               width: double.maxFinite/2,
@@ -57,12 +59,12 @@ class Menu extends StatelessWidget{
                       const Color.fromARGB(255, 175, 108, 94)),
                 ),
                 onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => Food()),);}
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => const Food()),);}
             ),
             ),
             ),
             Container(
-            margin: EdgeInsets.fromLTRB(0,20,10,0),
+            margin: const EdgeInsets.fromLTRB(0,20,10,0),
             child: SizedBox(
               height: double.maxFinite/2,
               width: double.maxFinite/2,
@@ -74,13 +76,13 @@ class Menu extends StatelessWidget{
                       const Color.fromARGB(255, 218, 203, 190)),
                 ),
                 onPressed: () {Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => Parking()),
+                  MaterialPageRoute(builder: (context) => const ParkList()),
                 );}
             ),
             ),
             ),
             Container(
-            margin: EdgeInsets.fromLTRB(10,0,0,0),
+            margin: const EdgeInsets.fromLTRB(10,0,0,0),
             child : SizedBox(
               height: double.maxFinite/2,
               width: double.maxFinite/2,
@@ -92,13 +94,13 @@ class Menu extends StatelessWidget{
                       const Color.fromARGB(255, 176, 176, 176)),
                 ),
                 onPressed: () {Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => TheoreticalClasses()),
+                  MaterialPageRoute(builder: (context) => const TheoreticalClasses()),
                 );}
             ),
             ),
             ),
             Container(
-            margin: EdgeInsets.fromLTRB(0,0,10,0),
+            margin: const EdgeInsets.fromLTRB(0,0,10,0),
             child : SizedBox(
               height: 900,
               width: 250,
@@ -110,7 +112,7 @@ class Menu extends StatelessWidget{
                       const Color.fromARGB(255, 209, 209, 209)),
                 ),
                 onPressed: () {Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => Library()),
+                  MaterialPageRoute(builder: (context) => const Library()),
                 );
                 }
                 ),

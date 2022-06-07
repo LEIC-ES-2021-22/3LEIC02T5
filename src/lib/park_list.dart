@@ -1,14 +1,15 @@
 import 'package:hello_world/park.dart';
 import 'package:flutter/material.dart';
-import 'package:hello_world/menu.dart';
 enum ParkType {student,teacher}
 ParkType type = ParkType.student;
-class Parking extends StatelessWidget {
+class ParkList extends StatelessWidget {
+  const ParkList({Key? key}) : super(key: key);
+
     @override
     Widget build(BuildContext context) {
       return Scaffold(
         appBar: AppBar(
-          leading: BackButton(
+          leading: const BackButton(
               color: Colors.black
           ),
           backgroundColor: Colors.white,
@@ -32,7 +33,7 @@ class Parking extends StatelessWidget {
           ),
           children: <Widget>[
             Container(
-              margin: EdgeInsets.fromLTRB(10,10,10,0),
+              margin: const EdgeInsets.fromLTRB(10,10,10,0),
               child : SizedBox(
                 height: 60,
                 width: 250,
@@ -45,12 +46,12 @@ class Parking extends StatelessWidget {
                   ),
                   onPressed: () {
                     type = ParkType.student;
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => Park()),);}
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => const Park()),);}
               ),
             ),
             ),
             Container(
-              margin: EdgeInsets.fromLTRB(10,0,10,0),
+              margin: const EdgeInsets.fromLTRB(10,0,10,0),
               child : SizedBox(
                 height: 60,
                 width: 250,
@@ -63,7 +64,7 @@ class Parking extends StatelessWidget {
                   ),
                   onPressed: () {
                     type = ParkType.teacher;
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => Park()),);}
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => const Park()),);}
               ),
             ),
            ),

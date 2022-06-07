@@ -37,9 +37,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         padding: const EdgeInsets.all(10),
         child: ListView(
           children: <Widget>[
-            SizedBox(height:70),
-            new Image.asset('assets/images/logotipo.png', height: 145,width: 100),
-            SizedBox(height:35),
+            const SizedBox(height:70),
+            Image.asset('assets/images/logotipo.png', height: 145,width: 100),
+            const SizedBox(height:35),
             Container(
               padding: const EdgeInsets.all(10),
               child: TextField(
@@ -70,7 +70,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     color:Color.fromARGB(255, 140, 45, 25),
                   )),
             ),
-            Container(
+            SizedBox(
               height: 50,
               child: ElevatedButton(
                   child: const Text('Login'),
@@ -78,8 +78,6 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     backgroundColor: MaterialStateProperty.all<Color>(const Color.fromARGB(255, 140, 45, 25)),
                   ),
                   onPressed: () {
-                    print(nameController.text);
-                    print(passwordController.text);
                     _navigateToNextScreen(context);
                   }
               ),
@@ -104,6 +102,6 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         ));
   }
   void _navigateToNextScreen(BuildContext context) {
-    Navigator.of(context).push(MaterialPageRoute(builder: (context) => Menu()));
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => const Menu()));
   }
 }

@@ -1,11 +1,6 @@
-import 'dart:ui';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:hello_world/main.dart';
 import 'dart:async';
 import 'package:hello_world/food.dart';
-import 'package:flutter/material.dart';
 
 void main() => runApp(const FoodSpots());
 
@@ -20,7 +15,7 @@ class FoodSpots extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyStatefulWidget(),
+      home: const MyStatefulWidget(),
       debugShowCheckedModeBanner: false,
     );
   }
@@ -35,13 +30,13 @@ class MyStatefulWidget extends StatefulWidget {
 
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   double progress = 0;
-  int count_up = 0;
-  int count_down = 0;
+  int countUp = 0;
+  int countDown = 0;
 
   Future _handleReactions() async {
-    final balance = count_up - count_down;
+    final balance = countUp - countDown;
     setState(() {
-      Text("oi");
+      const Text("oi");
 
       progress = ((balance * 0.1) / 25);
       if (balance == -25) {
@@ -55,7 +50,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           progress = 0;
         }
       } else if (balance == 100) {
-        Text("Full!",style:TextStyle(fontWeight: FontWeight.bold, fontSize: 24, color: Colors.black));
+        const Text("Full!",style:TextStyle(fontWeight: FontWeight.bold, fontSize: 24, color: Colors.black));
       }
     });
   }
@@ -63,17 +58,17 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   Widget buildProgress() {
     if (progress >= 0.9) {
       //Text("Full!",style:TextStyle(fontWeight: FontWeight.bold, fontSize: 24, color: Colors.black));
-      return LinearProgressIndicator(valueColor: AlwaysStoppedAnimation(Color.fromARGB(255, 190, 83, 49)),value: progress,minHeight: 50,backgroundColor: Colors.grey);
+      return LinearProgressIndicator(valueColor: const AlwaysStoppedAnimation(Color.fromARGB(255, 190, 83, 49)),value: progress,minHeight: 50,backgroundColor: Colors.grey);
     }
     else if(progress >=  0.6 && progress < 0.9){
-      return LinearProgressIndicator(valueColor: AlwaysStoppedAnimation(Color.fromARGB(255, 232, 191, 43)),value: progress,minHeight: 50,backgroundColor: Colors.grey);
+      return LinearProgressIndicator(valueColor: const AlwaysStoppedAnimation(Color.fromARGB(255, 232, 191, 43)),value: progress,minHeight: 50,backgroundColor: Colors.grey);
     }else{
       /*return Text(
         '${(progress * 100).toStringAsFixed(1)}%',
         style: TextStyle(
             fontWeight: FontWeight.bold, fontSize: 24, color: Colors.black),
       );*/
-      return LinearProgressIndicator(valueColor: AlwaysStoppedAnimation(Colors.green),value: progress,minHeight: 50,backgroundColor: Colors.grey);
+      return LinearProgressIndicator(valueColor: const AlwaysStoppedAnimation(Colors.green),value: progress,minHeight: 50,backgroundColor: Colors.grey);
     }
   }
   @override
@@ -84,8 +79,11 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         leading: BackButton(
             color: Colors.black,
             onPressed: () {
-              if(ispressed) Navigator.of(context).pop();
-              else Navigator.of(context).push(MaterialPageRoute(builder: (context) => Food()));
+              if(ispressed) {
+                Navigator.of(context).pop();
+              } else {
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => const Food()));
+              }
             }
         ),
         backgroundColor: Colors.white,
@@ -106,12 +104,15 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             height: queryData.size.height * 0.0000,
           ),
           Container(
-            margin: EdgeInsets.fromLTRB(320,10,0,0),
+            margin: const EdgeInsets.fromLTRB(320,10,0,0),
             child: MaterialButton(
               height: 2,
               onPressed: () {
-                if(spotsFavorite) spotsFavorite = false;
-                else spotsFavorite = true;
+                if(spotsFavorite) {
+                  spotsFavorite = false;
+                } else {
+                  spotsFavorite = true;
+                }
               },
               child: const Icon(
                 Icons.star,
@@ -122,13 +123,13 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           ),
           Container(
             alignment: Alignment.topCenter,
-            margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
+            margin: const EdgeInsets.fromLTRB(10, 0, 10, 0),
             child: const Text(
               'Current Occupancy',
               style: TextStyle(fontSize: 27, fontWeight: FontWeight.bold),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 12,
           ),
           Container(
@@ -144,7 +145,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                       children: [
                         LinearProgressIndicator(
                           minHeight: 40,
-                          valueColor: AlwaysStoppedAnimation(Colors.green),
+                          valueColor: const AlwaysStoppedAnimation(Colors.green),
                           backgroundColor: Colors.grey,
                           value: progress,
                         ),
@@ -154,7 +155,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           Container(
@@ -172,14 +173,14 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               MaterialButton(
                 onPressed: () {
                   setState(() {
-                    count_up++;
+                    countUp++;
                   });
                   _handleReactions();
                 },
                 textColor: const Color.fromARGB(255, 139, 186, 118),
                 child: Stack(
                   alignment: Alignment.topCenter,
-                  children: <Widget>[
+                  children: const <Widget>[
                     //Text('$count_up'),
                     Icon(Icons.thumb_up_alt_outlined, size: 90),
                   ],
@@ -188,20 +189,20 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               MaterialButton(
                 onPressed: () {
                   setState(() {
-                    count_down++;
+                    countDown++;
                   });
                   _handleReactions();
                 },
                 textColor: const Color.fromARGB(255, 190, 83, 49),
                 child: Stack(
                   alignment: Alignment.topCenter,
-                  children: <Widget>[
+                  children: const <Widget>[
                     //Text('$count_down'),
                     Icon(Icons.thumb_down_alt_outlined, size: 90),
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height:100,
               ),
             ],
@@ -214,7 +215,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
 }
 Widget getWidget(BuildContext context){
   return Container(
-    margin: EdgeInsets.fromLTRB(10, 10, 10, 0),
+    margin: const EdgeInsets.fromLTRB(10, 10, 10, 0),
     child: SizedBox(
       height: 60,
       width: 100,
@@ -228,7 +229,7 @@ Widget getWidget(BuildContext context){
           ),
           onPressed: () {
             Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => FoodSpots()),
+              MaterialPageRoute(builder: (context) => const FoodSpots()),
             );
           }),
     ),

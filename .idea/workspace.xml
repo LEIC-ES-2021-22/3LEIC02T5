@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="442ebc79-b596-43bf-9e32-ff5015d268a2" name="Default Changelist" comment="Cleanup">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/build/4f2a58af27abc49ecf55570043bbf938.cache.dill.track.dill" beforeDir="false" afterPath="$PROJECT_DIR$/src/build/4f2a58af27abc49ecf55570043bbf938.cache.dill.track.dill" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/cantina.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/cantina.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/favourites.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/favourites.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/parking.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/parking.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/studentPark.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/studentPark.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/teacherPark.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/teacherPark.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/food.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/food.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/foodSpots.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/food_spots.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/menu.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/menu.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/park.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/park.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/parking.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/park_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/theoreticalClasses.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/theoretical_classes.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +33,11 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <hideBySeverity>
+      <option value="15" />
+    </hideBySeverity>
   </component>
   <component name="ProjectId" id="27aZsNnS3V8z6UZJGwI8n2RIle9" />
   <component name="ProjectViewState">

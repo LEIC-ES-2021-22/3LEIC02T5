@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hello_world/parking.dart';
+import 'package:hello_world/park_list.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:icon_decoration/icon_decoration.dart';
@@ -8,6 +8,8 @@ bool studentParkFavorite = false;
 const parkingUrl = 'https://sigarra.up.pt/feup/pt/instalacs_geral.ocupacao_parques';
 enum ReadMode {key,value,done}
 class Park extends StatelessWidget {
+  const Park({Key? key}) : super(key: key);
+
   String getKey(){
     switch(type){
       case (ParkType.student):
@@ -49,7 +51,6 @@ class Park extends StatelessWidget {
       } //começa a registar values após o : e keys após ,
       else if (char == ",") {
         mode = ReadMode.key;
-        print("Read key $keyStr with value $valueStr");
         myMap[keyStr] = valueStr;
         valueStr = "";
         keyStr = "";
@@ -70,7 +71,7 @@ class Park extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: BackButton(
+        leading: const BackButton(
             color: Colors.black
         ),
         backgroundColor: Colors.white,
@@ -92,7 +93,7 @@ class Park extends StatelessWidget {
                   .of(context)
                   .size
                   .height / 1.3,
-              child: Center(
+              child: const Center(
                 child: CircularProgressIndicator(),
               ),
             );
@@ -102,18 +103,24 @@ class Park extends StatelessWidget {
             return Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[Container(
-                margin: EdgeInsets.fromLTRB(310, 6, 0, 0),
+                margin: const EdgeInsets.fromLTRB(310, 6, 0, 0),
                 child: MaterialButton(
                   height: 2,
                   onPressed: () {
                     switch(type){
                       case ParkType.student:
-                        if(studentParkFavorite) studentParkFavorite = false;
-                        else studentParkFavorite = true;
+                        if(studentParkFavorite) {
+                          studentParkFavorite = false;
+                        } else {
+                          studentParkFavorite = true;
+                        }
                         break;
                       case ParkType.teacher:
-                        if(teacherParkFavorite) teacherParkFavorite = false;
-                        else teacherParkFavorite = true;
+                        if(teacherParkFavorite) {
+                          teacherParkFavorite = false;
+                        } else {
+                          teacherParkFavorite = true;
+                        }
                         break;
                     }
                   },
@@ -124,7 +131,7 @@ class Park extends StatelessWidget {
                   ),
                 ),
               ),
-                Container(margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                Container(margin: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                   child: MaterialButton(
                     height: 2,
                     onPressed: () {},
@@ -132,14 +139,14 @@ class Park extends StatelessWidget {
                     child: Stack(
                       alignment: Alignment.center,
                       children: <Widget>[
-                        DecoratedIcon(
+                        const DecoratedIcon(
                           icon: Icon(Icons.circle,size: 270),
                           decoration: IconDecoration(border: IconBorder()),
                         ),
-                        Padding(padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                        Padding(padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                           child: Text(snapshotToMap(snapshot)[getKey()]
                               .toString(), /* + " / " + snapshotToMap(snapshot)["p1lotacao"].toString(),*/
-                            style: TextStyle(fontSize: 80,
+                            style: const TextStyle(fontSize: 80,
                                 fontWeight: FontWeight.bold,
                                 color: Color.fromARGB(255, 0, 0, 0)
                             ),
@@ -150,8 +157,8 @@ class Park extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.fromLTRB(50, 0, 50, 20),
-                  child: Text("Available Spots",
+                  margin: const EdgeInsets.fromLTRB(50, 0, 50, 20),
+                  child: const Text("Available Spots",
                     style: TextStyle(fontSize: 37, fontWeight: FontWeight.bold),
                   ),
                 ),
@@ -170,7 +177,7 @@ class Park extends StatelessWidget {
 }
   Widget getTeacherPark(BuildContext context){
     return Container(
-      margin: EdgeInsets.fromLTRB(10, 10, 10, 0),
+      margin: const EdgeInsets.fromLTRB(10, 10, 10, 0),
       child: SizedBox(
         height: 60,
         width: 100,
@@ -185,7 +192,7 @@ class Park extends StatelessWidget {
             onPressed: () {
               type = ParkType.teacher;
               Navigator.of(context).push(
-                MaterialPageRoute(builder: (context) => Park()),
+                MaterialPageRoute(builder: (context) => const Park()),
               );
             }),
       ),
@@ -194,7 +201,7 @@ class Park extends StatelessWidget {
 
 Widget getStudentPark(BuildContext context){
   return Container(
-    margin: EdgeInsets.fromLTRB(10, 10, 10, 0),
+    margin: const EdgeInsets.fromLTRB(10, 10, 10, 0),
     child: SizedBox(
       height: 60,
       width: 100,
@@ -209,7 +216,7 @@ Widget getStudentPark(BuildContext context){
           onPressed: () {
             type = ParkType.student;
             Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => Park()),
+              MaterialPageRoute(builder: (context) => const Park()),
             );
           }),
     ),

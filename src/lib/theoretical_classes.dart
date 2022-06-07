@@ -1,12 +1,13 @@
   import 'package:flutter/material.dart';
-  import 'package:hello_world/menu.dart';
 
   class TheoreticalClasses extends StatelessWidget {
+  const TheoreticalClasses({Key? key}) : super(key: key);
+
     @override
     Widget build(BuildContext context) {
       return Scaffold(
         appBar: AppBar(
-          leading: BackButton(
+          leading: const BackButton(
             color: Colors.black
           ),
           backgroundColor: Colors.white,
@@ -30,7 +31,7 @@
           ),
           children: <Widget>[
             Container(
-              margin: EdgeInsets.fromLTRB(10,0,10,0),
+              margin: const EdgeInsets.fromLTRB(10,0,10,0),
               child : SizedBox(
               height: 60,
               width: 250,
@@ -41,12 +42,12 @@
                     backgroundColor: MaterialStateProperty.all<Color>(
                         const Color.fromARGB(255, 44, 44, 44)),
                   ),
-                  onPressed: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => DA()),);}
+                  onPressed: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => const DA()),);}
               ),
             ),
       ),
       Container(
-        margin: EdgeInsets.fromLTRB(10,0,10,0),
+        margin: const EdgeInsets.fromLTRB(10,0,10,0),
         child : SizedBox(
           height: 60,
           width: 250,
@@ -57,12 +58,12 @@
                     backgroundColor: MaterialStateProperty.all<Color>(
                         const Color.fromARGB( 255, 76, 76, 76)),
                   ),
-                  onPressed: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => ES()),);}
+                  onPressed: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => const ES()),);}
               ),
             ),
       ),
             Container(
-                margin: EdgeInsets.fromLTRB(10,0,10,0),
+                margin: const EdgeInsets.fromLTRB(10,0,10,0),
                 child : SizedBox(
               height: 60,
               width: 100,
@@ -73,12 +74,12 @@
                     backgroundColor: MaterialStateProperty.all<Color>(
                         const Color.fromARGB(255, 148, 148, 149)),
                   ),
-                  onPressed: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => LC()),);}
+                  onPressed: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => const LC()),);}
               ),
             ),
             ),
               Container(
-                margin: EdgeInsets.fromLTRB(10,0,10,0),
+                margin: const EdgeInsets.fromLTRB(10,0,10,0),
                 child: SizedBox(
                   height: 60,
                   width: 100,
@@ -89,12 +90,12 @@
                     backgroundColor: MaterialStateProperty.all<Color>(
                         const Color.fromARGB(255, 182, 183, 183)),
                   ),
-                  onPressed: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => LTW()),);}
+                  onPressed: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => const LTW()),);}
               ),
       ),
               ),
               Container(
-              margin: EdgeInsets.fromLTRB(10,0,10,0),
+              margin: const EdgeInsets.fromLTRB(10,0,10,0),
               child: SizedBox(
               height: 60,
               width: 100,
@@ -105,7 +106,7 @@
                     backgroundColor: MaterialStateProperty.all<Color>(
                         const Color.fromARGB(255, 201, 202, 202)),
                   ),
-                  onPressed: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => SO()),);}
+                  onPressed: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => const SO()),);}
               ),
             ),
               ),
@@ -116,11 +117,13 @@
   }
 
   class SO extends StatelessWidget {
+  const SO({Key? key}) : super(key: key);
+
     @override
     Widget build(BuildContext context) {
       return Scaffold(
         appBar: AppBar(
-          leading: BackButton(
+          leading: const BackButton(
               color: Colors.black
           ),
           backgroundColor: Colors.white,
@@ -140,7 +143,7 @@
                 Row(
                   children: <Widget>[
                     Container(
-                      margin: EdgeInsets.fromLTRB(10,4.5,0,0),
+                      margin: const EdgeInsets.fromLTRB(10,4.5,0,0),
                       child : SizedBox(
                         height: 45,
                         width: 85,
@@ -155,7 +158,7 @@
                         ),
                       ),),
                     Container(
-                      margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                      margin: const EdgeInsets.fromLTRB(4,4.5,0,0),
                       child : SizedBox(
                         height: 45,
                         width: 200,
@@ -171,7 +174,7 @@
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                      margin: const EdgeInsets.fromLTRB(4,4.5,0,0),
                       child : SizedBox(
                         height: 45,
                         width: 80,
@@ -190,7 +193,7 @@
               Row(
                 children: <Widget>[
                   Container(
-                    margin: EdgeInsets.fromLTRB(10,4.5,0,0),
+                    margin: const EdgeInsets.fromLTRB(10,4.5,0,0),
                     child : SizedBox(
                       height: 45,
                       width: 85,
@@ -205,7 +208,7 @@
                       ),
                     ),),
                   Container(
-                    margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                    margin: const EdgeInsets.fromLTRB(4,4.5,0,0),
                     child : SizedBox(
                       height: 45,
                       width: 200,
@@ -221,7 +224,7 @@
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                    margin: const EdgeInsets.fromLTRB(4,4.5,0,0),
                     child : SizedBox(
                       height: 45,
                       width: 80,
@@ -240,7 +243,7 @@
               Row(
                 children: <Widget>[
                   Container(
-                    margin: EdgeInsets.fromLTRB(10,4.5,0,0),
+                    margin: const EdgeInsets.fromLTRB(10,4.5,0,0),
                     child : SizedBox(
                       height: 45,
                       width: 85,
@@ -255,7 +258,7 @@
                       ),
                     ),),
                   Container(
-                    margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                    margin: const EdgeInsets.fromLTRB(4,4.5,0,0),
                     child : SizedBox(
                       height: 45,
                       width: 200,
@@ -271,7 +274,7 @@
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                    margin: const EdgeInsets.fromLTRB(4,4.5,0,0),
                     child : SizedBox(
                       height: 45,
                       width: 80,
@@ -294,11 +297,13 @@
   }
 
   class LTW extends StatelessWidget {
+  const LTW({Key? key}) : super(key: key);
+
     @override
     Widget build(BuildContext context) {
       return Scaffold(
         appBar: AppBar(
-          leading: BackButton(
+          leading: const BackButton(
               color: Colors.black
           ),
           backgroundColor: Colors.white,
@@ -318,7 +323,7 @@
             Row(
               children: <Widget>[
                 Container(
-                  margin: EdgeInsets.fromLTRB(10,4.5,0,0),
+                  margin: const EdgeInsets.fromLTRB(10,4.5,0,0),
                   child : SizedBox(
                     height: 45,
                     width: 85,
@@ -333,7 +338,7 @@
                     ),
                   ),),
                 Container(
-                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  margin: const EdgeInsets.fromLTRB(4,4.5,0,0),
                   child : SizedBox(
                     height: 45,
                     width: 200,
@@ -349,7 +354,7 @@
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  margin: const EdgeInsets.fromLTRB(4,4.5,0,0),
                   child : SizedBox(
                     height: 45,
                     width: 80,
@@ -368,7 +373,7 @@
             Row(
               children: <Widget>[
                 Container(
-                  margin: EdgeInsets.fromLTRB(10,4.5,0,0),
+                  margin: const EdgeInsets.fromLTRB(10,4.5,0,0),
                   child : SizedBox(
                     height: 45,
                     width: 85,
@@ -383,7 +388,7 @@
                     ),
                   ),),
                 Container(
-                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  margin: const EdgeInsets.fromLTRB(4,4.5,0,0),
                   child : SizedBox(
                     height: 45,
                     width: 200,
@@ -399,7 +404,7 @@
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  margin: const EdgeInsets.fromLTRB(4,4.5,0,0),
                   child : SizedBox(
                     height: 45,
                     width: 80,
@@ -418,7 +423,7 @@
             Row(
               children: <Widget>[
                 Container(
-                  margin: EdgeInsets.fromLTRB(10,4.5,0,0),
+                  margin: const EdgeInsets.fromLTRB(10,4.5,0,0),
                   child : SizedBox(
                     height: 45,
                     width: 85,
@@ -433,7 +438,7 @@
                     ),
                   ),),
                 Container(
-                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  margin: const EdgeInsets.fromLTRB(4,4.5,0,0),
                   child : SizedBox(
                     height: 45,
                     width: 200,
@@ -449,7 +454,7 @@
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  margin: const EdgeInsets.fromLTRB(4,4.5,0,0),
                   child : SizedBox(
                     height: 45,
                     width: 80,
@@ -472,11 +477,13 @@
   }
 
   class LC extends StatelessWidget {
+  const LC({Key? key}) : super(key: key);
+
     @override
     Widget build(BuildContext context) {
       return Scaffold(
         appBar: AppBar(
-          leading: BackButton(
+          leading: const BackButton(
               color: Colors.black
           ),
           backgroundColor: Colors.white,
@@ -496,7 +503,7 @@
             Row(
               children: <Widget>[
                 Container(
-                  margin: EdgeInsets.fromLTRB(10,4.5,0,0),
+                  margin: const EdgeInsets.fromLTRB(10,4.5,0,0),
                   child : SizedBox(
                     height: 45,
                     width: 85,
@@ -511,7 +518,7 @@
                     ),
                   ),),
                 Container(
-                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  margin: const EdgeInsets.fromLTRB(4,4.5,0,0),
                   child : SizedBox(
                     height: 45,
                     width: 200,
@@ -527,7 +534,7 @@
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  margin: const EdgeInsets.fromLTRB(4,4.5,0,0),
                   child : SizedBox(
                     height: 45,
                     width: 80,
@@ -546,7 +553,7 @@
             Row(
               children: <Widget>[
                 Container(
-                  margin: EdgeInsets.fromLTRB(10,4.5,0,0),
+                  margin: const EdgeInsets.fromLTRB(10,4.5,0,0),
                   child : SizedBox(
                     height: 45,
                     width: 85,
@@ -561,7 +568,7 @@
                     ),
                   ),),
                 Container(
-                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  margin: const EdgeInsets.fromLTRB(4,4.5,0,0),
                   child : SizedBox(
                     height: 45,
                     width: 200,
@@ -577,7 +584,7 @@
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  margin: const EdgeInsets.fromLTRB(4,4.5,0,0),
                   child : SizedBox(
                     height: 45,
                     width: 80,
@@ -596,7 +603,7 @@
             Row(
               children: <Widget>[
                 Container(
-                  margin: EdgeInsets.fromLTRB(10,4.5,0,0),
+                  margin: const EdgeInsets.fromLTRB(10,4.5,0,0),
                   child : SizedBox(
                     height: 45,
                     width: 85,
@@ -611,7 +618,7 @@
                     ),
                   ),),
                 Container(
-                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  margin: const EdgeInsets.fromLTRB(4,4.5,0,0),
                   child : SizedBox(
                     height: 45,
                     width: 200,
@@ -627,7 +634,7 @@
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  margin: const EdgeInsets.fromLTRB(4,4.5,0,0),
                   child : SizedBox(
                     height: 45,
                     width: 80,
@@ -650,11 +657,13 @@
   }
 
   class DA extends StatelessWidget {
+  const DA({Key? key}) : super(key: key);
+
     @override
     Widget build(BuildContext context) {
       return Scaffold(
         appBar: AppBar(
-          leading: BackButton(
+          leading: const BackButton(
               color: Colors.black
           ),
           backgroundColor: Colors.white,
@@ -674,7 +683,7 @@
             Row(
               children: <Widget>[
                 Container(
-                  margin: EdgeInsets.fromLTRB(10,4.5,0,0),
+                  margin: const EdgeInsets.fromLTRB(10,4.5,0,0),
                   child : SizedBox(
                     height: 45,
                     width: 85,
@@ -689,7 +698,7 @@
                     ),
                   ),),
                 Container(
-                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  margin: const EdgeInsets.fromLTRB(4,4.5,0,0),
                   child : SizedBox(
                     height: 45,
                     width: 200,
@@ -705,7 +714,7 @@
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  margin: const EdgeInsets.fromLTRB(4,4.5,0,0),
                   child : SizedBox(
                     height: 45,
                     width: 80,
@@ -724,7 +733,7 @@
             Row(
               children: <Widget>[
                 Container(
-                  margin: EdgeInsets.fromLTRB(10,4.5,0,0),
+                  margin: const EdgeInsets.fromLTRB(10,4.5,0,0),
                   child : SizedBox(
                     height: 45,
                     width: 85,
@@ -739,7 +748,7 @@
                     ),
                   ),),
                 Container(
-                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  margin: const EdgeInsets.fromLTRB(4,4.5,0,0),
                   child : SizedBox(
                     height: 45,
                     width: 200,
@@ -755,7 +764,7 @@
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  margin: const EdgeInsets.fromLTRB(4,4.5,0,0),
                   child : SizedBox(
                     height: 45,
                     width: 80,
@@ -774,7 +783,7 @@
             Row(
               children: <Widget>[
                 Container(
-                  margin: EdgeInsets.fromLTRB(10,4.5,0,0),
+                  margin: const EdgeInsets.fromLTRB(10,4.5,0,0),
                   child : SizedBox(
                     height: 45,
                     width: 85,
@@ -789,7 +798,7 @@
                     ),
                   ),),
                 Container(
-                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  margin: const EdgeInsets.fromLTRB(4,4.5,0,0),
                   child : SizedBox(
                     height: 45,
                     width: 200,
@@ -805,7 +814,7 @@
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  margin: const EdgeInsets.fromLTRB(4,4.5,0,0),
                   child : SizedBox(
                     height: 45,
                     width: 80,
@@ -828,11 +837,13 @@
   }
 
   class ES extends StatelessWidget {
+  const ES({Key? key}) : super(key: key);
+
     @override
     Widget build(BuildContext context) {
       return Scaffold(
         appBar: AppBar(
-          leading: BackButton(
+          leading: const BackButton(
               color: Colors.black
           ),
           backgroundColor: Colors.white,
@@ -852,7 +863,7 @@
             Row(
               children: <Widget>[
                 Container(
-                  margin: EdgeInsets.fromLTRB(10,4.5,0,0),
+                  margin: const EdgeInsets.fromLTRB(10,4.5,0,0),
                   child : SizedBox(
                     height: 45,
                     width: 85,
@@ -867,7 +878,7 @@
                     ),
                   ),),
                 Container(
-                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  margin: const EdgeInsets.fromLTRB(4,4.5,0,0),
                   child : SizedBox(
                     height: 45,
                     width: 200,
@@ -883,7 +894,7 @@
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  margin: const EdgeInsets.fromLTRB(4,4.5,0,0),
                   child : SizedBox(
                     height: 45,
                     width: 80,
@@ -902,7 +913,7 @@
             Row(
               children: <Widget>[
                 Container(
-                  margin: EdgeInsets.fromLTRB(10,4.5,0,0),
+                  margin: const EdgeInsets.fromLTRB(10,4.5,0,0),
                   child : SizedBox(
                     height: 45,
                     width: 85,
@@ -917,7 +928,7 @@
                     ),
                   ),),
                 Container(
-                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  margin: const EdgeInsets.fromLTRB(4,4.5,0,0),
                   child : SizedBox(
                     height: 45,
                     width: 200,
@@ -933,7 +944,7 @@
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  margin: const EdgeInsets.fromLTRB(4,4.5,0,0),
                   child : SizedBox(
                     height: 45,
                     width: 80,
@@ -952,7 +963,7 @@
             Row(
               children: <Widget>[
                 Container(
-                  margin: EdgeInsets.fromLTRB(10,4.5,0,0),
+                  margin: const EdgeInsets.fromLTRB(10,4.5,0,0),
                   child : SizedBox(
                     height: 45,
                     width: 85,
@@ -967,7 +978,7 @@
                     ),
                   ),),
                 Container(
-                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  margin: const EdgeInsets.fromLTRB(4,4.5,0,0),
                   child : SizedBox(
                     height: 45,
                     width: 200,
@@ -983,7 +994,7 @@
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.fromLTRB(4,4.5,0,0),
+                  margin: const EdgeInsets.fromLTRB(4,4.5,0,0),
                   child : SizedBox(
                     height: 45,
                     width: 80,
