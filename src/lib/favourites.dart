@@ -1,8 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:hello_world/cantina.dart';
-import 'package:hello_world/studentPark.dart';
-import 'package:hello_world/teacherPark.dart';
+import 'package:hello_world/park.dart';
 
 class Favourites extends StatelessWidget {
   @override
@@ -29,13 +28,14 @@ class Favourites extends StatelessWidget {
     mainAxisExtent: 100,
     ),
         children: <Widget>[
-          if( cantinaFavorite == true)
-            getWidget(context)
-          else if (studentParkFavourite == true)
-            getStudentPark(context)
-          else if(teacherParkFavorite == true )
-            getTeacherPark(context)],
-          ),
+            if( cantinaFavorite == true)
+              getWidget(context),
+            if (studentParkFavorite == true)
+              getStudentPark(context),
+            if(teacherParkFavorite == true )
+              getTeacherPark(context)
+        ],
+    ),
     );
   }
 }

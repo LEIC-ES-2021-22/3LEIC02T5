@@ -1,13 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:hello_world/cantina.dart';
-import 'package:hello_world/menu.dart';
+import 'package:hello_world/parking.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:icon_decoration/icon_decoration.dart';
 bool teacherParkFavorite = false;
+bool studentParkFavorite = false;
 const parkingUrl = 'https://sigarra.up.pt/feup/pt/instalacs_geral.ocupacao_parques';
 enum ReadMode {key,value,done}
-class TeacherPark extends StatelessWidget {
+class Park extends StatelessWidget {
+  String getKey(){
+    switch(type){
+      case (ParkType.student):
+        return "p3livres";
+      case (ParkType.teacher):
+        return "p1livres";
+      default:
+        return "NULL";
+    }
+  }
+
   Future<Map<String, dynamic>> getParkData() async {
     var response = await http.get(Uri.parse(parkingUrl));
     if (response.statusCode == 200) {
@@ -95,8 +106,16 @@ class TeacherPark extends StatelessWidget {
                 child: MaterialButton(
                   height: 2,
                   onPressed: () {
-                    if(teacherParkFavorite) teacherParkFavorite = false;
-                    else teacherParkFavorite = true;
+                    switch(type){
+                      case ParkType.student:
+                        if(studentParkFavorite) studentParkFavorite = false;
+                        else studentParkFavorite = true;
+                        break;
+                      case ParkType.teacher:
+                        if(teacherParkFavorite) teacherParkFavorite = false;
+                        else teacherParkFavorite = true;
+                        break;
+                    }
                   },
                   child: const Icon(
                     Icons.star,
@@ -118,7 +137,7 @@ class TeacherPark extends StatelessWidget {
                           decoration: IconDecoration(border: IconBorder()),
                         ),
                         Padding(padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                          child: Text(snapshotToMap(snapshot)["p1livres"]
+                          child: Text(snapshotToMap(snapshot)[getKey()]
                               .toString(), /* + " / " + snapshotToMap(snapshot)["p1lotacao"].toString(),*/
                             style: TextStyle(fontSize: 80,
                                 fontWeight: FontWeight.bold,
@@ -164,10 +183,35 @@ class TeacherPark extends StatelessWidget {
                   const Color.fromARGB( 255, 160, 133, 107)),
             ),
             onPressed: () {
+              type = ParkType.teacher;
               Navigator.of(context).push(
-                MaterialPageRoute(builder: (context) => TeacherPark()),
+                MaterialPageRoute(builder: (context) => Park()),
               );
             }),
       ),
     );
   }
+
+Widget getStudentPark(BuildContext context){
+  return Container(
+    margin: EdgeInsets.fromLTRB(10, 10, 10, 0),
+    child: SizedBox(
+      height: 60,
+      width: 100,
+      child: ElevatedButton(
+          child: const Text('Parque dos alunos',
+              style: TextStyle(fontSize: 20),
+              textAlign: TextAlign.center),
+          style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.all<Color>(
+                const Color.fromARGB(255, 182, 163, 148)),
+          ),
+          onPressed: () {
+            type = ParkType.student;
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) => Park()),
+            );
+          }),
+    ),
+  );
+}

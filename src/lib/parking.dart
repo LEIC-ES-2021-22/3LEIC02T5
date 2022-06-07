@@ -1,8 +1,8 @@
-import 'package:hello_world/studentPark.dart';
-import 'package:hello_world/teacherPark.dart';
+import 'package:hello_world/park.dart';
 import 'package:flutter/material.dart';
 import 'package:hello_world/menu.dart';
-enum ChosenPark {student,teacher}
+enum ParkType {student,teacher}
+ParkType type = ParkType.student;
 class Parking extends StatelessWidget {
     @override
     Widget build(BuildContext context) {
@@ -44,7 +44,8 @@ class Parking extends StatelessWidget {
                         const Color.fromARGB(255, 182, 163, 148)),
                   ),
                   onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => StudentPark()),);}
+                    type = ParkType.student;
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => Park()),);}
               ),
             ),
             ),
@@ -61,7 +62,8 @@ class Parking extends StatelessWidget {
                         const Color.fromARGB( 255, 160, 133, 107)),
                   ),
                   onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => TeacherPark()),);}
+                    type = ParkType.teacher;
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => Park()),);}
               ),
             ),
            ),
