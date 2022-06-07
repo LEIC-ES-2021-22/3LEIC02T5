@@ -152,7 +152,7 @@ class FirstF extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Image.asset("assets/images/piso1.png",
-          scale: 0.7,
+          scale: 1.1,
           fit: BoxFit.fitWidth),
         ],
       ),
@@ -182,7 +182,7 @@ class SecondF extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Image.asset("assets/images/piso2.png",
-              scale: 0.7,
+              scale: 1.1,
               fit: BoxFit.fitWidth),
         ],
       ),
@@ -212,7 +212,7 @@ class ThirdF extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Image.asset("assets/images/piso3.png",
-              scale: 0.7,
+              scale: 1.1,
               fit: BoxFit.fitWidth),
         ],
       ),
@@ -242,7 +242,7 @@ class FourthF extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Image.asset("assets/images/piso4.png",
-              scale: 0.7,
+              scale: 1.1,
               fit: BoxFit.fitWidth),
         ],
       ),
@@ -272,7 +272,7 @@ class FifthF extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Image.asset("assets/images/piso5.png",
-              scale: 0.7,
+              scale: 1.1,
               fit: BoxFit.fitWidth),
         ],
       ),
@@ -302,7 +302,7 @@ class SixthF extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Image.asset("assets/images/piso6.png",
-              scale: 0.7,
+              scale: 1.1,
               fit: BoxFit.fitWidth),
         ],
       ),
