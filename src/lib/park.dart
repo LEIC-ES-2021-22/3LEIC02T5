@@ -32,38 +32,8 @@ class Park extends StatelessWidget {
     }
   }
 
-  Map<String, String> snapshotToMap(AsyncSnapshot snapshot) {
-    String snapshotStr = snapshot.data.toString(),
-        keyStr = "",
-        valueStr = "",
-        char;
-    ReadMode mode = ReadMode.key;
-    Map<String, String> myMap = {};
-    for (int i = 0; i < snapshotStr
-        .length; i++) { //ignora os 8 primeiros carateres porque não interessam
-      char = snapshotStr[i];
-      if (char == "(" || char == ")" || char == "\"" || char == "{" ||
-          char == "}" || char == "[" || char == "]" || char == " ") {
-        continue;
-      } //ignora estes simbolos
-      else if (char == ":") {
-        mode = ReadMode.value;
-      } //começa a registar values após o : e keys após ,
-      else if (char == ",") {
-        mode = ReadMode.key;
-        myMap[keyStr] = valueStr;
-        valueStr = "";
-        keyStr = "";
-      }
-      else {
-        if (mode == ReadMode.key) {
-          keyStr += char;
-        } //ignora espaços
-        else if (mode == ReadMode.value) {
-          valueStr += char;
-        }
-      }
-    }
+  Map<String, dynamic> snapshotToMap(AsyncSnapshot snapshot) {
+    Map<String,dynamic> myMap = snapshot.data as Map<String,dynamic>;
     return myMap;
   }
 
