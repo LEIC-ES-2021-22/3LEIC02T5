@@ -61,7 +61,7 @@ ClassType type = ClassType.da;
                         const Color.fromARGB(255, 44, 44, 44)),
                   ),
                   onPressed: () {
-                    ClassType.da;
+                    type = ClassType.da;
                     Navigator.of(context).push(MaterialPageRoute(builder: (context) => const Class()),);}
               ),
             ),
@@ -97,7 +97,7 @@ ClassType type = ClassType.da;
                         const Color.fromARGB(255, 148, 148, 149)),
                   ),
                   onPressed: () {
-                    ClassType.lcom;
+                    type = ClassType.lcom;
                     Navigator.of(context).push(MaterialPageRoute(builder: (context) => const Class()),);}
               ),
             ),
