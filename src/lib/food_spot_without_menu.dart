@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:hello_world/food_list.dart';
+import 'globals.dart' as globals;
+
 
 void main() => runApp(const FoodSpotWithoutMenu());
-
 class FoodSpotWithoutMenu extends StatelessWidget {
   // This widget is the root
   // of your application.
@@ -30,8 +31,7 @@ class MyStatefulWidget extends StatefulWidget {
 
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   double progress = 0;
-  int countUp = 0;
-  int countDown = 0;
+  int count = 0;
 
   String getImageAddress(){
     switch(type){
@@ -49,18 +49,18 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   }
 
   Future _handleReactions() async {
-    final balance = countUp - countDown;
+    final balance = count;
     setState(() {
       const Text("oi");
 
-      progress = ((balance * 0.1) / 25);
+      progress = (balance / 25);
       if (balance == -25) {
         progress -= 0.1;
         if (progress < 0) {
           progress = 0;
         }
       } else if (balance < -25) {
-        progress = ((balance) * 0.1) / 25;
+        progress = (balance/ 25);
         if (progress < 0) {
           progress = 0;
         }
@@ -188,7 +188,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               MaterialButton(
                 onPressed: () {
                   setState(() {
-                    countUp++;
+                    if(count < 25 && !globals.hasLiked){count++; globals.hasDisliked = false; globals.hasLiked = true;}
                   });
                   _handleReactions();
                 },
@@ -204,7 +204,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               MaterialButton(
                 onPressed: () {
                   setState(() {
-                    countDown++;
+                    if(count > 0 && !globals.hasDisliked){count--; globals.hasDisliked = true; globals.hasLiked = false;}
+                    else{} //does nothing if line is already at minimum
                   });
                   _handleReactions();
                 },
