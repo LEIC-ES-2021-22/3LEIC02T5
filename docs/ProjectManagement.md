@@ -40,11 +40,12 @@
 ## Did Well
 
 - We managed to close a bigger amount of issues in this iteration.
-- 
+- We delivered cleaner, simpler and more organized code in this iteration.
 
 ## Do Differently
 
-- 
+- Some of our code could be fairly more simple if we made more use of functions to draw similar elements on a page.
+- If we had another iteration, we could change the way the app is implemented so the mocks data could be read from files, as reading from those text files would make the code similar to what we would need once we had access to the back end.
 
 ## Puzzles
 
