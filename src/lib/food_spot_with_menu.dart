@@ -5,8 +5,6 @@ import 'package:hello_world/food_list.dart';
 void main() => runApp(const FoodSpotWithMenu());
 
 class FoodSpotWithMenu extends StatelessWidget {
-  // This widget is the root
-  // of your application.
   const FoodSpotWithMenu({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {

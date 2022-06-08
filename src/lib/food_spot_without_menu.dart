@@ -6,8 +6,6 @@ import 'globals.dart' as globals;
 
 void main() => runApp(const FoodSpotWithoutMenu());
 class FoodSpotWithoutMenu extends StatelessWidget {
-  // This widget is the root
-  // of your application.
   const FoodSpotWithoutMenu({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
