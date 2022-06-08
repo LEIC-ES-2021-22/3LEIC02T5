@@ -49,7 +49,24 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   }
 
   Future _handleReactions() async {
-    final balance = count;
+    int balance = 0;
+    switch(type){
+      case(FoodSpotType.aefeup):
+        balance = globals.countAEFEUP;
+        break;
+      case(FoodSpotType.cantina):
+        balance = globals.countCantina;
+        break;
+      case(FoodSpotType.barMinas):
+        balance = globals.countBarMinas;
+        break;
+      case(FoodSpotType.barBiblio):
+        balance = globals.countBarBiblioteca;
+        break;
+      case(FoodSpotType.restauranteINEGI):
+        balance = globals.countRestINEGI;
+        break;
+    }
     setState(() {
       const Text("oi");
 
@@ -188,8 +205,25 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               MaterialButton(
                 onPressed: () {
                   setState(() {
-                    if(count < 25 && !globals.hasLiked){count++; globals.hasDisliked = false; globals.hasLiked = true;}
-                  });
+                    switch(type){
+                      case FoodSpotType.aefeup:
+                        if(globals.countAEFEUP < 25 && !globals.hasLikedAEFEUP){globals.countAEFEUP++; globals.hasDislikedAEFEUP = false; globals.hasLikedAEFEUP = true;}
+                        break;
+                      case FoodSpotType.barMinas:
+                        if(globals.countBarMinas < 25 && !globals.hasLikedBarMinas){globals.countBarMinas++; globals.hasDislikedBarMinas = false; globals.hasLikedBarMinas = true;}
+                        break;
+                      case FoodSpotType.cantina:
+                        if(globals.countCantina < 25 && !globals.hasLikedCantina){globals.countCantina++; globals.hasDislikedCantina = false; globals.hasLikedCantina = true;}
+                        break;
+                      case FoodSpotType.barBiblio:
+                        if(globals.countBarBiblioteca < 25 && !globals.hasLikedBarBiblioteca){globals.countBarBiblioteca++; globals.hasDislikedBarBiblioteca = false; globals.hasLikedBarBiblioteca = true;}
+                        break;
+                      case FoodSpotType.restauranteINEGI:
+                        if(globals.countRestINEGI < 25 && !globals.hasLikedRestINEGI){globals.countRestINEGI++; globals.hasDislikedRestINEGI = false; globals.hasLikedRestINEGI = true;}
+                        break;
+                    }
+                  }
+                  );
                   _handleReactions();
                 },
                 textColor: const Color.fromARGB(255, 139, 186, 118),
@@ -204,8 +238,23 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               MaterialButton(
                 onPressed: () {
                   setState(() {
-                    if(count > 0 && !globals.hasDisliked){count--; globals.hasDisliked = true; globals.hasLiked = false;}
-                    else{} //does nothing if line is already at minimum
+                    switch(type){
+                      case FoodSpotType.aefeup:
+                        if(globals.countAEFEUP < 25 && !globals.hasDislikedAEFEUP){globals.countAEFEUP--; globals.hasDislikedAEFEUP = true; globals.hasLikedAEFEUP = false;}
+                        break;
+                      case FoodSpotType.barMinas:
+                        if(globals.countBarMinas < 25 && !globals.hasDislikedBarMinas){globals.countBarMinas--; globals.hasDislikedBarMinas = true; globals.hasLikedBarMinas = false;}
+                        break;
+                      case FoodSpotType.cantina:
+                        if(globals.countCantina < 25 && !globals.hasDislikedCantina){globals.countCantina--; globals.hasDislikedCantina = true; globals.hasLikedCantina = false;}
+                        break;
+                      case FoodSpotType.barBiblio:
+                        if(globals.countBarBiblioteca < 25 && !globals.hasDislikedBarBiblioteca){globals.countBarBiblioteca--; globals.hasDislikedBarBiblioteca = true; globals.hasLikedBarBiblioteca = false;}
+                        break;
+                      case FoodSpotType.restauranteINEGI:
+                        if(globals.countRestINEGI < 25 && !globals.hasDislikedRestINEGI){globals.countRestINEGI--; globals.hasDislikedRestINEGI = true; globals.hasLikedRestINEGI = false;}
+                        break;
+                    }
                   });
                   _handleReactions();
                 },
