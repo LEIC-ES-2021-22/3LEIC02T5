@@ -373,7 +373,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               ),
             ],
           ),
-          Image.asset('src/assets/images/canteen.png', height:110,width:385,alignment: Alignment.center),
+          Image.asset('assets/images/canteen.png', height:110,width:385,alignment: Alignment.center),
         ],
       ),
     );
