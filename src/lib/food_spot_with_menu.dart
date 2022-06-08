@@ -191,7 +191,6 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 child: Stack(
                   alignment: Alignment.topCenter,
                   children: const <Widget>[
-                    //Text('$count_down'),
                     Icon(Icons.thumb_down_alt_outlined, size: 90),
                   ],
                 ),

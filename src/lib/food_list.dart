@@ -27,18 +27,7 @@ class FoodList extends StatelessWidget {
           Container (
             //alignment: Alignment.topLeft,
             margin: const EdgeInsets.fromLTRB(0, 10, 208,10),
-            /*child: SizedBox(
-              width: 134,
-              child: ElevatedButton(
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all<Color>(const Color.fromARGB(255, 147, 77, 76)),),
-                onPressed:() { Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => Menu()
-                ),);},
-                child: const Text('Alimentação',
-                    style: TextStyle(fontSize: 16),
-                    textAlign: TextAlign.left),
-              ),),*/),
+          ),
 
           IconButton(
             alignment: Alignment.topLeft,
@@ -46,18 +35,6 @@ class FoodList extends StatelessWidget {
             icon: const Icon(Icons.account_circle, size: 40),
             onPressed: () {},
           ),],
-
-
-        /*const SizedBox(
-        width: 95.0,
-        height: 67.0,
-        child: const DecoratedBox(
-          decoration: const BoxDecoration(
-              color: Colors.grey
-          ),
-        ),
-      ),*/
-
       ),
       body: GridView(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(

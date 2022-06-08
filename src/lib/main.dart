@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'menu.dart';
 
-void main() => runApp(const MyApp());
+void main() => runApp(const Login());
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class Login extends StatelessWidget {
+  const Login({Key? key}) : super(key: key);
 
   static const String _title = '';
 
