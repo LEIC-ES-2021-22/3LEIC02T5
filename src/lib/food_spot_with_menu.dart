@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
+import 'globals.dart';
 import 'package:hello_world/food_list.dart';
 
 void main() => runApp(const FoodSpotWithMenu());
@@ -27,22 +28,21 @@ class MyStatefulWidget extends StatefulWidget {
 }
 
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
-  double progress = 0;
-  int countUp = 0;
-  int countDown = 0;
+  int count = countCantina;
+  double progress = countCantina/25;
 
   Future _handleReactions() async {
-    final balance = countUp - countDown;
+    int balance = count;
     setState(() {
 
-      progress = ((balance * 0.1) / 25);
+      progress = (balance/ 25);
       if (balance == -25) {
         progress -= 0.1;
         if (progress < 0) {
           progress = 0;
         }
       } else if (balance < -25) {
-        progress = ((balance) * 0.1) / 25;
+        progress = (balance / 25);
         if (progress < 0) {
           progress = 0;
         }
@@ -164,7 +164,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               MaterialButton(
                 onPressed: () {
                   setState(() {
-                    countUp++;
+                    if(countCantina < 25 && !hasLikedCantina){count++; countCantina++; hasDislikedCantina = false; hasLikedCantina = true;}
                   });
                   _handleReactions();
                 },
@@ -181,7 +181,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               MaterialButton(
                 onPressed: () {
                   setState(() {
-                    countDown++;
+                    if(countCantina < 25 && !hasLikedCantina){count--; countCantina--; hasDislikedCantina = true; hasLikedCantina = false;}
                   });
                   _handleReactions();
                 },

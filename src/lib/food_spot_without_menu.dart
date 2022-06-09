@@ -28,8 +28,8 @@ class MyStatefulWidget extends StatefulWidget {
 }
 
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
-  double progress = 0;
   int count = 0;
+  double progress = 0;
 
   String getImageAddress(){
     switch(type){
@@ -75,7 +75,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           progress = 0;
         }
       } else if (balance < -25) {
-        progress = (balance/ 25);
+        progress = (balance / 25);
         if (progress < 0) {
           progress = 0;
         }
@@ -205,19 +205,19 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   setState(() {
                     switch(type){
                       case FoodSpotType.aefeup:
-                        if(globals.countAEFEUP < 25 && !globals.hasLikedAEFEUP){globals.countAEFEUP++; globals.hasDislikedAEFEUP = false; globals.hasLikedAEFEUP = true;}
+                        if(globals.countAEFEUP < 25 && !globals.hasLikedAEFEUP){count++; globals.countAEFEUP++; globals.hasDislikedAEFEUP = false; globals.hasLikedAEFEUP = true;}
                         break;
                       case FoodSpotType.barMinas:
-                        if(globals.countBarMinas < 25 && !globals.hasLikedBarMinas){globals.countBarMinas++; globals.hasDislikedBarMinas = false; globals.hasLikedBarMinas = true;}
+                        if(globals.countBarMinas < 25 && !globals.hasLikedBarMinas){count++; globals.countBarMinas++; globals.hasDislikedBarMinas = false; globals.hasLikedBarMinas = true;}
                         break;
                       case FoodSpotType.cantina:
-                        if(globals.countCantina < 25 && !globals.hasLikedCantina){globals.countCantina++; globals.hasDislikedCantina = false; globals.hasLikedCantina = true;}
+                        if(globals.countCantina < 25 && !globals.hasLikedCantina){count++; globals.countCantina++; globals.hasDislikedCantina = false; globals.hasLikedCantina = true;}
                         break;
                       case FoodSpotType.barBiblio:
-                        if(globals.countBarBiblioteca < 25 && !globals.hasLikedBarBiblioteca){globals.countBarBiblioteca++; globals.hasDislikedBarBiblioteca = false; globals.hasLikedBarBiblioteca = true;}
+                        if(globals.countBarBiblioteca < 25 && !globals.hasLikedBarBiblioteca){count++; globals.countBarBiblioteca++; globals.hasDislikedBarBiblioteca = false; globals.hasLikedBarBiblioteca = true;}
                         break;
                       case FoodSpotType.restauranteINEGI:
-                        if(globals.countRestINEGI < 25 && !globals.hasLikedRestINEGI){globals.countRestINEGI++; globals.hasDislikedRestINEGI = false; globals.hasLikedRestINEGI = true;}
+                        if(globals.countRestINEGI < 25 && !globals.hasLikedRestINEGI){count++; globals.countRestINEGI++; globals.hasDislikedRestINEGI = false; globals.hasLikedRestINEGI = true;}
                         break;
                     }
                   }
@@ -238,19 +238,19 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   setState(() {
                     switch(type){
                       case FoodSpotType.aefeup:
-                        if(globals.countAEFEUP < 25 && !globals.hasDislikedAEFEUP){globals.countAEFEUP--; globals.hasDislikedAEFEUP = true; globals.hasLikedAEFEUP = false;}
+                        if(globals.countAEFEUP < 25 && !globals.hasDislikedAEFEUP){count--; globals.countAEFEUP--; globals.hasDislikedAEFEUP = true; globals.hasLikedAEFEUP = false;}
                         break;
                       case FoodSpotType.barMinas:
-                        if(globals.countBarMinas < 25 && !globals.hasDislikedBarMinas){globals.countBarMinas--; globals.hasDislikedBarMinas = true; globals.hasLikedBarMinas = false;}
+                        if(globals.countBarMinas < 25 && !globals.hasDislikedBarMinas){count--; globals.countBarMinas--; globals.hasDislikedBarMinas = true; globals.hasLikedBarMinas = false;}
                         break;
                       case FoodSpotType.cantina:
-                        if(globals.countCantina < 25 && !globals.hasDislikedCantina){globals.countCantina--; globals.hasDislikedCantina = true; globals.hasLikedCantina = false;}
+                        if(globals.countCantina < 25 && !globals.hasDislikedCantina){count--; globals.countCantina--; globals.hasDislikedCantina = true; globals.hasLikedCantina = false;}
                         break;
                       case FoodSpotType.barBiblio:
-                        if(globals.countBarBiblioteca < 25 && !globals.hasDislikedBarBiblioteca){globals.countBarBiblioteca--; globals.hasDislikedBarBiblioteca = true; globals.hasLikedBarBiblioteca = false;}
+                        if(globals.countBarBiblioteca < 25 && !globals.hasDislikedBarBiblioteca){count--; globals.countBarBiblioteca--; globals.hasDislikedBarBiblioteca = true; globals.hasLikedBarBiblioteca = false;}
                         break;
                       case FoodSpotType.restauranteINEGI:
-                        if(globals.countRestINEGI < 25 && !globals.hasDislikedRestINEGI){globals.countRestINEGI--; globals.hasDislikedRestINEGI = true; globals.hasLikedRestINEGI = false;}
+                        if(globals.countRestINEGI < 25 && !globals.hasDislikedRestINEGI){count--; globals.countRestINEGI--; globals.hasDislikedRestINEGI = true; globals.hasLikedRestINEGI = false;}
                         break;
                     }
                   });
