@@ -23,6 +23,27 @@ void main(){
           expect(const Class().getSubjectName(),"SO");
           break;
       }
-      });
+    });
+  });
+  group("getClasses", (){
+    test("Obtained Wrong Class List", (){
+      switch(type){
+        case ClassType.da:
+          expect(const Class().getClasses(),classesDA);
+          break;
+        case ClassType.ltw:
+          expect(const Class().getClasses(),classesLTW);
+          break;
+        case ClassType.esof:
+          expect(const Class().getClasses(),classesES);
+          break;
+        case ClassType.lcom:
+          expect(const Class().getClasses(),classesLCOM);
+          break;
+        case ClassType.so:
+          expect(const Class().getClasses(),classesSO);
+          break;
+      }
+    });
   });
 }
