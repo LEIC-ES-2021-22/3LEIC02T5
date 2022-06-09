@@ -174,14 +174,14 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   alignment: Alignment.topCenter,
                   children: const <Widget>[
                     //Text('$count_up'),
-                    Icon(Icons.thumb_up_alt_outlined, size: 90, ),
+                    Icon(Icons.thumb_up_alt_outlined, size: 90),
                   ],
                 ),
               ),
               MaterialButton(
                 onPressed: () {
                   setState(() {
-                    if(countCantina < 25 && !hasLikedCantina){count--; countCantina--; hasDislikedCantina = true; hasLikedCantina = false;}
+                    if(countCantina < 25 && !hasDislikedCantina){count--; countCantina--; hasDislikedCantina = true; hasLikedCantina = false;}
                   });
                   _handleReactions();
                 },
