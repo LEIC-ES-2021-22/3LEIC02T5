@@ -4,15 +4,14 @@ import 'package:test/test.dart';
 
 void main(){
   group('getKey',() {
-    test('Wrong key obtained.', (){
-     switch(type){
-       case (ParkType.student):
-         expect(const Park().getKey(), "p3livres");
-         break;
-       case (ParkType.teacher):
-         expect(const Park().getKey(), "p1livres");
-     }
+    test('Wrong key for Student Park Available Spots', (){
+      type = ParkType.student;
+      expect(const Park().getKey(), "p3livres");
     });
-  });
-}
+    test('Wrong key for Teacher Park Available Spots', (){
+      type = ParkType.teacher;
+      expect(const Park().getKey(), "p1livres");
+    });
+    });
+  }
 
